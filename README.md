@@ -1,3 +1,8 @@
+# Use full command 
+
+npx @angular/cli@20 new AngularCV ==> Generate new project with version
+npx ng build --configuration production ==> Build project to deployement
+
 # AngularCV
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
