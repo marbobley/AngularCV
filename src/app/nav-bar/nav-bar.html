@@ -1,5 +1,8 @@
 <button class="openbtn" (click)="openSideMenu()">&#9776; open</button>
 <nav class="sidenav" #sidenav>
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
-    <a routerLink="about">About</a>
+    <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
+    <a routerLink="about" (click)="closeSideMenu()">A propos</a>
+    <a routerLink="about" (click)="closeSideMenu()">Expériences</a>
+    <a routerLink="about" (click)="closeSideMenu()">Compétences</a>
 </nav>
