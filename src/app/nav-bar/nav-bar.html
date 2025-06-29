@@ -1,4 +1,7 @@
-<button class="openbtn" (click)="openSideMenu()">&#9776; open</button>
+<div class="navHeader">
+    <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
+    <h1>CV Wilfried FOURNIER</h1>
+</div>
 <nav class="sidenav" #sidenav>
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
     <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
