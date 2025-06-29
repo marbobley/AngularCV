@@ -1,0 +1,36 @@
+<h3>Game of Life</h3>
+
+<main>
+  <table>
+    <tbody>
+        <tr>
+            <label for="resolution">Resolution :</label>
+            <input type="number" id="resolution"  [(ngModel)]="resolution">
+        </tr>
+        <tr>
+            <label for="width">Width :</label>
+            <input type="number" [(ngModel)]="boardWidth">
+        </tr>
+        <tr>
+            <label for="height">Height :</label>
+            <input type="number" id="height"  [(ngModel)]="boardHeight">
+        </tr>
+        <tr>
+            <button (click)="onApply()">Apply</button>
+        </tr>
+      <tr>
+        <td>
+            <ul>
+                <li><button (click)="playAnimateInterval()">PlayInterval</button></li>
+                <li><button (click)="stopAnimateInterval()">StopInterval</button></li>
+            </ul>
+        </td>
+        <td>
+          <div>
+            <canvas #gameboard></canvas>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

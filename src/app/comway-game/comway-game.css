@@ -1,0 +1,13 @@
+canvas{
+    border: 1px solid black;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li{
+    padding: 10px;
+}
