@@ -7,7 +7,7 @@
         <h1>Ingénieur développement</h1>
     }
 </div>
-<nav class="sidenav" #sidenav>
+<nav class="sidenav" #sidenav (mouseleave)="closeSideMenu()">
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
     <img src="sideNaveImage-computer.jpg" class="imgSideNav">
     <img src="pprofil.jpg" class="imgOnImg">
