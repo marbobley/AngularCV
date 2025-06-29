@@ -9,3 +9,20 @@
 body{
     background-color: var(--app-background-color);
 }
+
+.main {
+    background-color: white;
+    height: 50%;
+    width: 98%;
+    position: fixed;
+    /* Stay on top */
+    top: 120px;
+    /* Stay at the top */
+    left: 20px;
+
+}
+
+.section {
+    background-color: var(--app-second-color);
+    margin: 10px;
+}
