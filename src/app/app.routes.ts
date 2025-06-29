@@ -7,9 +7,9 @@ import { Playground } from './playground/playground';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home' , component:Home },
-    {path: 'about', component:About,  },
-    {path: 'experience', component:Experience,  },
-    {path: 'skill', component:Skill,  },
-    {path: 'playground', component:Playground,  }
+    { path: 'home', component: Home },
+    { path: 'about', component: About },
+    { path: 'experience', component: Experience },
+    { path: 'skill', component: Skill },
+    { path: 'playground', component: Playground }
 ];
