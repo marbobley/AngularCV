@@ -1,7 +1,12 @@
 @import '../../styles.css';
 
-.navBack{
+.navHeader{
   background-color: white;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  border-bottom: 2px solid black;
 }
 
 .navHeader h1 {
@@ -31,7 +36,7 @@
   /* 0.5 second transition effect to slide in the sidenav */
   border-right: var(--app-background-color);
   border-right-style: groove;
-  border-right-width: 5px;
+  border-right-width: -5px;
 }
 
 .openSideNav {
