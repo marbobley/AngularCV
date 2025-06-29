@@ -20,13 +20,12 @@ body {
     left: 20px;
     box-shadow:
         0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
-
 }
 
 .section {
     background-color: var(--app-second-color);
     margin: 10px;
-    
+
 }
 
 .titleArticle {
@@ -34,9 +33,24 @@ body {
 }
 
 
-.separator{
-  border: 2px solid #858585;
-  width: 30%;
+.bigSeparator {
+    border: 2px solid #858585;
+    width: 70%;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.littleSeparator {
+    border: 2px solid #858585;
+    width: 20%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
