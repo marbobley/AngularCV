@@ -16,7 +16,7 @@ export class NavBar {
     if (!elementSideNav)
       return;
 
-      elementSideNav.nativeElement.style.width = "250px";
+    elementSideNav.nativeElement.style.width = "250px";
 
   }
 
@@ -26,7 +26,7 @@ export class NavBar {
     if (!elementSideNav)
       return;
 
-      elementSideNav.nativeElement.style.width = "0px";
+    elementSideNav.nativeElement.style.width = "0px";
 
   }
 }

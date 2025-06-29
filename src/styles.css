@@ -12,9 +12,8 @@ body {
 
 .main {
     background-color: white;
-    height: 50%;
     width: 98%;
-    position: fixed;
+    position: absolute;
     /* Stay on top */
     top: 120px;
     /* Stay at the top */
@@ -27,13 +26,12 @@ body {
 .section {
     background-color: var(--app-second-color);
     margin: 10px;
+    
 }
 
 .titleArticle {
     text-align: center;
 }
-
-.secondTitleArticle {}
 
 
 .separator{
