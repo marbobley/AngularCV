@@ -31,11 +31,12 @@
 
 .navHeader h1 {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 25px;
 }
 .links {
   margin-top: 200px;
 }
+
 .sidenav {
   height: 100%;
   /* 100% Full-height */
@@ -111,4 +112,9 @@
 
 .openbtn:hover {
   color: #f1f1f1;
+}
+
+.sidenav .closebtn:hover{
+  color:#f1f1f1;
+  transition: 0.3s;
 }
