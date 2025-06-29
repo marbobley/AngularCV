@@ -13,6 +13,7 @@ body {
 .main {
     background-color: white;
     width: 98%;
+    height: auto;
     position: absolute;
     /* Stay on top */
     top: 120px;

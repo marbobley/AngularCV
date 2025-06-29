@@ -34,7 +34,16 @@
   margin-left: 25px;
 }
 .links {
+  margin-top: 20px;
+}
+
+.contact{
   margin-top: 200px;
+  text-align: center;
+}
+
+.contact h2{
+  font-weight: bold;
 }
 
 .sidenav {

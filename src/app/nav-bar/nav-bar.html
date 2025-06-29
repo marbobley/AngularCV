@@ -1,16 +1,25 @@
 <div class="navHeader">
     <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
     @if( isDesktop$ | async) {
-        <h1>Ingénieur en développement logiciel C# .Net et Angular</h1>
+    <h1>Ingénieur en développement logiciel C# .Net et Angular</h1>
 
     } @else {
-        <h1>Ingénieur développement</h1>
+    <h1>Ingénieur développement</h1>
     }
 </div>
 <nav class="sidenav" #sidenav (mouseleave)="closeSideMenu()">
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
     <img src="sideNaveImage-computer.jpg" class="imgSideNav">
     <img src="pprofil.jpg" class="imgOnImg">
+    <div class="contact">
+        <h2 class="titleName">FOURNIER Wilfried</h2>
+        <p>
+            fournier.wilf&#x40;gmail.com
+        </p>
+        <p>
+            06.35.31.50.22
+        </p>
+    </div>
     <div class="links">
         <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
         <a routerLink="about" (click)="closeSideMenu()">A propos</a>
