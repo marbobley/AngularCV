@@ -3,6 +3,25 @@
 npx @angular/cli@20 new AngularCV ==> Generate new project with version
 npx ng build --configuration production ==> Build project to deployement
 
+# Use full link 
+htaccess generator : https://julianpoemp.github.io/ngx-htaccess-generator/#/generator
+
+# HTACCESS FILE : 
+# Generated with ngx-htaccess-generator v1.2.4
+# Check for updates: https://julianpoemp.github.io/ngx-htaccess-generator/
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirection of requests to index.html
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^.*$ - [NC,L]
+  # Redirect all non-file routes to index.html
+  RewriteRule ^(?!.*\.).*$ index.html [NC,L]
+</IfModule>
+
+
 # AngularCV
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
