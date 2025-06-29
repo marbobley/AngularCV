@@ -26,3 +26,11 @@ body{
     background-color: var(--app-second-color);
     margin: 10px;
 }
+
+.titleArticle{
+    text-align: center;
+}
+
+.secondTitleArticle{
+
+}

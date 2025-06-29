@@ -1,11 +1,13 @@
-<div class="navHeader">
-    <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
-    <h1>CV Wilfried FOURNIER</h1>
+<div class="navBack">
+    <div class="navHeader">
+        <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
+        <h1>Ingénieur en développement logiciel C# .Net et Angular</h1>
+    </div>
+    <nav class="sidenav" #sidenav>
+        <button (click)="closeSideMenu()" class="closebtn">&times;</button>
+        <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
+        <a routerLink="about" (click)="closeSideMenu()">A propos</a>
+        <a routerLink="experience" (click)="closeSideMenu()">Expériences</a>
+        <a routerLink="skill" (click)="closeSideMenu()">Compétences</a>
+    </nav>
 </div>
-<nav class="sidenav" #sidenav>
-    <button (click)="closeSideMenu()" class="closebtn">&times;</button>
-    <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
-    <a routerLink="about" (click)="closeSideMenu()">A propos</a>
-    <a routerLink="experience" (click)="closeSideMenu()">Expériences</a>
-    <a routerLink="skill" (click)="closeSideMenu()">Compétences</a>
-</nav>

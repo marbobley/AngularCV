@@ -1,5 +1,9 @@
 @import '../../styles.css';
 
+.navBack{
+  background-color: white;
+}
+
 .navHeader h1 {
   display: inline-block;
   margin-left: 50px;
