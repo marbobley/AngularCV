@@ -1,8 +1,8 @@
 <main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
   <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
     <article>
-      <div class="card">
-        <div class="left">
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+        <div class="left" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
           <h2 class="title-article">
             Ingénieur en développement logiciel C# .Net
           </h2>
@@ -20,7 +20,7 @@
             solution applicative C# .Net possible.
           </p>
         </div>
-        <div class="right">
+        <div class="right" >
           <img src="pprofilAccueil.jpg" />
         </div>
       </div>

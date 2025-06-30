@@ -4,7 +4,13 @@
   display: inline-flex;
 }
 
-.right {
+
+.card.is-phone-portrait{
+    
+  display: block;
+}
+
+.card .right {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -22,3 +28,11 @@
   font-size: 30px;
 }
 
+.left.is-phone-portrait {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.right img.left.is-phone-portrait{
+
+}

@@ -28,7 +28,6 @@ body {
 }
 
 .main-page.is-phone-portrait{
-    background-color: rgb(168, 142, 142);
 }
 
 .section {
@@ -39,8 +38,6 @@ body {
 
 
 .section.is-phone-portrait {
-    background-color: rgb(185, 5, 5);
-
 }
 
 .title-article {
