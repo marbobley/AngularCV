@@ -1,16 +1,25 @@
-
 .card-block {
   max-width: 400px;
   margin-right: 20px;
-  height: 100%;
-  margin-top: 5px;
+  height: 99%;
 }
-
 .card-header {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-image: url("https://material.angular.dev/assets/img/examples/shiba1.jpg");
   background-size: cover;
+  margin-bottom: 5px;
 }
 
-p{
+p {
   text-align: justify;
+}
+
+.mat-progress-bar {
+  width: 250px;
+}
+.mat-card-title{
+  margin-bottom: 10px;
+}
+.mat-card-subtitle {
+  width: 100%;
+  margin-bottom: 10px;
 }
