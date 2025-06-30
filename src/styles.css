@@ -10,7 +10,7 @@ body {
     background-color: var(--app-background-color);
 }
 
-.main {
+.main-page {
     background-color: white;
     width: 98%;
     height: auto;
@@ -23,9 +23,19 @@ body {
         0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
+.main-page.is-phone-portrait{
+    background-color: rgb(168, 142, 142);
+}
+
 .section {
     background-color: var(--app-second-color);
     margin: 10px;
+
+}
+
+
+.section.is-phone-portrait {
+    background-color: rgb(185, 5, 5);
 
 }
 
@@ -55,3 +65,4 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
