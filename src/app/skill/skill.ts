@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CardTechnical } from '../card-technical/card-technical';
 import { SkillModel } from '../Classes/skill-model';
 import { SkillModelBuilder } from '../Classes/skill-model-builder';
+import { SkillFactory } from '../skill-factory';
 
 @Component({
   selector: 'app-skill',
@@ -16,19 +17,11 @@ export class Skill implements OnInit {
   isPhonePortrait = false;
   skills: SkillModel[] = [];
 
-  constructor(private responsive: BreakpointObserver) {}
+  constructor(private responsive: BreakpointObserver, private skillService : SkillFactory) {}
 
   ngOnInit(): void {
-    const skill = new SkillModelBuilder()
-      .setEvaluation('C#')
-      .setLevel(8)
-      .setYearOfExperience('Plus de 5')
-      .setDescription('DESCPRTIOTOTOTOO')
-      .setEvaluation('Intermediate')
-      .build();
 
-
-    this.skills.push(skill);
+    this.skills = this.skillService.GetSkills();
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;
