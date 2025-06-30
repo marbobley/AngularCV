@@ -30,7 +30,6 @@ export class Home implements OnInit {
       if(result.matches)
       {
         this.isPhonePortrait = true;
-        console.log('HANDSETPORTRAIT');
       }
     })
   }
