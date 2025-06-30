@@ -16,7 +16,6 @@ body {
 
 .main-page {
     background-color: white;
-    width: 98%;
     height: auto;
     position: absolute;
     /* Stay on top */
@@ -27,8 +26,6 @@ body {
         0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
-.main-page.is-phone-portrait{
-}
 
 .section {
     background-color: var(--app-second-color);
@@ -36,9 +33,15 @@ body {
 
 }
 
-
-.section.is-phone-portrait {
+.main-page.is-phone-portrait{
+    width: 100%;
+    left: 2px;
+    top: 150px;
 }
+.section.is-phone-portrait {
+    margin: 0px;
+}
+
 
 .title-article {
     text-align: center;

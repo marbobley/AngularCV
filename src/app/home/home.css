@@ -2,6 +2,7 @@
 
 .card {
   display: inline-flex;
+  width: auto;
 }
 
 
@@ -19,7 +20,6 @@
 .right img {
   max-width: 500px;
   display: block;
-  margin: auto;
 }
 
 .left {
@@ -31,8 +31,10 @@
 .left.is-phone-portrait {
   padding-left: 0px;
   padding-right: 0px;
+  font-size: 15px;
 }
 
-.right img.left.is-phone-portrait{
+.right img.is-phone-portrait{
+  max-width: 250px;
 
 }
