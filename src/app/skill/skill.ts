@@ -4,10 +4,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardTechnical } from '../card-technical/card-technical';
 import { SkillModel } from '../Classes/skill-model';
+import { SkillModelBuilder } from '../Classes/skill-model-builder';
 
 @Component({
   selector: 'app-skill',
-  imports: [NgClass,MatTabsModule, CardTechnical],
+  imports: [NgClass, MatTabsModule, CardTechnical],
   templateUrl: './skill.html',
   styleUrl: './skill.css',
 })
@@ -18,10 +19,16 @@ export class Skill implements OnInit {
   constructor(private responsive: BreakpointObserver) {}
 
   ngOnInit(): void {
+    const skill = new SkillModelBuilder()
+      .setEvaluation('C#')
+      .setLevel(8)
+      .setYearOfExperience('Plus de 5')
+      .setDescription('DESCPRTIOTOTOTOO')
+      .setEvaluation('Intermediate')
+      .build();
 
-    let firstSkill = new SkillModel('C#',8, 'Plus de 5', 'blablalbla' , 'Intermediaire' )
 
-    this.skills.push(firstSkill);
+    this.skills.push(skill);
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;

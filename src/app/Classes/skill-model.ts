@@ -1,11 +1,20 @@
+import { SkillModelBuilder } from "./skill-model-builder";
+
 export class SkillModel {
-  constructor(
-    private _langage: string,
-    private _level: number,
-    private _yearOfExperence: string,
-    private _description: string,
-    private _evaluation: string
-  ) {}
+    private _langage: string ;
+    private _level: number;
+    private _yearOfExperence: string;
+    private _description: string;
+    private _evaluation: string;
+
+    constructor(builder: SkillModelBuilder)
+    {
+        this._langage = builder.langage;
+        this._level = builder.level;
+        this._yearOfExperence = builder.yearOfExperience;
+        this._description = builder.description;
+        this._evaluation = builder.evaluation;
+    }
 
   public get Langage() {
     return this._langage;
