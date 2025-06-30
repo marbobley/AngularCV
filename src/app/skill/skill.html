@@ -1,1 +1,47 @@
-<p>skill works!</p>
+<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+    <article>
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+        <div
+          class="left-text"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+        >
+          <h2 class="title-article">Compétences développeur logiciel</h2>
+          <hr class="big-separator" />
+          <p>
+            Principalement développeur logiciel sur des projets TMA, j’ai appris
+            à diversifier mes compétences techniques et fonctionnelles.
+          </p>
+          <p>
+            J’ai une prédominance pour le technique, mais je sais qu’il faut
+            comprendre ce que et pour qui on développe. De cette façon, on
+            produit du code propre, logique et maintenable proche des métiers.
+          </p>
+        </div>
+        <div class="right">
+          <img
+            src="cloudWord.png"
+            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+          />
+        </div>
+      </div>
+    </article>
+  </section>
+  <hr class="little-separator" />
+  <section class="section">
+    <article>
+      <div
+        class="card-mat-tab-group"
+        [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+      >
+        <mat-tab-group class="mat-tab-group">
+          <mat-tab label="Techniques">
+          </mat-tab>
+          <mat-tab label="Fonctionnelles"> Fonctionnelles </mat-tab>
+          <mat-tab label="Métiers"> Métiers </mat-tab>
+          <mat-tab label="Langues"> Langues </mat-tab>
+        </mat-tab-group>
+      </div>
+    </article>
+  </section>
+</main>
