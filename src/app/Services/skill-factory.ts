@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { SkillModelBuilder } from './Classes/skill-model-builder';
-import { SkillModel } from './Classes/skill-model';
+import { SkillModelBuilder } from '../Classes/skill-model-builder';
+import { SkillModel } from '../Classes/skill-model';
 
 
 @Injectable({
@@ -38,8 +38,8 @@ export class SkillFactory {
     skillsOutput.push(this.GetSkill('Javascript', 3.5 , 'Moins de 1', 'Description Javascript', 'Débutant'));
     skillsOutput.push(this.GetSkill('TypeScript', 3.5 , 'Moins de 1', 'Description TypeScript', 'Débutant'));
     skillsOutput.push(this.GetSkill('HTML/CSS', 3.5  , 'Moins de 1', 'Description HTML/CSS', 'Débutant'));
-    skillsOutput.push(this.GetSkill('PHP', 6 , 'Moins de 1', 'Description PHP', 'Intermediaire'));
-    skillsOutput.push(this.GetSkill('Symfony', 6 , 'Moins de 1', 'Description Symfony', 'Intermediaire'));
+    skillsOutput.push(this.GetSkill('PHP',5 , 'Moins de 1', 'Description PHP', 'Intermediaire'));
+    skillsOutput.push(this.GetSkill('PHP/Symfony', 4.5 , 'Moins de 1', 'Description Symfony', 'Intermediaire'));
     return skillsOutput;
   }
 }

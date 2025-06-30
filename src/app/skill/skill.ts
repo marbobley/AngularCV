@@ -5,7 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CardTechnical } from '../card-technical/card-technical';
 import { SkillModel } from '../Classes/skill-model';
 import { SkillModelBuilder } from '../Classes/skill-model-builder';
-import { SkillFactory } from '../skill-factory';
+import { SkillFactory } from '../Services/skill-factory';
 
 @Component({
   selector: 'app-skill',
