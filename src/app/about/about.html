@@ -1,11 +1,39 @@
-<main class="main">
-  <h2>SITE EN CONSTRUCTION 🎆</h2>
-  <section class="section">
+<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
     <article>
-      <h3>OBJECTIFS</h3>
-      <p>Retrouver le contenu equivalent du CV CMS WP</p>
-      <p>Uniquement en Angular </p>
-      <p> SPA !!!!! </p>
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+        <div
+          class="left-text"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+        >
+          <h2 class="title-article">Qui suis je ?</h2>
+          <hr class="big-separator" />
+          <p>
+            De façon général, je suis une personne plutôt tranquille : Afin de
+            me permettre d’évoluer en limitant le stress, j’anticipe, je
+            planifie, je prévois. Plutôt introverti, j’ai cependant une très
+            bonne communication avec les collaborateurs sur le travail, et je
+            sais être présent sur les moments importants.
+          </p>
+          <p>
+            De base je suis développeur : être développeur, c’est ne pas
+            réinventer la roue, c’est chercher dans ce qui a déjà été fait afin
+            d’améliorer et produire plus rapidement.
+          </p>
+          <p>
+            Un peu touche à tout, j’adore apprendre de nouvelles choses mais
+            aussi approfondir mes connaissances. Depuis quelques années,
+            j’apprends à jouer de la guitare en autodidacte et la modélisation
+            3D afin de pouvoir imprimer ce que je souhaite.
+          </p>
+        </div>
+        <div class="right">
+          <img
+            src="pprofilAccueil.jpg"
+            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+          />
+        </div>
+      </div>
     </article>
   </section>
 </main>
