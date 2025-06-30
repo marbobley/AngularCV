@@ -8,9 +8,10 @@ import { FormsModule, NgModel } from '@angular/forms';
   selector: 'app-comway-game',
   imports: [FormsModule],
   templateUrl: './comway-game.html',
-  styleUrl: './comway-game.css'
+  styleUrl: './comway-game.css',
 })
-export class ComwayGame {canvas = viewChild<ElementRef<HTMLCanvasElement>>('gameboard');
+export class ComwayGame {
+  canvas = viewChild<ElementRef<HTMLCanvasElement>>('gameboard');
   private ctx: CanvasRenderingContext2D | null = null;
   gameBoard: BitArray[] = [];
 
@@ -38,7 +39,7 @@ export class ComwayGame {canvas = viewChild<ElementRef<HTMLCanvasElement>>('game
     this.init();
   }
 
-  init(){
+  init() {
     const can = this.canvas();
     if (can) {
       can.nativeElement.width = this.boardWidth;
