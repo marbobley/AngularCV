@@ -15,7 +15,6 @@
 }
 
 .left img {
-  max-width: 500px;
   display: block;
   justify-content: center;
   align-items: center;
@@ -32,7 +31,11 @@
   justify-content: center;
   align-items: center;
   display: flex;
+}
 
+.right-text.is-phone-portrait
+{
+  text-align: center;
 }
 .left-text {
   padding-left: 100px;
@@ -49,6 +52,8 @@
   padding-left: 0px;
   padding-right: 0px;
   font-size: 15px;
+  text-align: justify;
+  padding: 1px;
 }
 .left img.is-phone-portrait,
 .right img.is-phone-portrait {
