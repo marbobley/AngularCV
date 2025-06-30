@@ -63,4 +63,23 @@
 .card-horizontal{
   display: inline-flex;
   width: auto;
+  margin: 10px;  
+}
+
+.card-horizontal.is-phone-portrait{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card-section{
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
