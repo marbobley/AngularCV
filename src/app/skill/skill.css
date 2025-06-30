@@ -1,7 +1,42 @@
-@import '../../styles.css';
-@import '../home/home.css';
+@import "../../styles.css";
+@import "../home/home.css";
 
-.card-mat-tab-group{
+.card-mat-tab-group {
 }
-.mat-tab-group{
+.mat-tab-group {
+}
+
+.card-block {
+  max-width: 100px;
+  margin-right: 20px;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.card-header {
+  background-image: url("https://material.angular.dev/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+.mat-tab {
+  height: auto;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -10;
+}
+
+.mat-tab.is-phone-portrait{
+  max-height: none;
+  align-items: center;
+
+}
+
+.mat-tab-elm {
+  width: 400px;
+}
+
+
+p {
+  text-align: justify;
 }

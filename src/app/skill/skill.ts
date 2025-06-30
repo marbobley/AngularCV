@@ -2,11 +2,11 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
-import { CardQuality } from '../card-quality/card-quality';
+import { CardTechnical } from '../card-technical/card-technical';
 
 @Component({
   selector: 'app-skill',
-  imports: [NgClass,MatTabsModule, CardQuality],
+  imports: [NgClass,MatTabsModule, CardTechnical],
   templateUrl: './skill.html',
   styleUrl: './skill.css',
 })
