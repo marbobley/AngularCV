@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
@@ -9,8 +9,9 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './card-technical.css'
 })
 export class CardTechnical {
-  title = 'hey';
-  subtitle = 'heyho';
-  content1 = 'aaaa';
+  @Input() langage = 'C#';
+  @Input() level = 9; 
+  @Input() yearOfExperience = 5;
+  @Input() description='Pratiquer dans un contexte TMA avec beaucoup de correctifs ';
 
 }

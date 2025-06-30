@@ -36,27 +36,17 @@
       >
         <mat-tab-group class="mat-tab-group">
           <mat-tab label="Techniques">
-            <div class="mat-tab"  [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
-              <app-card-technical class="mat-tab-elm"></app-card-technical>
+            <div
+              class="mat-tab"
+              [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+            >
+              <app-card-technical
+                class="mat-tab-elm"
+                [langage]="'C#'"
+                [level]="5"
+                [yearOfExperience]="5"
+                [description]="'blalbla'"
+              ></app-card-technical>
             </div>
           </mat-tab>
           <mat-tab label="Fonctionnelles"> Fonctionnelles </mat-tab>
