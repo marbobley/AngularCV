@@ -6,7 +6,11 @@
     --app-main-font-size: 14px;
 }
 
+html,
 body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: var(--app-background-color);
 }
 
@@ -39,30 +43,22 @@ body {
 
 }
 
-.titleArticle {
+.title-article {
     text-align: center;
 }
 
 
-.bigSeparator {
+.big-separator {
     border: 2px solid #858585;
     width: 70%;
 }
 
-.littleSeparator {
+.little-separator {
     border: 2px solid #858585;
     width: 20%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-html,
-body {
-    height: 100%;
-}
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
