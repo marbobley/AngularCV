@@ -40,30 +40,17 @@
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
+            @for(item of skills; track item.Langage; )
+            {
               <app-card-technical
                 class="mat-tab-elm"
-                [langage]="'C#'"
-                [level]="8"
-                [yearOfExperience]="'plus de 5'"
-                [description]="'Pratiquer dans le cadre de TMA : beaucoup de correctif et d\'evolution.'"
-                [evalution]="'Intermediare/Confirmé'"
+                [langage]="item.Langage"
+                [level]="item.Level"
+                [yearOfExperience]="item.YearOfExperience"
+                [description]="item.Description"
+                [evalution]="item.Evaluation"
               ></app-card-technical>
-              <app-card-technical
-                class="mat-tab-elm"
-                [langage]="'SQL SERVER'"
-                [level]="8"
-                [yearOfExperience]="'plus de 5'"
-                [description]="'Pratiquer dans le cadre de TMA.'"
-                [evalution]="'Intermediare/Confirmé'"
-              ></app-card-technical>
-              <app-card-technical
-                class="mat-tab-elm"
-                [langage]="'Angular'"
-                [level]="2.5"
-                [yearOfExperience]="'Moins de 6 mois'"
-                [description]="'Pas de pratique pro'"
-                [evalution]="'Débutant'"
-              ></app-card-technical>
+            }
             </div>
           </mat-tab>
           <mat-tab label="Fonctionnelles"> Fonctionnelles </mat-tab>
