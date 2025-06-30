@@ -40,8 +40,7 @@
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
-            @for(item of skills; track item.Langage; )
-            {
+              @for(item of skills; track item.Langage; ) {
               <app-card-technical
                 class="mat-tab-elm"
                 [langage]="item.Langage"
@@ -50,7 +49,7 @@
                 [description]="item.Description"
                 [evalution]="item.Evaluation"
               ></app-card-technical>
-            }
+              }
             </div>
           </mat-tab>
           <mat-tab label="Fonctionnelles"> Fonctionnelles </mat-tab>
