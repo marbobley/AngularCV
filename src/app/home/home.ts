@@ -3,13 +3,11 @@ import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterLink } from '@angular/router';
-
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { CardQuality } from "../card-quality/card-quality";
 
 @Component({
   selector: 'app-home',
-  imports: [MatGridListModule,RouterLink, NgClass, MatCardModule,MatButtonModule],
+  imports: [MatGridListModule, RouterLink, NgClass,  CardQuality],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

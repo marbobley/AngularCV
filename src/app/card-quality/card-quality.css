@@ -1,0 +1,11 @@
+
+.card-block {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.card-header {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
