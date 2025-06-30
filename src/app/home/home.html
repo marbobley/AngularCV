@@ -2,7 +2,10 @@
   <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
     <article>
       <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-        <div class="left-text" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+        <div
+          class="left-text"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+        >
           <h2 class="title-article">
             Ingénieur en développement logiciel C# .Net
           </h2>
@@ -40,27 +43,78 @@
             [ngClass]="{'is-phone-portrait': isPhonePortrait}"
           />
         </div>
-        <div class="right-text" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-          <p>Le développement logiciel mais pas <a routerLink="/skill"> que...</a></p>          
+        <div
+          class="right-text"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+        >
+          <p>
+            Le développement logiciel mais pas
+            <a routerLink="/skill"> que...</a>
+          </p>
         </div>
       </div>
     </article>
   </section>
   <hr class="little-separator" />
   <section class="section">
-    <article>
-      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-        <div class="left" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-          <img
-            class="left-image"
-            src="cloudWord.png"
-            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
-          />
-        </div>
-        <div class="right-text" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-          <p>Le développement logiciel mais pas <a routerLink="/skill"> que...</a></p>          
-        </div>
-      </div>
+    <article class="card-horizontal">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton>LIKE</button>
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton>LIKE</button>
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton>LIKE</button>
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </article>
   </section>
   <!--

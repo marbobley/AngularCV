@@ -59,3 +59,19 @@
 .right img.is-phone-portrait {
   max-width: 250px;
 }
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card-horizontal{
+  display: inline-flex;
+  width: auto;
+  background-color: aquamarine;
+}

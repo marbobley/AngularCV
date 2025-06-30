@@ -4,9 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterLink } from '@angular/router';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 @Component({
   selector: 'app-home',
-  imports: [MatGridListModule,RouterLink, NgClass],
+  imports: [MatGridListModule,RouterLink, NgClass, MatCardModule,MatButtonModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
