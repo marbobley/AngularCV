@@ -5,36 +5,52 @@
   width: auto;
 }
 
-
-.card.is-phone-portrait{
-    
+.card.is-phone-portrait {
   display: block;
 }
-
 .card .right {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
+.left img {
+  max-width: 500px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .right img {
   max-width: 500px;
   display: block;
 }
+.right-text{
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
-.left {
+}
+.left-text {
   padding-left: 100px;
   padding-right: 100px;
   font-size: 30px;
 }
+.left {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
-.left.is-phone-portrait {
+.left-text.is-phone-portrait {
   padding-left: 0px;
   padding-right: 0px;
   font-size: 15px;
 }
-
-.right img.is-phone-portrait{
+.left img.is-phone-portrait,
+.right img.is-phone-portrait {
   max-width: 250px;
-
 }
