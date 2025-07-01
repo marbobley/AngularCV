@@ -51,14 +51,20 @@ export class SkillFactory {
 
   GetSkills(): SkillModel[] {
     const skillsOutput: SkillModel[] = [];
+    /*
+    0 - 1 - 2 : Débutant 
+    3 - 4 - 5 : Intermédiaire
+    6 - 7 - 8 : Confirmé 
+    9 - 10 : Expert
+    */
 
     skillsOutput.push(
       this.GetSkill(
         'C#',
-        8,
+        7,
         'Plus de 5',
         "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
-        'Intermediaire/confirmé',
+        'Confirmé',
         'tech-icons/csharp.png',
         'Langage'
       )
@@ -78,9 +84,9 @@ export class SkillFactory {
       this.GetSkill(
         'SQL',
         8,
-        'Plus de 5',
+        'Plus de 8',
         'SQL Server, SQL Oracle, MySQL, MariaDB...',
-        'Intermediaire/confirmé',
+        'Confirmé',
         'tech-icons/sqlserver.png',
         'Langage'
       )
@@ -88,10 +94,10 @@ export class SkillFactory {
     skillsOutput.push(
       this.GetSkill(
         'C',
-        4,
+        3,
         '5',
         'Langage utilisé pendant mes études',
-        'Intermediaire',
+        'Intermédiaire',
         'tech-icons/C.png',
         'Langage'
       )
@@ -99,10 +105,10 @@ export class SkillFactory {
     skillsOutput.push(
       this.GetSkill(
         'C++',
-        4,
+        3,
         'Moins de 2',
         'Langage utilisé pendant mes études et quelques mois pro',
-        'Intermediaire',
+        'Intermédiaire',
         'tech-icons/Cplusplus.png',
         'Langage'
       )
@@ -113,7 +119,7 @@ export class SkillFactory {
         3.5,
         'Moins de 1',
         'Pratiqué dans un contexte Sharepoint',
-        'Débutant',
+        'Intermédiaire',
         'tech-icons/Javascript.png',
         'Langage'
       )
@@ -124,7 +130,7 @@ export class SkillFactory {
         3.5,
         'Moins de 1',
         'En cours de formation: ce site est une mise en pratique du TS.',
-        'Débutant',
+        'Intermédiaire',
         'tech-icons/Typescript.png',
         'Langage'
       )
@@ -135,7 +141,7 @@ export class SkillFactory {
         3.5,
         'Moins de 1',
         'En cours de formation: ce site est une mise en pratique du HTML/CSS.',
-        'Débutant',
+        'Intermédiaire',
         'tech-icons/html5.png',
         'Langage'
       )
@@ -143,10 +149,10 @@ export class SkillFactory {
     skillsOutput.push(
       this.GetSkill(
         'PHP',
-        5,
+        4,
         'Moins de 1',
-        'Description PHP',
-        'Intermediaire',
+        'Pas de pratique pro mais des bases',
+        'Intermédiaire',
         'tech-icons/Php.png',
         'Langage'
       )
@@ -154,10 +160,10 @@ export class SkillFactory {
     skillsOutput.push(
       this.GetSkill(
         'PHP/Symfony',
-        4.5,
+        3.5,
         'Moins de 1',
-        'Description Symfony',
-        'Intermediaire',
+        'Pas de pratique pro mais des bases : création d\'un site de gestion de compte, création de jeux type UnLock ou Exit en ligne',
+        'Intermédiaire',
         'tech-icons/symfony.jpg',
         'Framework'
       )
@@ -167,8 +173,8 @@ export class SkillFactory {
         'Composer',
         4.5,
         'Moins de 1',
-        'Description Symfony',
-        'Intermediaire',
+        'Pas de pratique pro mais utiliser pour Symfony',
+        'Intermédiaire',
         'tech-icons/composer.png',
         'Outil'
       )
@@ -178,7 +184,7 @@ export class SkillFactory {
         'npm',
         4.5,
         'Moins de 1',
-        'Description Symfony',
+        'En cours de formation',
         'Intermediaire',
         'tech-icons/npm.png',
         'Outil'
@@ -189,8 +195,19 @@ export class SkillFactory {
         'dotnet',
         4.5,
         'Moins de 1',
-        'Description Symfony',
+        'En cours de formation',
         'Intermediaire',
+        '',
+        'Outil'
+      )
+    );
+    skillsOutput.push(
+      this.GetSkill(
+        'git',
+        6,
+        'Moins de 1',
+        'Utiliser plusieurs fois sur des projets perso ou pro',
+        'Confirmé',
         '',
         'Outil'
       )

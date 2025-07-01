@@ -5,17 +5,17 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-card-technical',
+  selector: 'app-card-skill',
   imports: [
     MatButtonModule,
     MatCardModule,
     MatProgressBarModule,
     MatTooltipModule,
   ],
-  templateUrl: './card-technical.html',
-  styleUrl: './card-technical.css',
+  templateUrl: './card-skill.html',
+  styleUrl: './card-skill.css',
 })
-export class CardTechnical {
+export class CardSkill {
   @Input() typeSkill = 'Langage';
   @Input() langage = 'C#';
   @Input() evalution = 'Intermediate';

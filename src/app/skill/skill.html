@@ -49,7 +49,7 @@
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
               @for(item of skills; track item.Langage; ) {
-              <app-card-technical
+              <app-card-skill
                 class="mat-tab-elm"
                 [typeSkill]="item.TypeSkill"
                 [langage]="item.Langage"
@@ -58,7 +58,7 @@
                 [description]="item.Description"
                 [evalution]="item.Evaluation"
                 [imgSrc]="item.ImgSrc"
-              ></app-card-technical>
+              ></app-card-skill>
               }
             </div>
           </mat-tab>
