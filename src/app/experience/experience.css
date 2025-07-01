@@ -1,0 +1,8 @@
+@import '../../styles.css';
+@import '../home/home.css';
+
+
+.timeline-box {
+    
+    background-color: yellow ;
+}
