@@ -161,7 +161,7 @@ export class SkillFactory {
         'Moins de 1',
         'Description Symfony',
         'Intermediaire',
-        '',
+        'tech-icons/npm.png',
         'Outil'
       )
     );
