@@ -22,6 +22,7 @@ export class Skill implements OnInit {
   ngOnInit(): void {
 
     this.skills = this.skillService.GetSkills();
+    this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;

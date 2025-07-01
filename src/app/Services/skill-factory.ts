@@ -30,6 +30,11 @@ export class SkillFactory {
     return skill;
   }
 
+  OrderSkillByLevelDesc( skills: SkillModel[]) : SkillModel[]
+  {
+    return skills.sort((elm1, elm2) =>  elm2.Level - elm1.Level);
+  }
+
   GetSkills(): SkillModel[] {
     const skillsOutput: SkillModel[] = [];
 
@@ -83,7 +88,7 @@ export class SkillFactory {
         4,
         'Moins de 2',
         'Langage utilisé pendant mes études et quelques mois pro',
-        'Intermediaire/confirmé',
+        'Intermediaire',
         'tech-icons/Cplusplus.png',
         'Langage'
       )

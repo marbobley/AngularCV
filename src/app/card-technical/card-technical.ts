@@ -1,23 +1,27 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-card-technical',
-  imports: [MatButtonModule, MatCardModule,MatProgressBarModule],
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatTooltipModule,
+  ],
   templateUrl: './card-technical.html',
-  styleUrl: './card-technical.css'
+  styleUrl: './card-technical.css',
 })
 export class CardTechnical {
-  @Input() typeSkill = 'Langage'
+  @Input() typeSkill = 'Langage';
   @Input() langage = 'C#';
   @Input() evalution = 'Intermediate';
-  @Input() level = 9; 
+  @Input() level = 9;
   @Input() yearOfExperience = '5';
-  @Input() description='Pratiquer dans un contexte TMA avec beaucoup de correctifs ';
+  @Input() description =
+    'Pratiquer dans un contexte TMA avec beaucoup de correctifs ';
   @Input() imgSrc = '';
-
 }
