@@ -36,9 +36,24 @@ export class Skill implements OnInit {
   }
 
   sortByLevelDsc() {
+    this.skills = this.skillService.GetSkills();
     this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
   }
   sortByLevelAsc() {
+    this.skills = this.skillService.GetSkills();
     this.skills = this.skillService.OrderSkillByLevelAsc(this.skills);
+  }
+
+  filterByFramework() {
+    this.skills = this.skillService.GetSkills();
+    this.skills = this.skillService.FilterSkillByFramework(this.skills);
+  }
+  filterByLangage() {
+    this.skills = this.skillService.GetSkills();
+    this.skills = this.skillService.FilterSkillByLangage(this.skills);
+  }
+  filterByTool() {
+    this.skills = this.skillService.GetSkills();
+    this.skills = this.skillService.FilterSkillByTool(this.skills);
   }
 }

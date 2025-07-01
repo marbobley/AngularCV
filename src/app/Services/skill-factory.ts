@@ -38,6 +38,16 @@ export class SkillFactory {
   {
     return skills.sort((elm1, elm2) =>  elm1.Level - elm2.Level);
   }
+  
+  FilterSkillByFramework(skills: SkillModel[]): SkillModel[] {
+    return skills.filter((elm) => elm.TypeSkill === 'Framework')
+  }
+  FilterSkillByTool(skills: SkillModel[]): SkillModel[] {
+    return skills.filter((elm) => elm.TypeSkill === 'Outil')
+  }
+  FilterSkillByLangage(skills: SkillModel[]): SkillModel[] {
+    return skills.filter((elm) => elm.TypeSkill === 'Langage')
+  }
 
   GetSkills(): SkillModel[] {
     const skillsOutput: SkillModel[] = [];
