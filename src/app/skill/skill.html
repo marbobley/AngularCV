@@ -62,14 +62,35 @@
               }
             </div>
           </mat-tab>
-          <mat-tab label="Fonctionnelles"> Fonctionnelles </mat-tab>
+          <mat-tab label="Fonctionnelles">
+            <div
+              class="mat-tab"
+              [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+            >
+              @for(item of skills; track item.Langage; ) {
+              <app-card-skill
+                class="mat-tab-elm"
+                [typeSkill]="item.TypeSkill"
+                [langage]="item.Langage"
+                [level]="item.Level"
+                [yearOfExperience]="item.YearOfExperience"
+                [description]="item.Description"
+                [evalution]="item.Evaluation"
+                [imgSrc]="item.ImgSrc"
+              ></app-card-skill>
+              }
+            </div>
+          </mat-tab>
           <mat-tab label="Métiers"> Métiers </mat-tab>
           <mat-tab label="Langues"> Langues </mat-tab>
         </mat-tab-group>
       </div>
     </article>
   </section>
-<p>
-  <a target="_blank" href="https://icons8.com/icon/45490/c-sharp-logo-2">C Sharp Logo 2</a> icône par <a target="_blank" href="https://icons8.com">Icons8</a>
-</p>
+  <p>
+    <a target="_blank" href="https://icons8.com/icon/45490/c-sharp-logo-2"
+      >C Sharp Logo 2</a
+    >
+    icône par <a target="_blank" href="https://icons8.com">Icons8</a>
+  </p>
 </main>
