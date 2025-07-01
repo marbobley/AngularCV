@@ -12,6 +12,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
   styleUrl: './card-technical.css'
 })
 export class CardTechnical {
+  @Input() typeSkill = 'Langage'
   @Input() langage = 'C#';
   @Input() evalution = 'Intermediate';
   @Input() level = 9; 

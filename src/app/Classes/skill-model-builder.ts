@@ -7,6 +7,13 @@ export class SkillModelBuilder {
   description!: string;
   evaluation!: string;
   imgUrl!: string;
+  typeSkill!:string;
+
+  setTypeSkill(typeSkill: string): SkillModelBuilder
+  {
+    this.typeSkill = typeSkill;
+    return this;
+  }
 
   setImgUrl(imgUrl: string): SkillModelBuilder{
     this.imgUrl = imgUrl;

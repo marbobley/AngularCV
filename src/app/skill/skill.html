@@ -43,6 +43,7 @@
               @for(item of skills; track item.Langage; ) {
               <app-card-technical
                 class="mat-tab-elm"
+                [typeSkill]="item.TypeSkill"
                 [langage]="item.Langage"
                 [level]="item.Level"
                 [yearOfExperience]="item.YearOfExperience"

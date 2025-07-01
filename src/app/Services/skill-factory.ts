@@ -14,7 +14,8 @@ export class SkillFactory {
     yearOfExperience: string,
     description: string,
     evaluation: string,
-    imgUrl: string
+    imgUrl: string,
+    typeSkill: string
   ): SkillModel {
     const skill = new SkillModelBuilder()
       .setLangage(langage)
@@ -23,6 +24,7 @@ export class SkillFactory {
       .setDescription(description)
       .setEvaluation(evaluation)
       .setImgUrl(imgUrl)
+      .setTypeSkill(typeSkill)
       .build();
 
     return skill;
@@ -38,7 +40,8 @@ export class SkillFactory {
         'Plus de 5',
         "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
         'Intermediaire/confirmé',
-        'tech-icons/csharp.png'
+        'tech-icons/csharp.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -48,7 +51,8 @@ export class SkillFactory {
         'Moins de 1',
         'Pas de pratique pro: ce site est une mise en pratique de mes connaissances Angular',
         'Débutant',
-        'tech-icons/angular.png'
+        'tech-icons/angular.png',
+        'Framework'
       )
     );
     skillsOutput.push(
@@ -58,7 +62,8 @@ export class SkillFactory {
         'Plus de 5',
         'SQL Server, SQL Oracle, MySQL, MariaDB...',
         'Intermediaire/confirmé',
-        'tech-icons/sqlserver.png'
+        'tech-icons/sqlserver.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -68,7 +73,8 @@ export class SkillFactory {
         '5',
         'Langage utilisé pendant mes études',
         'Intermediaire',
-        'tech-icons/C.png'
+        'tech-icons/C.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -78,7 +84,8 @@ export class SkillFactory {
         'Moins de 2',
         'Langage utilisé pendant mes études et quelques mois pro',
         'Intermediaire/confirmé',
-        'tech-icons/Cplusplus.png'
+        'tech-icons/Cplusplus.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -88,7 +95,8 @@ export class SkillFactory {
         'Moins de 1',
         'Pratiqué dans un contexte Sharepoint',
         'Débutant',
-        'tech-icons/Javascript.png'
+        'tech-icons/Javascript.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -98,7 +106,8 @@ export class SkillFactory {
         'Moins de 1',
         'En cours de formation: ce site est une mise en pratique du TS.',
         'Débutant',
-        'tech-icons/Typescript.png'
+        'tech-icons/Typescript.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -108,7 +117,8 @@ export class SkillFactory {
         'Moins de 1',
         'En cours de formation: ce site est une mise en pratique du HTML/CSS.',
         'Débutant',
-        'tech-icons/html5.png'
+        'tech-icons/html5.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -118,7 +128,8 @@ export class SkillFactory {
         'Moins de 1',
         'Description PHP',
         'Intermediaire',
-        'tech-icons/Php.png'
+        'tech-icons/Php.png',
+        'Langage'
       )
     );
     skillsOutput.push(
@@ -128,7 +139,8 @@ export class SkillFactory {
         'Moins de 1',
         'Description Symfony',
         'Intermediaire',
-        'tech-icons/symfony.jpg'
+        'tech-icons/symfony.jpg',
+        'Framework'
       )
     );
     skillsOutput.push(
@@ -138,7 +150,8 @@ export class SkillFactory {
         'Moins de 1',
         'Description Symfony',
         'Intermediaire',
-        'tech-icons/composer.png'
+        'tech-icons/composer.png',
+        'Outil'
       )
     );
     skillsOutput.push(
@@ -148,7 +161,8 @@ export class SkillFactory {
         'Moins de 1',
         'Description Symfony',
         'Intermediaire',
-        ''
+        '',
+        'Outil'
       )
     );
     skillsOutput.push(
@@ -158,7 +172,8 @@ export class SkillFactory {
         'Moins de 1',
         'Description Symfony',
         'Intermediaire',
-        ''
+        '',
+        'Outil'
       )
     );
     return skillsOutput;
