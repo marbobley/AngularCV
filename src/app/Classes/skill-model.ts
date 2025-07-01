@@ -6,6 +6,7 @@ export class SkillModel {
     private _yearOfExperence: string;
     private _description: string;
     private _evaluation: string;
+    private _imgSrc: string;
 
     constructor(builder: SkillModelBuilder)
     {
@@ -14,6 +15,7 @@ export class SkillModel {
         this._yearOfExperence = builder.yearOfExperience;
         this._description = builder.description;
         this._evaluation = builder.evaluation;
+        this._imgSrc = builder.imgUrl;
     }
 
   public get Langage() {
@@ -32,5 +34,9 @@ export class SkillModel {
   }
   public get Evaluation(){
     return this._evaluation;
+  }
+
+  public get ImgSrc(){
+    return this._imgSrc;
   }
 }

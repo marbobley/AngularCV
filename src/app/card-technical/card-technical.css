@@ -4,9 +4,12 @@
   height: 99%;
 }
 .card-header {
-  background-image: url("https://material.angular.dev/assets/img/examples/shiba1.jpg");
   background-size: cover;
   margin-bottom: 5px;
+}
+
+img{
+  width: 48px;
 }
 
 p {

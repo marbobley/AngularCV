@@ -6,6 +6,12 @@ export class SkillModelBuilder {
   yearOfExperience!: string;
   description!: string;
   evaluation!: string;
+  imgUrl!: string;
+
+  setImgUrl(imgUrl: string): SkillModelBuilder{
+    this.imgUrl = imgUrl;
+    return this;
+  }
 
   setLangage(langage: string): SkillModelBuilder {
     this.langage = langage;

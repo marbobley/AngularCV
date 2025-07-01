@@ -17,5 +17,6 @@ export class CardTechnical {
   @Input() level = 9; 
   @Input() yearOfExperience = '5';
   @Input() description='Pratiquer dans un contexte TMA avec beaucoup de correctifs ';
+  @Input() imgSrc = '';
 
 }
