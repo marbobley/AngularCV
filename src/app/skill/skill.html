@@ -36,6 +36,10 @@
       >
         <mat-tab-group class="mat-tab-group">
           <mat-tab label="Techniques/Technologies">
+            <div>
+              <button (click)="sortByLevelAsc()">Sort by level asc</button>
+              <button (click)="sortByLevelDsc()">Sort by level dsc</button>
+            </div>
             <div
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"

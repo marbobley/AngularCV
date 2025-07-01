@@ -34,6 +34,10 @@ export class SkillFactory {
   {
     return skills.sort((elm1, elm2) =>  elm2.Level - elm1.Level);
   }
+  OrderSkillByLevelAsc( skills: SkillModel[]) : SkillModel[]
+  {
+    return skills.sort((elm1, elm2) =>  elm1.Level - elm2.Level);
+  }
 
   GetSkills(): SkillModel[] {
     const skillsOutput: SkillModel[] = [];

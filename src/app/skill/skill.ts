@@ -17,10 +17,12 @@ export class Skill implements OnInit {
   isPhonePortrait = false;
   skills: SkillModel[] = [];
 
-  constructor(private responsive: BreakpointObserver, private skillService : SkillFactory) {}
+  constructor(
+    private responsive: BreakpointObserver,
+    private skillService: SkillFactory
+  ) {}
 
   ngOnInit(): void {
-
     this.skills = this.skillService.GetSkills();
     this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
 
@@ -31,5 +33,12 @@ export class Skill implements OnInit {
         this.isPhonePortrait = true;
       }
     });
+  }
+
+  sortByLevelDsc() {
+    this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
+  }
+  sortByLevelAsc() {
+    this.skills = this.skillService.OrderSkillByLevelAsc(this.skills);
   }
 }
