@@ -46,7 +46,7 @@ export class SkillFactory {
         'Angular',
         2,
         'Moins de 1',
-        'Pas de pratique pro',
+        'Pas de pratique pro: ce site est une mise en pratique de mes connaissances Angular',
         'Débutant',
         'tech-icons/angular.png'
       )
@@ -76,7 +76,7 @@ export class SkillFactory {
         'C++',
         4,
         'Moins de 2',
-        'Description SQL',
+        'Langage utilisé pendant mes études et quelques mois pro',
         'Intermediaire/confirmé',
         'tech-icons/Cplusplus.png'
       )
@@ -86,9 +86,9 @@ export class SkillFactory {
         'Javascript',
         3.5,
         'Moins de 1',
-        'Description Javascript',
+        'Pratiqué dans un contexte Sharepoint',
         'Débutant',
-        ''
+        'tech-icons/Javascript.png'
       )
     );
     skillsOutput.push(
@@ -96,9 +96,9 @@ export class SkillFactory {
         'TypeScript',
         3.5,
         'Moins de 1',
-        'Description TypeScript',
+        'En cours de formation: ce site est une mise en pratique du TS.',
         'Débutant',
-        ''
+        'tech-icons/Typescript.png'
       )
     );
     skillsOutput.push(
@@ -106,9 +106,9 @@ export class SkillFactory {
         'HTML/CSS',
         3.5,
         'Moins de 1',
-        'Description HTML/CSS',
+        'En cours de formation: ce site est une mise en pratique du HTML/CSS.',
         'Débutant',
-        ''
+        'tech-icons/html5.png'
       )
     );
     skillsOutput.push(
@@ -118,12 +118,42 @@ export class SkillFactory {
         'Moins de 1',
         'Description PHP',
         'Intermediaire',
-        ''
+        'tech-icons/Php.png'
       )
     );
     skillsOutput.push(
       this.GetSkill(
         'PHP/Symfony',
+        4.5,
+        'Moins de 1',
+        'Description Symfony',
+        'Intermediaire',
+        'tech-icons/symfony.jpg'
+      )
+    );
+    skillsOutput.push(
+      this.GetSkill(
+        'Composer',
+        4.5,
+        'Moins de 1',
+        'Description Symfony',
+        'Intermediaire',
+        'tech-icons/composer.png'
+      )
+    );
+    skillsOutput.push(
+      this.GetSkill(
+        'npm',
+        4.5,
+        'Moins de 1',
+        'Description Symfony',
+        'Intermediaire',
+        ''
+      )
+    );
+    skillsOutput.push(
+      this.GetSkill(
+        'dotnet',
         4.5,
         'Moins de 1',
         'Description Symfony',
