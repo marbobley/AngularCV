@@ -36,9 +36,16 @@
           <button (click)="sortByLevelDsc()">Sort by level dsc</button>
           <button (click)="reset()">RAZ</button>
         </div>
-        <button (click)="filterByFramework()">Filter by Framework</button>
         <button (click)="filterByLangage()">Filter by Langage</button>
+        <button (click)="filterByFramework()">Filter by Framework</button>
         <button (click)="filterByTool()">Filter by Tool</button>
+        <button (click)="filterByProjet()">Filter by project</button>
+        <button (click)="filterByArchitecture()">Filter by architecture</button>
+        <button (click)="filterByLogiciel()">Filter by software</button>
+        <button (click)="filterByDocumentation()">Filter by documentation</button>
+        <button (click)="filterByEnvironnement()">Filter by environment</button>
+        <button (click)="filterByMetier()">Filter by business</button>
+        <button (click)="filterByParler()">Filter by speak</button>
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
         @for(skill of skills(); track skill; ) {

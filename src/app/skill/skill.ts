@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
 import { SkillDataService } from '../Services/skill-data-service';
+import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 
 @Component({
   selector: 'app-skill',
@@ -25,7 +26,7 @@ export class Skill implements OnInit {
   ngOnInit(): void {
     this.skillDataService.getSkills().subscribe((res) => {
       this.skills.set(res);
-      this.skillsMemorized  = res;
+      this.skillsMemorized = res;
     });
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
@@ -44,19 +45,45 @@ export class Skill implements OnInit {
     this.skills().sort((a, b) => a.Level - b.Level);
   }
 
-
-
   filterByFramework() {
     this.skills.set(this.skillsMemorized);
-    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Framework'));
+    this.skills.set(this.skills().filter((x) => x.TypeSkill === TypeSkillEnum.Framework));
   }
   filterByLangage() {
     this.skills.set(this.skillsMemorized);
-    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Langage'));
+    this.skills.set(this.skills().filter((x) => x.TypeSkill === TypeSkillEnum.Langage));
   }
   filterByTool() {
     this.skills.set(this.skillsMemorized);
-    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Outil'));
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Outil));
+  }
+  filterByProjet() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Projet));
+  }
+  filterByArchitecture() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Architecture));
+  }
+  filterByLogiciel() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Logiciel));
+  }
+  filterByEnvironnement() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Environnement));
+  }
+  filterByDocumentation() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Documentation));
+  }
+  filterByMetier() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Metier));
+  }
+  filterByParler() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill ===  TypeSkillEnum.Parler));
   }
   reset() {
     this.skills.set(this.skillsMemorized);
