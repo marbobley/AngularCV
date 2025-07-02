@@ -4,8 +4,6 @@ import { Component, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
-import { SkillModelBuilder } from '../Classes/skill-model-builder';
-import { SkillFactory } from '../Services/skill-factory';
 import { SkillDataService } from '../Services/skill-data-service';
 
 @Component({
@@ -17,6 +15,7 @@ import { SkillDataService } from '../Services/skill-data-service';
 export class Skill implements OnInit {
   isPhonePortrait = false;
   skills = signal<SkillModel[]>([]);
+  skillsMemorized: SkillModel[] = [];
 
   constructor(
     private responsive: BreakpointObserver,
@@ -26,6 +25,7 @@ export class Skill implements OnInit {
   ngOnInit(): void {
     this.skillDataService.getSkills().subscribe((res) => {
       this.skills.set(res);
+      this.skillsMemorized  = res;
     });
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
@@ -35,5 +35,30 @@ export class Skill implements OnInit {
         this.isPhonePortrait = true;
       }
     });
+  }
+
+  sortByLevelDsc() {
+    this.skills().sort((a, b) => b.Level - a.Level);
+  }
+  sortByLevelAsc() {
+    this.skills().sort((a, b) => a.Level - b.Level);
+  }
+
+
+
+  filterByFramework() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Framework'));
+  }
+  filterByLangage() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Langage'));
+  }
+  filterByTool() {
+    this.skills.set(this.skillsMemorized);
+    this.skills.set(this.skills().filter((x) => x.TypeSkill === 'Outil'));
+  }
+  reset() {
+    this.skills.set(this.skillsMemorized);
   }
 }
