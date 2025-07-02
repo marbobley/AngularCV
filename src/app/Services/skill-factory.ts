@@ -117,7 +117,7 @@ export class SkillFactory {
       this.GetSkill(
         'Javascript',
         3.5,
-        'Moins de 1',
+        '1 à 2',
         'Pratiqué dans un contexte Sharepoint',
         'Intermédiaire',
         'tech-icons/Javascript.png',

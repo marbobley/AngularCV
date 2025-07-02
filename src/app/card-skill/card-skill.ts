@@ -6,7 +6,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { SkillModel } from '../Classes/skill-model';
 import { MultiplyByXPipe } from '../Pipes/MultiplyByXPipe';
 
-
 @Component({
   selector: 'app-card-skill',
   imports: [
@@ -14,7 +13,7 @@ import { MultiplyByXPipe } from '../Pipes/MultiplyByXPipe';
     MatCardModule,
     MatProgressBarModule,
     MatTooltipModule,
-    MultiplyByXPipe
+    MultiplyByXPipe,
   ],
   templateUrl: './card-skill.html',
   styleUrl: './card-skill.css',

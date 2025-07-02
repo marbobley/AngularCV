@@ -36,22 +36,14 @@
       >
         <mat-tab-group class="mat-tab-group">
           <mat-tab label="Techniques/Technologies">
-            <div class="filter-box">
-              <button (click)="sortByLevelAsc()">Sort by level asc</button>
-              <button (click)="sortByLevelDsc()">Sort by level dsc</button>
-              <button (click)="filterByFramework()">Filter by Framework</button>
-              <button (click)="filterByLangage()">Filter by Langage</button>
-              <button (click)="filterByTool()">Filter by Tool</button>
-              <button (click)="sortByLevelDsc()">RAZ</button>
-            </div>
             <div
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
-              @for(item of skills; track item.Langage; ) {
+              @for(skill of skills(); track skill; ) {
               <app-card-skill
                 class="mat-tab-elm"
-                [skill]="item"
+                [skill]="skill"
               ></app-card-skill>
               }
             </div>
@@ -61,7 +53,7 @@
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
-              @for(item of skills; track item; ) {
+              @for(item of skills(); track item; ) {
               <app-card-skill
                 class="mat-tab-elm"
                 [skill]="item"

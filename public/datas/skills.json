@@ -1,11 +1,128 @@
 [
   {
-    "typeSkill": "Langage",
-    "langage": "C#",
-    "level": 7,
-    "yearOfExperence": "Plus de 5",
-    "description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
-    "evaluation": "Confirmé",
-    "imgSrc": "tech-icons/csharp.png"
+    "TypeSkill": "Langage",
+    "Langage": "C#",
+    "Level": 7,
+    "YearOfExperence": "Plus de 5",
+    "Description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
+    "Evaluation": "Confirmé",
+    "ImgSrc": "tech-icons/csharp.png"
+  },
+  {
+    "TypeSkill": "Framework",
+    "Langage": "Angular",
+    "Level": 2,
+    "YearOfExperence": "Moins de 1",
+    "Description": "Pas de pratique pro: ce site est une mise en pratique de mes connaissances Angular",
+    "Evaluation": "Débutant",
+    "ImgSrc": "tech-icons/angular.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "SQL",
+    "Level": 8,
+    "YearOfExperence": "Plus de 8",
+    "Description": "SQL Server, SQL Oracle, MySQL, MariaDB...",
+    "Evaluation": "Confirmé",
+    "ImgSrc": "tech-icons/sqlserver.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "C",
+    "Level": 3,
+    "YearOfExperence": "5",
+    "Description": "Langage utilisé pendant mes études",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/C.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "C++",
+    "Level": 3,
+    "YearOfExperence": "Moins de 2",
+    "Description": "Langage utilisé pendant mes études et quelques mois pro",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/Cplusplus.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "Javascript",
+    "Level": 3.5,
+    "YearOfExperence": "1 à 2",
+    "Description": "Pratiqué dans un contexte Sharepoint",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/Javascript.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "TypeScript",
+    "Level": 3.5,
+    "YearOfExperence": "Moins de 1",
+    "Description": "En cours de formation: ce site est une mise en pratique du TS.",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/Typescript.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "HTML/CSS",
+    "Level": 3.5,
+    "YearOfExperence": "Moins de 1",
+    "Description": "En cours de formation: ce site est une mise en pratique du HTML/CSS.",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/html5.png"
+  },
+  {
+    "TypeSkill": "Langage",
+    "Langage": "PHP",
+    "Level": 3,
+    "YearOfExperence": "Moins de 1",
+    "Description": "Pas de pratique pro mais des bases",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/Php.png"
+  },
+  {
+    "TypeSkill": "Framework",
+    "Langage": "PHP/Symfony",
+    "Level": 3.5,
+    "YearOfExperence": "Moins de 1",
+    "Description": "Pas de pratique pro mais des bases : création d'un site de gestion de compte, création de jeux type UnLock ou Exit en ligne",
+    "Evaluation": "Intermédiaire",
+    "ImgSrc": "tech-icons/symfony.jpg"
+  },
+  {
+    "TypeSkill": "Outil",
+    "Langage": "Composer",
+    "Level": 4,
+    "YearOfExperence": "Moins de 1",
+    "Description": "Pas de pratique pro mais utiliser pour Symfony",
+    "Evaluation": "Intermediaire",
+    "ImgSrc": "tech-icons/composer.png"
+  },
+  {
+    "TypeSkill": "Outil",
+    "Langage": "npm",
+    "Level": 4.5,
+    "YearOfExperence": "Moins de 1",
+    "Description": "En cours de formation",
+    "Evaluation": "Intermediaire",
+    "ImgSrc": "tech-icons/npm.png"
+  },
+  {
+    "TypeSkill": "Outil",
+    "Langage": "dotnet",
+    "Level": 3.5,
+    "YearOfExperence": "Moins de 1",
+    "Description": "En cours de formation",
+    "Evaluation": "Intermediaire",
+    "ImgSrc": ""
+  },
+  {
+    "TypeSkill": "Framework",
+    "Langage": "git",
+    "Level": 6,
+    "YearOfExperence": "Plus de 5",
+    "Description": "Utiliser plusieurs fois sur des projets perso ou pro",
+    "Evaluation": "Confirmé",
+    "ImgSrc": ""
   }
 ]

@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
@@ -16,18 +16,17 @@ import { SkillDataService } from '../Services/skill-data-service';
 })
 export class Skill implements OnInit {
   isPhonePortrait = false;
-  skills: SkillModel[] = [];
+  skills = signal<SkillModel[]>([]);
 
   constructor(
     private responsive: BreakpointObserver,
-    private skillService: SkillFactory,
-    private skillDataService:SkillDataService
+    private skillDataService: SkillDataService
   ) {}
 
   ngOnInit(): void {
-    
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
+    this.skillDataService.getSkills().subscribe((res) => {
+      this.skills.set(res);
+    });
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;
@@ -36,30 +35,5 @@ export class Skill implements OnInit {
         this.isPhonePortrait = true;
       }
     });
-
-    this.skillDataService.getSkills().subscribe(res => console.log(res));
-
-  }
-
-  sortByLevelDsc() {
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
-  }
-  sortByLevelAsc() {
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.OrderSkillByLevelAsc(this.skills);
-  }
-
-  filterByFramework() {
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.FilterSkillByFramework(this.skills);
-  }
-  filterByLangage() {
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.FilterSkillByLangage(this.skills);
-  }
-  filterByTool() {
-    this.skills = this.skillService.GetSkills();
-    this.skills = this.skillService.FilterSkillByTool(this.skills);
   }
 }
