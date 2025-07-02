@@ -51,13 +51,7 @@
               @for(item of skills; track item.Langage; ) {
               <app-card-skill
                 class="mat-tab-elm"
-                [typeSkill]="item.TypeSkill"
-                [langage]="item.Langage"
-                [level]="item.Level"
-                [yearOfExperience]="item.YearOfExperience"
-                [description]="item.Description"
-                [evalution]="item.Evaluation"
-                [imgSrc]="item.ImgSrc"
+                [skill]="item"
               ></app-card-skill>
               }
             </div>
@@ -67,16 +61,10 @@
               class="mat-tab"
               [ngClass]="{'is-phone-portrait': isPhonePortrait}"
             >
-              @for(item of skills; track item.Langage; ) {
+              @for(item of skills; track item; ) {
               <app-card-skill
                 class="mat-tab-elm"
-                [typeSkill]="item.TypeSkill"
-                [langage]="item.Langage"
-                [level]="item.Level"
-                [yearOfExperience]="item.YearOfExperience"
-                [description]="item.Description"
-                [evalution]="item.Evaluation"
-                [imgSrc]="item.ImgSrc"
+                [skill]="item"
               ></app-card-skill>
               }
             </div>
