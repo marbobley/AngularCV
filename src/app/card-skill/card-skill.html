@@ -10,9 +10,9 @@
       >Niveau: {{skill()?.Evaluation}}
       <mat-progress-bar
         mode="determinate"
-        value="{{ skill()?.Level }} "
+        value="{{ skill()?.Level | MultiplyByX:10}} "
         class="mat-progress-bar"
-        matTooltip="{{ skill()?.Level }}"
+        matTooltip="{{ skill()?.Level | MultiplyByX:10}} /100 "
       ></mat-progress-bar>
     </mat-card-subtitle>
     <mat-card-subtitle
