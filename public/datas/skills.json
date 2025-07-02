@@ -1,10 +1,11 @@
 [
   {
-    "name": "toto",
-    "age": 1
-  },
-  {
-    "name": "toto1",
-    "age": 2
+    "typeSkill": "Langage",
+    "langage": "C#",
+    "level": 7,
+    "yearOfExperence": "Plus de 5",
+    "description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
+    "evaluation": "Confirmé",
+    "imgSrc": "tech-icons/csharp.png"
   }
 ]

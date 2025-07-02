@@ -1,22 +1,21 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, signal } from '@angular/core';
+import { SkillModel } from '../Classes/skill-model';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SkillDataService {
+export class SkillDataService  {
   url = 'datas/skills.json';
 
-  constructor(private http: HttpClient) {
-    console.log('start ngOninit');
-    this.http.get(this.url).subscribe((res) => {
-      console.log(res);
-    });
+  private skillsSignal = signal<SkillModel[]>([]);
 
-    console.log();
-  }
+  constructor(private http: HttpClient) {}
 
-  logUrl() {
-    console.log(this.url);
+  getSkills():Observable<SkillModel[]> {
+    return this.http.get<SkillModel[]>(this.url).pipe(
+      tap( skills => this.skillsSignal.set(skills))
+    );
   }
 }
