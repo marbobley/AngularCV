@@ -28,7 +28,7 @@
   },
   {
     "TypeSkill": "Langage",
-    "Langage": "C#XXXXX",
+    "Langage": "C#",
     "Level": 7,
     "YearOfExperience": "Plus de 5",
     "Description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
@@ -283,7 +283,7 @@
     "Langage": "Français - native",
     "Level": 7,
     "YearOfExperience": "environs 33",
-    "Description": "Ma langue natale ! Par contre, je ne garantis pas un sans faute ! ",
+    "Description": "Ma langue natale ! Par contre, je ne garantis pas un sans fautes ! ",
     "Evaluation": "Confirmé",
     "ImgSrc": "Windows"
   }
