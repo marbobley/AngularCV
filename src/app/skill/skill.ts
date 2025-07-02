@@ -6,6 +6,7 @@ import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
 import { SkillModelBuilder } from '../Classes/skill-model-builder';
 import { SkillFactory } from '../Services/skill-factory';
+import { SkillDataService } from '../Services/skill-data-service';
 
 @Component({
   selector: 'app-skill',
@@ -19,12 +20,14 @@ export class Skill implements OnInit {
 
   constructor(
     private responsive: BreakpointObserver,
-    private skillService: SkillFactory
+    private skillService: SkillFactory,
+    private skillDataService:SkillDataService
   ) {}
 
   ngOnInit(): void {
     this.skills = this.skillService.GetSkills();
     this.skills = this.skillService.OrderSkillByLevelDesc(this.skills);
+    this.skillDataService.logUrl();
 
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;
