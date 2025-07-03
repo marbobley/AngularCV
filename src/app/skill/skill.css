@@ -53,6 +53,13 @@ p {
 .filter-box button:hover{
   color: rgb(6, 185, 6);
 }
+.filter-box button:active{
+  filter: brightness(85%);
+  -webkit-box-shadow: inset 0px 0px 5px #244e28;
+     -moz-box-shadow: inset 0px 0px 5px #244e28;
+          box-shadow: inset 0px 0px 5px #244e28;
+   outline: none;
+}
 
 .thanks{
   padding: 10px;

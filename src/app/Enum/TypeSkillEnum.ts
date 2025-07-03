@@ -9,6 +9,4 @@ export enum TypeSkillEnum {
   Documentation = 'Documentation',
   Metier = 'Metier',
   Parler = 'Parler'
-
-
 }
