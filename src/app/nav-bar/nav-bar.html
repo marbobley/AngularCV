@@ -1,11 +1,6 @@
 <div class="navHeader">
     <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
-    @if( isDesktop$ | async) {
-    <h1>Ingénieur en développement logiciel C# .Net et Angular</h1>
-
-    } @else {
     <h1>Ingénieur développement</h1>
-    }
 </div>
 <nav class="sidenav" #sidenav (mouseleave)="closeSideMenu()">
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
