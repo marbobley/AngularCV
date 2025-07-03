@@ -7,8 +7,18 @@
 }
 
 .card-header {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
   background-size: cover;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 10;
+}
+.card-subtitle,
+.card-title{
+  position: relative;
+  overflow-wrap: break-word;
+  width: 150px;
+  left: 50px;
 }
 
 p{

@@ -57,30 +57,37 @@
   </section>
   <hr class="little-separator" />
   <section class="section card-section">
-    <div class="card-horizontal" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+    <div
+      class="card-horizontal"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+    >
       <app-card-quality
         [title]="'Autonomie'"
         [subtitle]="'Indépendant, mais présent'"
         [content1]="'J’ai souvent travaillé sur des projets de petites tailles : Satisfait des résultats et d’un compte rendu d’activité régulier, mes responsables m’ont laissé gérer le projet de façon autonome.'"
         [content2]="'Cette autonomie m’a permis de monter en compétences sur la gestion du temps, la planification et le relationnelle client.'"
+        [imgSrc]="'tech-icons/autonomy.png'"
       ></app-card-quality>
       <app-card-quality
         [title]="'Capacité d’adaptation'"
         [subtitle]="'S’adapter et évoluer'"
         [content1]="'Que ce soit d’un point de vu technique, ou fonctionnelle, j’ai toujours travaillé sur des sujets inconnus et nouveaux pour moi.'"
         [content2]="'De la technologie obsolète, du code historique ou une architecture archaïque, j’ai été confronté à ces différents cas et j’ai su m’adapter et évoluer.'"
+        [imgSrc]="'tech-icons/flexiblity.png'"
       ></app-card-quality>
       <app-card-quality
         [title]="'A l’écoute'"
         [subtitle]="'Comprendre les besoins du client'"
         [content1]="'J’aime investir du temps dans la compréhension du besoin. Développer du code propre c’est bien, mais développer du code qui répond aux besoins du client, c’est encore mieux !'"
         [content2]="'En milieu à risque, ou industriel, j’ai su échanger avec mon client, comprendre l’existant et le faire évoluer de façon logique et pérenne. Des démos régulièrement permettaient d’échanger et de vérifier si les évolutions allaient dans le bon sens, dans le sens du métier.'"
+        [imgSrc]="'tech-icons/listening.png'"
       ></app-card-quality>
       <app-card-quality
         [title]="'Anglais'"
         [subtitle]="'Courant'"
         [content1]="'Depuis 5 ans, je travaille en étroite collaboration avec différents intervenants Américains, Anglais, ou Indiens.'"
         [content2]="'Je suis assez à l’aise pour animer une réunion et des formations sur des sujets que je maitrise en anglais.'"
+        [imgSrc]="'tech-icons/speak.png'"
       ></app-card-quality>
     </div>
   </section>
