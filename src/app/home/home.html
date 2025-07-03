@@ -1,10 +1,10 @@
-<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <article>
-      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
         <div
           class="left-text"
-          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
         >
           <h2 class="title-article">
             Ingénieur en développement logiciel C# .Net
@@ -26,7 +26,7 @@
         <div class="right">
           <img
             src="pprofilAccueil.jpg"
-            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+            [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
           />
         </div>
       </div>
@@ -35,17 +35,17 @@
   <hr class="little-separator" />
   <section class="section">
     <article>
-      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-        <div class="left" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+        <div class="left" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
           <img
             class="left-image"
             src="cloudWord.png"
-            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+            [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
           />
         </div>
         <div
           class="right-text"
-          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
         >
           <p>
             Le développement logiciel mais pas
@@ -57,7 +57,7 @@
   </section>
   <hr class="little-separator" />
   <section class="section card-section">
-    <div class="card-horizontal" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+    <div class="card-horizontal" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
       <app-card-quality
         [title]="'Autonomie'"
         [subtitle]="'Indépendant, mais présent'"
