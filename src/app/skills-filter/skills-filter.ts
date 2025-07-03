@@ -11,7 +11,7 @@ import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 export class SkillsFilter  {
   skillFiltered = output<SkillModel[]>();
   skills = input<SkillModel[]>([]);
-  skillTypeFiltering = input<TypeSkillEnum>(TypeSkillEnum.Framework);
+  skillTypeFiltering = input<string>(TypeSkillEnum.Framework);
 
   constructor() {}
 

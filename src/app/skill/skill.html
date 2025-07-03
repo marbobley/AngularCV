@@ -39,57 +39,13 @@
           ></app-skills-sorter>
           <button (click)="reset()">RAZ</button>
         </div>
-        Filtre :
+        Filtre : @for(skillType of GetSkillType();track skillType) {
         <app-skills-filter
           [skills]="skillsMemorized"
           (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Framework"
+          [skillTypeFiltering]="skillType"
         ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Architecture"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Langage"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Outil"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Projet"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Logiciel"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Documentation"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Environnement"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Metier"
-        ></app-skills-filter>
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="SkillTypeEnum.Parler"
-        ></app-skills-filter>
+        }
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
         @for(skill of skills(); track skill; ) {

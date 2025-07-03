@@ -39,13 +39,8 @@ export class Skill implements OnInit {
         this.isPhonePortrait = true;
       }
     });
-  }
 
-  sortByLevelDsc() {
-    this.skills().sort((a, b) => b.Level - a.Level);
-  }
-  sortByLevelAsc() {
-    this.skills().sort((a, b) => a.Level - b.Level);
+    this.GetSkillType();
   }
   reset() {
     this.skills.set(this.skillsMemorized);
@@ -57,5 +52,16 @@ export class Skill implements OnInit {
 
   handleSkillSorted($event: SkillModel[]) {
     this.skills.set($event);
+  }
+
+  GetSkillType() : string[] {
+    let output: string[] = [];
+
+    for(let item in TypeSkillEnum)
+    {
+      output.push(item);
+    }
+
+    return output;
   }
 }

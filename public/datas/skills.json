@@ -123,7 +123,7 @@
     "YearOfExperience": "Moins de 1",
     "Description": "En cours de formation",
     "Evaluation": "Intermediaire",
-    "ImgSrc": ""
+    "ImgSrc": "tech-icons/dotnet.png"
   },
   {
     "TypeSkill": "Outil",
@@ -132,7 +132,7 @@
     "YearOfExperience": "Plus de 5",
     "Description": "Utiliser plusieurs fois sur des projets perso ou pro",
     "Evaluation": "Confirmé",
-    "ImgSrc": ""
+    "ImgSrc": "tech-icons/git.png"
   },
   {
     "TypeSkill": "Architecture",
@@ -141,7 +141,7 @@
     "YearOfExperience": "moins de 5",
     "Description": "Non vu directement, mais j'ai tenté de faire tendre mon dernier projet vers ce type d'architecture",
     "Evaluation": "Intermédiaire",
-    "ImgSrc": "MVC"
+    "ImgSrc": "tech-icons/mvc.png"
   },
   {
     "TypeSkill": "Architecture",
@@ -150,7 +150,7 @@
     "YearOfExperience": "moins de 3",
     "Description": "En charge d'une application .NET en TMA (quelques évolutions, mise à jour des modèles...)",
     "Evaluation": "Intermédiaire",
-    "ImgSrc": "MVVM"
+    "ImgSrc": "tech-icons/mvvm.png"
   },
   {
     "TypeSkill": "Architecture",
@@ -159,7 +159,7 @@
     "YearOfExperience": "plus de 10",
     "Description": "J'ai principalement travaillé dans des TMA industrielles : vieux logiciels, peu de bonne pratique, pas d'architecture en général.",
     "Evaluation": "Expert",
-    "ImgSrc": "MVVM"
+    "ImgSrc": "tech-icons/noarchi.png"
   },
   {
     "TypeSkill": "Logiciel",
@@ -168,7 +168,7 @@
     "YearOfExperience": "moins de 1",
     "Description": "Beaucoup utilisé ces derniers temps dans le cadre de mes formations et projets.",
     "Evaluation": "Intermédiaire",
-    "ImgSrc": "VisualStudioCode"
+    "ImgSrc": "tech-icons/vscode.png"
   },
   {
     "TypeSkill": "Logiciel",
@@ -177,7 +177,7 @@
     "YearOfExperience": "plus de 5",
     "Description": "Utiliser plusieurs fois sur des projets perso ou pro",
     "Evaluation": "Confirmé",
-    "ImgSrc": "SQLServer"
+    "ImgSrc": "tech-icons/sqlservermanagement.png"
   },
   {
     "TypeSkill": "Logiciel",
@@ -186,7 +186,7 @@
     "YearOfExperience": "plus de 5",
     "Description": "Utiliser plusieurs fois sur des projets pro : permet une vision claire de l'activité, des jalons, des RAE...J'adore !",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Jira"
+    "ImgSrc": "tech-icons/jira.png"
   },
   {
     "TypeSkill": "Environnement",
@@ -195,7 +195,7 @@
     "YearOfExperience": "Plus de 20",
     "Description": "Power shell, services, Windows server, ISS ... j'ai plusieus fois utilisés ces outils et environnement sur des projets pro ou perso",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/windows.png"
   },
   {
     "TypeSkill": "Environnement",
@@ -204,7 +204,7 @@
     "YearOfExperience": "Plus de 20",
     "Description": "Comme Windows, j'utilse aussi très souvent ce système. Je ne suis pas un expert du terminal, mais j'ai des bonnes bases",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/linux.png"
   },
   {
     "TypeSkill": "Documentation",
@@ -213,7 +213,7 @@
     "YearOfExperience": "Plus de 6",
     "Description": "Fonctionnelle, technique, guide utilisateur, cahier de recette, estimation, planification ",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/doc.png"
   },
   {
     "TypeSkill": "Projet",
@@ -222,7 +222,7 @@
     "YearOfExperience": "Plus de 10",
     "Description": "Bien gérer son temps, c'est essentiel pour moi : ça me permet d'anticiper, avoir une vision claire de mon activité et mieux gérer les moments de pression",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/time.png"
   },
   {
     "TypeSkill": "Projet",
@@ -231,7 +231,7 @@
     "YearOfExperience": "Plus de 10",
     "Description": "Dans un context TMA, il faut savoir faire des choix!",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/priority.png"
   },
   {
     "TypeSkill": "Projet",
@@ -240,7 +240,7 @@
     "YearOfExperience": "Plus de 10",
     "Description": "Je suis en télétravail depuis plusieurs années grace à reporting clair auprès du management : Le travail est fait en temps et en heure et les chefs de projets sont tenus régulièrement informés des avancements et point de blocages",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/report.png"
   },
   {
     "TypeSkill": "Projet",
@@ -249,7 +249,7 @@
     "YearOfExperience": "Plus de 10",
     "Description": "Je suis principalement intervenu dans des projets TMA : j'ai conscience des SLA & SLO et je sais me rendre disponible quand il y a besoin",
     "Evaluation": "Expert",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/tma.png"
   },
   {
     "TypeSkill": "Metier",
@@ -258,7 +258,7 @@
     "YearOfExperience": "3 à 4",
     "Description": "Au sein d'une TMA, je me suis occupé de la remise en route d'un très vieux logiciel de GMAO, ainsi que d'un progiciel (INFOREAM)",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/energy.png"
   },
   {
     "TypeSkill": "Metier",
@@ -267,7 +267,7 @@
     "YearOfExperience": "environs 5",
     "Description": "Au sein d'une TMA, je me suis occupé d'évolution, maintenance, correctif, formations d'outil lié à la production de parechec (de la presse à l'assemblage)",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/bumper.png"
   },
   {
     "TypeSkill": "Parler",
@@ -276,7 +276,7 @@
     "YearOfExperience": "environs 20",
     "Description": "Au cours de mon dernier projet, j'ai travaillé en équipe avec des personnes situées en Inde, en Amérique, en Angleterre : J'ai pu améliorer mon anglais !",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/en.png"
   },
   {
     "TypeSkill": "Parler",
@@ -285,7 +285,7 @@
     "YearOfExperience": "environs 33",
     "Description": "Ma langue natale ! Par contre, je ne garantis pas un sans fautes ! ",
     "Evaluation": "Confirmé",
-    "ImgSrc": "Windows"
+    "ImgSrc": "tech-icons/fr.png"
   }
 ]
 
