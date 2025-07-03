@@ -7,18 +7,18 @@ import { SkillModel } from '../Classes/skill-model';
 import { SkillDataService } from '../Services/skill-data-service';
 import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../skills-filter/skills-filter';
+import { SkillsSorter } from '../skills-sorter/skills-sorter';
 
 @Component({
   selector: 'app-skill',
-  imports: [NgClass, MatTabsModule, CardSkill, SkillsFilter],
+  imports: [NgClass, MatTabsModule, CardSkill, SkillsFilter, SkillsSorter],
   templateUrl: './skill.html',
   styleUrl: './skill.css',
 })
 export class Skill implements OnInit {
-  isPhonePortrait = false;
   skills = signal<SkillModel[]>([]);
   skillsMemorized: SkillModel[] = [];
-
+  isPhonePortrait = false;
   protected SkillTypeEnum = TypeSkillEnum;
 
   constructor(
@@ -52,6 +52,10 @@ export class Skill implements OnInit {
   }
 
   handleSkillFiltered($event: SkillModel[]) {
+    this.skills.set($event);
+  }
+
+  handleSkillSorted($event: SkillModel[]) {
     this.skills.set($event);
   }
 }

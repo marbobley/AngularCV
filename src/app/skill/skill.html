@@ -33,8 +33,10 @@
       <div class="filter-box">
         <div>
           Tri :
-          <button (click)="sortByLevelAsc()">Sort by level asc</button>
-          <button (click)="sortByLevelDsc()">Sort by level dsc</button>
+          <app-skills-sorter
+            [skills]="skills()"
+            (skillSorted)="handleSkillSorted($event)"
+          ></app-skills-sorter>
           <button (click)="reset()">RAZ</button>
         </div>
         Filtre :
