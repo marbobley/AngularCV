@@ -32,20 +32,52 @@
     <article>
       <div class="filter-box">
         <div>
+          Tri :
           <button (click)="sortByLevelAsc()">Sort by level asc</button>
           <button (click)="sortByLevelDsc()">Sort by level dsc</button>
           <button (click)="reset()">RAZ</button>
         </div>
-        <button (click)="filterByLangage()">Filter by Langage</button>
-        <button (click)="filterByFramework()">Filter by Framework</button>
-        <button (click)="filterByTool()">Filter by Tool</button>
-        <button (click)="filterByProjet()">Filter by project</button>
-        <button (click)="filterByArchitecture()">Filter by architecture</button>
-        <button (click)="filterByLogiciel()">Filter by software</button>
-        <button (click)="filterByDocumentation()">Filter by documentation</button>
-        <button (click)="filterByEnvironnement()">Filter by environment</button>
-        <button (click)="filterByMetier()">Filter by business</button>
-        <button (click)="filterByParler()">Filter by speak</button>
+        Filtre :
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Framework"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Architecture"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Langage"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Outil"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Projet"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Logiciel"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Documentation"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Environnement"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Metier"
+        ></app-skills-filter>
+        <app-skills-filter
+          (skillFiltered)="handleSkillFiltered($event)"
+          [skillTypeFiltering]="SkillTypeEnum.Parler"
+        ></app-skills-filter>
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
         @for(skill of skills(); track skill; ) {

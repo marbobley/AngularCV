@@ -1,0 +1,12 @@
+button{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.5s;
+  background-color: var(--app-background-color);
+}
+
+button:hover{
+  color: rgb(6, 185, 6);
+}
