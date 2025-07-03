@@ -88,7 +88,7 @@ body {
   left: 30px;
   border: medium solid rgb(199, 185, 185);
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgb(228, 8, 8) transparent transparent;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
