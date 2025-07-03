@@ -4,9 +4,11 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  inject,
   OnInit,
   viewChild,
 } from '@angular/core';
+import { LayoutService } from '../Services/layout-service';
 
 @Component({
   selector: 'app-experience',
@@ -14,24 +16,8 @@ import {
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })
-export class Experience implements OnInit  {
-  isPhonePortrait = false;
-
-  constructor(private responsive: BreakpointObserver)
-  {
-
-  }
-
-  ngOnInit(): void {
-    this.responsive.observe(Breakpoints.HandsetPortrait)
-    .subscribe(result => {
-      this.isPhonePortrait = false;
-
-      if(result.matches)
-      {
-        this.isPhonePortrait = true;
-      }
-    })
-  }
+export class Experience {
+  private layoutService = inject(LayoutService);
+  isPhonePortrait = this.layoutService.isPhonePortrait;
 
 }

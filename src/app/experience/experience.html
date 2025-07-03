@@ -1,10 +1,10 @@
-<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
-  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <article>
-      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+      <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
         <div
           class="left-text"
-          [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+          [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
         >
           <h2 class="title-article">Confirmé</h2>
           <hr class="big-separator" />
@@ -22,13 +22,13 @@
         <div class="right">
           <img
             src="pprofil.jpg"
-            [ngClass]="{'is-phone-portrait': isPhonePortrait}"
+            [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
           />
         </div>
       </div>
     </article>
   </section>
-  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <article>
       <div class="timeline">
         <div class="container left">
