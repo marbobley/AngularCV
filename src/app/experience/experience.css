@@ -59,7 +59,7 @@ body {
 }
 
 /* Place the container to the right */
-.right {
+.right-timeline {
   left: 50%;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 /* Add arrows to the right container (pointing left) */
-.right::before {
+.right-timeline::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -92,7 +92,7 @@ body {
 }
 
 /* Fix the circle for containers on the right side */
-.right::after {
+.right-timeline::after {
   left: -16px;
 }
 
@@ -128,12 +128,12 @@ body {
   }
 
 /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
+  .left::after, .right-timeline::after {
     left: 15px;
   }
 
 /* Make all right containers behave like the left ones */
-  .right {
+  .right-timeline {
     left: 0%;
   }
 }
