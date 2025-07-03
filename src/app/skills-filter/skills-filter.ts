@@ -1,6 +1,5 @@
 import { Component, input, OnInit, output, signal } from '@angular/core';
 import { SkillModel } from '../Classes/skill-model';
-import { SkillDataService } from '../Services/skill-data-service';
 import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 
 @Component({
@@ -9,28 +8,18 @@ import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
   templateUrl: './skills-filter.html',
   styleUrl: './skills-filter.css',
 })
-export class SkillsFilter implements OnInit {
+export class SkillsFilter  {
   skillFiltered = output<SkillModel[]>();
-  skills = signal<SkillModel[]>([]);
-
+  skills = input<SkillModel[]>([]);
   skillTypeFiltering = input<TypeSkillEnum>(TypeSkillEnum.Framework);
 
-  constructor(private readonly skillService: SkillDataService) {}
-
-  ngOnInit(): void {
-    this.skillService.getSkills().subscribe((skills) => {
-      this.skills.set(skills);
-    });
-  }
+  constructor() {}
 
   EmitNewListSkills() {
-    this.filterBy();
-    this.skillFiltered.emit(this.skills());
+    this.skillFiltered.emit(this.filterBy());
   }
 
-  filterBy() {
-    this.skills.set(
-      this.skills().filter((x) => x.TypeSkill === this.skillTypeFiltering())
-    );
+  filterBy() : SkillModel[]{
+      return this.skills().filter((x) => x.TypeSkill === this.skillTypeFiltering())   
   }
 }
