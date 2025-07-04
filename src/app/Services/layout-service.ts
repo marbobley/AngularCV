@@ -11,10 +11,27 @@ import { map } from 'rxjs';
  */
 export class LayoutService {
   private breakpointObserver = inject(BreakpointObserver);
+
+  customBreakpoint = '(min-width: 500px)';
+
   isPhonePortrait = toSignal(
     this.breakpointObserver
     .observe([Breakpoints.HandsetPortrait])
     .pipe(map(result => result.matches)),
     { initialValue: false}
   );
+
+  isDesktop = toSignal(
+    this.breakpointObserver
+    .observe([Breakpoints.Tablet])
+    .pipe(map(result => result.matches)),
+    { initialValue: false}
+  )
+
+  isCustomBreakpoint = toSignal(
+    this.breakpointObserver
+    .observe([this.customBreakpoint])
+    .pipe(map(result => result.matches)),
+    { initialValue: false}
+  ) 
 }

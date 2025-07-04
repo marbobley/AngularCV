@@ -1,12 +1,15 @@
 <main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
   <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <article>
-      <div  [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+      <div [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
         Je suis la page de test des breakpoint observer : la taille est de
         <ul>
           <li>x : {{ innerWidth}}</li>
           <li>y : {{ innerHeight}}</li>
         </ul>
+        <div>isPhoneportrait : {{isPhonePortrait()}}</div>
+        <div>isDesktop : {{isDesktop()}}</div>
+        <div>isCustom (500 px width) : {{isCustomBreakpoint()}}</div>
 
         <button (click)="onClickRefresh()">refresh</button>
         <ul>

@@ -12,6 +12,8 @@ import { Breakpoints } from '@angular/cdk/layout';
 export class TestBreakpointObserver implements OnInit {
   private layoutService = inject(LayoutService);
   isPhonePortrait = this.layoutService.isPhonePortrait;
+  isDesktop = this.layoutService.isDesktop;
+  isCustomBreakpoint = this.layoutService.isCustomBreakpoint;
   private readonly document = inject(DOCUMENT);
   private readonly window = this.document?.defaultView;
   innerWidth: number = 0;
