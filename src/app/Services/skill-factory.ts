@@ -6,7 +6,6 @@ import { SkillModel } from '../Classes/skill-model';
   providedIn: 'root',
 })
 export class SkillFactory {
-  constructor() {}
 
   GetSkill(
     langage: string,

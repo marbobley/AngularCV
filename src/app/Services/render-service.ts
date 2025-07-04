@@ -4,13 +4,13 @@ import { BitArray } from '../Types/BitArray';
   providedIn: 'root',
 })
 export class RenderService {
-  private animationFrameId: number = 0;
-
   private localBitArray: BitArray[] = [];
 
-  constructor() {}
-
-  render(gameBoard: BitArray[], ctx: CanvasRenderingContext2D | null, resolution :number) {
+  render(
+    gameBoard: BitArray[],
+    ctx: CanvasRenderingContext2D | null,
+    resolution: number
+  ) {
     const c = ctx;
     const res = resolution;
     gameBoard.forEach((row, rowIndex) => {
@@ -25,11 +25,18 @@ export class RenderService {
       });
     });
   }
-  
-  animate(gameBoard: BitArray[],ctx: CanvasRenderingContext2D | null , nextGen:(nextGen: BitArray[]) => BitArray[], resolution:number) {
-    this.animationFrameId = requestAnimationFrame(() => this.animate(gameBoard, ctx, nextGen, resolution));
+
+  animate(
+    gameBoard: BitArray[],
+    ctx: CanvasRenderingContext2D | null,
+    nextGen: (nextGen: BitArray[]) => BitArray[],
+    resolution: number
+  ) {
+    requestAnimationFrame(() =>
+      this.animate(gameBoard, ctx, nextGen, resolution)
+    );
     this.render(gameBoard, ctx, resolution);
-    gameBoard =  nextGen(gameBoard) ;
+    gameBoard = nextGen(gameBoard);
     this.localBitArray = gameBoard;
     console.log('animate');
   }
@@ -37,17 +44,17 @@ export class RenderService {
   animateWithInterval(
     gameBoard: BitArray[],
     ctx: CanvasRenderingContext2D | null,
-    nextGen: (nextGen: BitArray[]) => BitArray[], 
+    nextGen: (nextGen: BitArray[]) => BitArray[],
     resolution: number
   ): number {
     return setInterval(() => {
-      this.render(gameBoard, ctx,resolution);
+      this.render(gameBoard, ctx, resolution);
       gameBoard = nextGen(gameBoard);
       this.localBitArray = gameBoard;
     }, 10);
   }
 
-  get LocalBitArray(){
+  get LocalBitArray() {
     return this.localBitArray;
   }
 }

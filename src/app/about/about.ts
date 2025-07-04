@@ -1,6 +1,5 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LayoutService } from '../Services/layout-service';
 
 @Component({

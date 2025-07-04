@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
@@ -20,11 +20,8 @@ export class Skill implements OnInit {
   skillsMemorized: SkillModel[] = [];
   isPhonePortrait = false;
   protected SkillTypeEnum = TypeSkillEnum;
-
-  constructor(
-    private responsive: BreakpointObserver,
-    private skillDataService: SkillDataService
-  ) {}
+  private responsive = inject(BreakpointObserver);
+  private skillDataService = inject(SkillDataService);
 
   ngOnInit(): void {
     this.skillDataService.getSkills().subscribe((res) => {
@@ -55,9 +52,9 @@ export class Skill implements OnInit {
   }
 
   GetSkillType() : string[] {
-    let output: string[] = [];
+    const output: string[] = [];
 
-    for(let item in TypeSkillEnum)
+    for(const item in TypeSkillEnum)
     {
       output.push(item);
     }

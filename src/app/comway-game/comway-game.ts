@@ -1,8 +1,8 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
 import { BitArray } from '../Types/BitArray';
 import { ComwayService } from '../Services/comway-service';
 import { RenderService } from '../Services/render-service';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-comway-game',
@@ -14,17 +14,14 @@ export class ComwayGame {
   canvas = viewChild<ElementRef<HTMLCanvasElement>>('gameboard');
   private ctx: CanvasRenderingContext2D | null = null;
   gameBoard: BitArray[] = [];
+  private readonly comwayService = inject(ComwayService);
+  private readonly renderService = inject(RenderService);
 
-  private intervalId: number = 0;
+  private intervalId = 0;
 
   resolution = 5;
   boardWidth = 400;
   boardHeight = 400;
-
-  constructor(
-    private readonly comwayService: ComwayService,
-    private readonly renderService: RenderService
-  ) {}
 
   reset() {
     this.gameBoard = this.comwayService.initRandom(
@@ -33,10 +30,6 @@ export class ComwayGame {
       this.resolution
     );
     this.renderService.render(this.gameBoard, this.ctx, this.resolution);
-  }
-
-  ngAfterViewInit(): void {
-    this.init();
   }
 
   init() {

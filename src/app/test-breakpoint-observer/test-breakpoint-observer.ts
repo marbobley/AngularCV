@@ -16,8 +16,8 @@ export class TestBreakpointObserver implements OnInit {
   isCustomBreakpoint = this.layoutService.isCustomBreakpoint;
   private readonly document = inject(DOCUMENT);
   private readonly window = this.document?.defaultView;
-  innerWidth: number = 0;
-  innerHeight: number = 0;
+  innerWidth = 0;
+  innerHeight = 0;
 
   breakpoints = Breakpoints;
 

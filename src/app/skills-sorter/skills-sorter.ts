@@ -11,9 +11,7 @@ export class SkillsSorter {
   skillSorted = output<SkillModel[]>();
   skills = input<SkillModel[]>([]);
 
-  isSortAsc: boolean = true;
-
-  constructor() {}
+  isSortAsc = true;
 
   EmitNewListSkills() {
     if (this.isSortAsc) {

@@ -5,9 +5,6 @@ import { BitArray } from '../Types/BitArray';
 })
 export class ComwayService {
 
-  constructor() { }
-
-
     initRandom(boardWidth: number, boardHeight: number, resolution: number) : BitArray[]
     {
         const numOfRows = boardHeight / resolution;
