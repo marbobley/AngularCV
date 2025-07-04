@@ -1,0 +1,31 @@
+<main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+  <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+    <article>
+      <div  [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+        Je suis la page de test des breakpoint observer : la taille est de
+        <ul>
+          <li>x : {{ innerWidth}}</li>
+          <li>y : {{ innerHeight}}</li>
+        </ul>
+
+        <button (click)="onClickRefresh()">refresh</button>
+        <ul>
+          <li>Handset : {{ breakpoints.Handset}}</li>
+          <li>HandsetLandscape : {{ breakpoints.HandsetLandscape}}</li>
+          <li>HandsetPortrait : {{ breakpoints.HandsetPortrait}}</li>
+          <li>Large : {{ breakpoints.Large}}</li>
+          <li>Medium : {{ breakpoints.Medium}}</li>
+          <li>Small : {{ breakpoints.Small}}</li>
+          <li>Tablet : {{ breakpoints.Tablet}}</li>
+          <li>TabletLandscape : {{ breakpoints.TabletLandscape}}</li>
+          <li>TabletLandscape : {{ breakpoints.TabletLandscape}}</li>
+          <li>Web : {{ breakpoints.Web}}</li>
+          <li>WebLandscape : {{ breakpoints.WebLandscape}}</li>
+          <li>WebPortrait : {{ breakpoints.WebPortrait}}</li>
+          <li>XLarge : {{ breakpoints.XLarge}}</li>
+          <li>XSmall : {{ breakpoints.XSmall}}</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</main>
