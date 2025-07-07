@@ -3,7 +3,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../card-skill/card-skill';
 import { SkillModel } from '../Classes/skill-model';
-import { SkillDataService } from '../Services/skill-data-service';
+import { SkillDataService } from '../Services/skill-data-service/skill-data-service';
 import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../skills-filter/skills-filter';
 import { SkillsSorter } from '../skills-sorter/skills-sorter';

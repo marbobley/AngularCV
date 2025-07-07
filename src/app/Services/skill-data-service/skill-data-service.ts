@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
-import { SkillModel } from '../Classes/skill-model';
+import { SkillModel } from '../../Classes/skill-model';
 import { Observable, tap } from 'rxjs';
 
 @Injectable({
