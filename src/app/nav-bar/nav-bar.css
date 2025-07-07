@@ -127,3 +127,18 @@
   color:#f1f1f1;
   transition: 0.3s;
 }
+
+.is-phone-portrait{
+  font-size: 0.80rem;
+}
+
+.sidenav a.is-phone-portrait {
+  padding: 0px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-top: 20px;
+  text-align: center;
+}

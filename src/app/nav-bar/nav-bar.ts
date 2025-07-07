@@ -1,14 +1,18 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { LayoutService } from '../Services/layout-service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterLink],
+  imports: [RouterLink, NgClass],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css',
 })
 export class NavBar {
   sideNav = viewChild<ElementRef<HTMLElement>>('sidenav');
+  responsive = inject(LayoutService);
+  isPhonePortrait = this.responsive.isPhonePortrait;
 
   openSideMenu() {
     const elementSideNav = this.sideNav();

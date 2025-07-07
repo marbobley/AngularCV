@@ -1,8 +1,8 @@
-<div class="navHeader">
+<div class="navHeader" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
     <h1>Ingénieur développement</h1>
 </div>
-<nav class="sidenav" #sidenav (mouseleave)="closeSideMenu()">
+<nav class="sidenav" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" #sidenav (mouseleave)="closeSideMenu()" >
     <button (click)="closeSideMenu()" class="closebtn">&times;</button>
     <img src="sideNaveImage-computer.jpg" class="imgSideNav" alt="image d'un ordinateur">
     <img src="pprofil.jpg" class="imgOnImg" alt="image de wilfried fournier">
@@ -15,12 +15,12 @@
             06.35.31.50.22
         </p>
     </div>
-    <div class="links">
-        <a routerLink="home" (click)="closeSideMenu()">Accueil</a>
-        <a routerLink="about" (click)="closeSideMenu()">A propos</a>
-        <a routerLink="experience" (click)="closeSideMenu()">Expériences</a>
-        <a routerLink="skill" (click)="closeSideMenu()">Compétences</a>
-        <a routerLink="playground" (click)="closeSideMenu()">Playground</a>
-        <a routerLink="testBreakpoint" (click)="closeSideMenu()">Breakpoint Observer</a>
+    <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+        <a routerLink="home" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()"  >Accueil</a>
+        <a routerLink="about" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">A propos</a>
+        <a routerLink="experience" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Expériences</a>
+        <a routerLink="skill" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Compétences</a>
+        <a routerLink="playground" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Playground</a>
+        <a routerLink="testBreakpoint" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Breakpoint Observer</a>
     </div>
 </nav>
