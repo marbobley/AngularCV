@@ -1,26 +1,73 @@
-<div class="navHeader" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-    <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
-    <h1>Ingénieur développement</h1>
+@if(isPhonePortrait()) {
+
+<div class="navbar-bottom">
+  <a routerLink="home">Home</a>
+  <a routerLink="about">A propos</a>
+  <a routerLink="experience">Expériences</a>
+  <a routerLink="skill">Compétences</a>
 </div>
-<nav class="sidenav" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" #sidenav (mouseleave)="closeSideMenu()" >
-    <button (click)="closeSideMenu()" class="closebtn">&times;</button>
-    <img src="sideNaveImage-computer.jpg" class="imgSideNav" alt="image d'un ordinateur">
-    <img src="pprofil.jpg" class="imgOnImg" alt="image de wilfried fournier">
-    <div class="contact">
-        <h2 class="titleName">FOURNIER Wilfried</h2>
-        <p>
-            fournier.wilf&#x40;gmail.com
-        </p>
-        <p>
-            06.35.31.50.22
-        </p>
-    </div>
-    <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-        <a routerLink="home" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()"  >Accueil</a>
-        <a routerLink="about" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">A propos</a>
-        <a routerLink="experience" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Expériences</a>
-        <a routerLink="skill" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Compétences</a>
-        <a routerLink="playground" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Playground</a>
-        <a routerLink="testBreakpoint" [ngClass]="{'is-phone-portrait': isPhonePortrait()}" (click)="closeSideMenu()">Breakpoint Observer</a>
-    </div>
+
+} @else {
+<div class="navHeader" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+  <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
+  <h1>Ingénieur développement</h1>
+</div>
+<nav
+  class="sidenav"
+  [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+  #sidenav
+  (mouseleave)="closeSideMenu()"
+>
+  <button (click)="closeSideMenu()" class="closebtn">&times;</button>
+  <img
+    src="sideNaveImage-computer.jpg"
+    class="imgSideNav"
+    alt="image d'un ordinateur"
+  />
+  <img src="pprofil.jpg" class="imgOnImg" alt="image de wilfried fournier" />
+  <div class="contact">
+    <h2 class="titleName">FOURNIER Wilfried</h2>
+    <p>fournier.wilf&#x40;gmail.com</p>
+    <p>06.35.31.50.22</p>
+  </div>
+  <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+    <a
+      routerLink="home"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Accueil</a
+    >
+    <a
+      routerLink="about"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >A propos</a
+    >
+    <a
+      routerLink="experience"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Expériences</a
+    >
+    <a
+      routerLink="skill"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Compétences</a
+    >
+    <a
+      routerLink="playground"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Playground</a
+    >
+    <a
+      routerLink="testBreakpoint"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Breakpoint Observer</a
+    >
+  </div>
 </nav>
+
+}
