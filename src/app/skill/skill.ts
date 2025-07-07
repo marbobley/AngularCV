@@ -1,4 +1,3 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -8,6 +7,7 @@ import { SkillDataService } from '../Services/skill-data-service';
 import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../skills-filter/skills-filter';
 import { SkillsSorter } from '../skills-sorter/skills-sorter';
+import { LayoutService } from '../Services/layout-service';
 
 @Component({
   selector: 'app-skill',
@@ -18,23 +18,15 @@ import { SkillsSorter } from '../skills-sorter/skills-sorter';
 export class Skill implements OnInit {
   skills = signal<SkillModel[]>([]);
   skillsMemorized: SkillModel[] = [];
-  isPhonePortrait = false;
   protected SkillTypeEnum = TypeSkillEnum;
-  private responsive = inject(BreakpointObserver);
   private skillDataService = inject(SkillDataService);
+  private layoutService = inject(LayoutService);
+  isPhonePortrait = this.layoutService.isPhonePortrait;
 
   ngOnInit(): void {
     this.skillDataService.getSkills().subscribe((res) => {
       this.skills.set(res);
       this.skillsMemorized = res;
-    });
-
-    this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
-      this.isPhonePortrait = false;
-
-      if (result.matches) {
-        this.isPhonePortrait = true;
-      }
     });
 
     this.GetSkillType();
@@ -51,11 +43,10 @@ export class Skill implements OnInit {
     this.skills.set($event);
   }
 
-  GetSkillType() : string[] {
+  GetSkillType(): string[] {
     const output: string[] = [];
 
-    for(const item in TypeSkillEnum)
-    {
+    for (const item in TypeSkillEnum) {
       output.push(item);
     }
 
