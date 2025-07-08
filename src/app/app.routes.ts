@@ -5,6 +5,7 @@ import { Experience } from './experience/experience';
 import { Skill } from './skill/skill';
 import { Playground } from './playground/playground';
 import { TestBreakpointObserver } from './test-breakpoint-observer/test-breakpoint-observer';
+import { CategorySkillList } from './category-skill-list/category-skill-list';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'experience', component: Experience },
     { path: 'skill', component: Skill },
     { path: 'playground', component: Playground },
-    { path: 'testBreakpoint', component: TestBreakpointObserver }
+    { path: 'testBreakpoint', component: TestBreakpointObserver },
+    { path: 'admin' , component: CategorySkillList}
 ];
