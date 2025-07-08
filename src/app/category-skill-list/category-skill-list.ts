@@ -18,4 +18,22 @@ export class CategorySkillList implements OnInit {
       this.categorySkills.set(res);
     });
   }
+
+getSkill() {
+  this.categorySkillService.getCategorySkill(35).subscribe((res) => {
+    console.log(res);
+  })
+}
+  
+postCategorySkill() {
+
+  const categorySkill: CategorySkillInterface = { 
+    name: '',
+    description: 'descs'
+  }
+
+  this.categorySkillService.postCategorySkill(categorySkill).subscribe((res) => {
+    console.log(res);
+  })
+}
 }

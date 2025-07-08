@@ -11,6 +11,12 @@ export class CategorySkillApiService {
   private http = inject(HttpClient);
   urlApiCategorySkill = `${environment.apiURL}/categories`;
 
+  getCategorySkill(id: number): Observable<CategorySkillInterface>{
+    return this.http
+    .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id)
+    .pipe(tap());
+  }
+
   getCategorySkills(): Observable<CategorySkillInterface[]> {
     return this.http
       .get<CategorySkillInterface[]>(this.urlApiCategorySkill)
