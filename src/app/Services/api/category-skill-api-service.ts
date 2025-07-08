@@ -2,13 +2,14 @@ import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategorySkillApiService {
   private http = inject(HttpClient);
-  urlApiCategorySkill = 'http://127.0.0.1:8000/api/categories';
+  urlApiCategorySkill = `${environment.apiURL}/categories`;
 
   getCategorySkills(): Observable<CategorySkillInterface[]> {
     return this.http
