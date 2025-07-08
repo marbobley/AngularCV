@@ -29,6 +29,14 @@ export class Skill implements OnInit {
       this.skillsMemorized = res;
     });
 
+    this.skillDataService.getApiSkills().subscribe((res) => {
+      console.log(res);
+    })
+
+    this.skillDataService.deleteApiSkills(41).subscribe((res) => {
+      console.log(res);
+    })
+
     this.GetSkillType();
   }
   reset() {
