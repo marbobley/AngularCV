@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { SkillModel } from '../../Classes/skill-model';
 import { Observable, tap } from 'rxjs';
-import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 
 @Injectable({
   providedIn: 'root',
@@ -21,35 +20,5 @@ export class SkillDataService {
       .pipe(tap((skills) => this.skillsSignal.set(skills)));
   }
 
-  getApiCategorySkills(): Observable<CategorySkillInterface[]> {
-    return this.http
-      .get<CategorySkillInterface[]>(this.urlApiCategorySkill)
-      .pipe(tap());
-  }
-
-  postApiCategorySkills(
-    categorySkill: CategorySkillInterface
-  ): Observable<CategorySkillInterface> {
-    return this.http
-      .post<CategorySkillInterface>(this.urlApiCategorySkill, categorySkill)
-      .pipe();
-  }
-
-  putApiCategorySkill(
-    categorySkill: CategorySkillInterface
-  ) : Observable<CategorySkillInterface> {
-    return this.http.put<CategorySkillInterface>(this.urlApiCategorySkill + "/" + categorySkill.id, categorySkill)
-    .pipe();
-  }
-
-  /*deleteApiSkills(id: number): Observable<any>{
-    return this.http.delete<any>(this.urlApiSkill + "/" + id).pipe(
-      tap( skills => console.log(skills))
-    );
-  }
-  getApiSkills():Observable<any>{
-    return this.http.get<any>(this.urlApiSkill).pipe(
-      tap( skills => this.skillsSignal.set(skills))
-    );
-  }*/
+  
 }
