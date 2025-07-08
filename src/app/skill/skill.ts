@@ -8,6 +8,7 @@ import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../skills-filter/skills-filter';
 import { SkillsSorter } from '../skills-sorter/skills-sorter';
 import { LayoutService } from '../Services/layout-service';
+import { CategorySkillInterface } from '../Interface/CategorySkillInterface';
 
 @Component({
   selector: 'app-skill',
@@ -16,6 +17,7 @@ import { LayoutService } from '../Services/layout-service';
   styleUrl: './skill.css',
 })
 export class Skill implements OnInit {
+  categorySkillApi = signal<CategorySkillInterface[]>([]);
   skills = signal<SkillModel[]>([]);
   skillsMemorized: SkillModel[] = [];
   protected SkillTypeEnum = TypeSkillEnum;
@@ -29,12 +31,8 @@ export class Skill implements OnInit {
       this.skillsMemorized = res;
     });
 
-    this.skillDataService.getApiSkills().subscribe((res) => {
-      console.log(res);
-    })
-
-    this.skillDataService.deleteApiSkills(41).subscribe((res) => {
-      console.log(res);
+    this.skillDataService.getApiCategorySkills().subscribe((res) => {
+      this.categorySkillApi.set(res);
     })
 
     this.GetSkillType();
