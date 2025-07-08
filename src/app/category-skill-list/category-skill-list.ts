@@ -28,8 +28,8 @@ getSkill() {
 postCategorySkill() {
 
   const categorySkill: CategorySkillInterface = { 
-    name: '',
-    description: 'descs'
+    name: 'A1',
+    description: 'B1'
   }
 
   this.categorySkillService.postCategorySkill(categorySkill).subscribe((res) => {
