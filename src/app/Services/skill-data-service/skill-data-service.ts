@@ -8,8 +8,6 @@ import { Observable, tap } from 'rxjs';
 })
 export class SkillDataService {
   url = 'datas/skills.json';
-  urlApiSkill = 'http://127.0.0.1:8000/api/skills';
-  urlApiCategorySkill = 'http://127.0.0.1:8000/api/categories';
 
   private skillsSignal = signal<SkillModel[]>([]);
   private http = inject(HttpClient);
