@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { LayoutService } from '../Services/layout-service';
+import { LayoutService } from '../../Services/layout-service';
 
 @Component({
   selector: 'app-experience',
