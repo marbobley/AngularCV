@@ -17,27 +17,22 @@ export class CategorySkillList implements OnInit {
   categorySkills = signal<CategorySkillInterface[]>([]);
 
   ngOnInit(): void {
-    if (this.isConnected()) {
-      this.categorySkillService.getCategorySkills().subscribe((res) => {
-        this.categorySkills.set(res);
-      });
-    }
-    else
-    {
-      console.log('not connected');
-    }
+    this.categorySkillService.getCategorySkills().subscribe((res) => {
+      this.categorySkills.set(res);
+    });
   }
 
   getSkills() {
     this.categorySkillService.getCategorySkills().subscribe((res) => {
       console.log(res);
+      this.categorySkills.set(res);
     });
   }
 
   postCategorySkill() {
     const categorySkill: CategorySkillInterface = {
-      name: 'A1',
-      description: 'B1',
+      name: 'A2',
+      description: 'B2',
     };
 
     this.categorySkillService

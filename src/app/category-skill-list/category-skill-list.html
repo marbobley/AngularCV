@@ -1,6 +1,6 @@
 <main class="main-page">
   <ul>
-    @for(categorySkill of categorySkills(); track categorySkill; ) { 
+    @for(categorySkill of categorySkills(); track categorySkill.id; ) { 
         <li>{{ categorySkill.name }} - {{ categorySkill.description }}</li>
     }
   </ul>

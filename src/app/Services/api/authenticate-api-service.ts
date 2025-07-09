@@ -37,7 +37,9 @@ export class AuthenticateApiService {
           window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
         })
       );
-  }/*
+  }
+
+  /*
 
   // Méthode pour rafraîchir les tokens. Utilisée par l'intercepteur HTTP
   revokeToken(): Observable<UserInterface> {

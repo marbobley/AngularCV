@@ -3,31 +3,19 @@ import { Observable, tap } from 'rxjs';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
+import { TokenService } from './token-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategorySkillApiService {
   private http = inject(HttpClient);
+  private token = inject(TokenService);
   urlApiCategorySkill = `${environment.apiURL}/categories`;
 
-  private getToken(): string {
-    const token = window.sessionStorage.getItem('USER_KEY');
-    let jsonToken = null;
-    if (token) {
-      jsonToken = JSON.parse(token);
-      console.log(console.log());
-    }
-
-    return 'Bearer ' + jsonToken['token'];
-  }
 
   getCategorySkill(id: number): Observable<CategorySkillInterface> {
-    let headers = new HttpHeaders().set('Authorization', this.getToken());
-    headers = new HttpHeaders().set(
-      'Content-Type',
-      'application/json; charset=utf-8'
-    );
+    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
       .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id, {
         headers: headers,
@@ -36,7 +24,7 @@ export class CategorySkillApiService {
   }
 
   getCategorySkills(): Observable<CategorySkillInterface[]> {
-    const headers = new HttpHeaders().set('Authorization', this.getToken());
+    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
       .get<CategorySkillInterface[]>(this.urlApiCategorySkill, {
         headers: headers,
@@ -47,8 +35,11 @@ export class CategorySkillApiService {
   postCategorySkill(
     categorySkill: CategorySkillInterface
   ): Observable<CategorySkillInterface> {
+    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
-      .post<CategorySkillInterface>(this.urlApiCategorySkill, categorySkill)
+      .post<CategorySkillInterface>(this.urlApiCategorySkill, categorySkill, {
+        headers: headers,
+      })
       .pipe();
   }
 
