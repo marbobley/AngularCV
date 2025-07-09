@@ -32,6 +32,12 @@
   </div>
   <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <a
+      routerLink="login"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Connexion</a
+    >
+    <a
       routerLink="home"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
