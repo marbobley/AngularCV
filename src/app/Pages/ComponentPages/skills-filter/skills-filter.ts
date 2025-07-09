@@ -1,6 +1,5 @@
 import { Component, input, output } from '@angular/core';
 import { SkillModel } from '../../../Classes/skill-model';
-import { TypeSkillEnum } from '../../../Enum/TypeSkillEnum';
 
 @Component({
   selector: 'app-skills-filter',
@@ -11,7 +10,7 @@ import { TypeSkillEnum } from '../../../Enum/TypeSkillEnum';
 export class SkillsFilter {
   skillFiltered = output<SkillModel[]>();
   skills = input<SkillModel[]>([]);
-  skillTypeFiltering = input<string>(TypeSkillEnum.Framework);
+  skillTypeFiltering = input<string>('Framework');
 
   EmitNewListSkills() {
     this.skillFiltered.emit(this.filterBy());

@@ -4,7 +4,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../ComponentPages/card-skill/card-skill';
 import { SkillModel } from '../../Classes/skill-model';
 import { SkillDataService } from '../../Services/skill-data-service/skill-data-service';
-import { TypeSkillEnum } from '../../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../ComponentPages/skills-filter/skills-filter';
 import { SkillsSorter } from '../ComponentPages/skills-sorter/skills-sorter';
 import { LayoutService } from '../../Services/layout-service';
@@ -20,7 +19,6 @@ import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 export class Skill implements OnInit {
   skills = signal<SkillModel[]>([]);
   skillsMemorized: SkillModel[] = [];
-  protected SkillTypeEnum = TypeSkillEnum;
   private skillDataService = inject(SkillDataService);
   private layoutService = inject(LayoutService);
   isPhonePortrait = this.layoutService.isPhonePortrait;
@@ -36,9 +34,7 @@ export class Skill implements OnInit {
 
     this.categorySkillApi.getCategorySkills().subscribe(res => {
       this.categorySkills.set(res);
-    })
-
-    this.GetSkillType();
+    });
   }
   reset() {
     this.skills.set(this.skillsMemorized);
@@ -50,15 +46,5 @@ export class Skill implements OnInit {
 
   handleSkillSorted($event: SkillModel[]) {
     this.skills.set($event);
-  }
-
-  GetSkillType(): string[] {
-    const output: string[] = [];
-
-    for (const item in TypeSkillEnum) {
-      output.push(item);
-    }
-
-    return output;
   }
 }
