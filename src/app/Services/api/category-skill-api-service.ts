@@ -15,20 +15,14 @@ export class CategorySkillApiService {
 
 
   getCategorySkill(id: number): Observable<CategorySkillInterface> {
-    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
-      .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id, {
-        headers: headers,
-      })
+      .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id)
       .pipe(tap());
   }
 
   getCategorySkills(): Observable<CategorySkillInterface[]> {
-    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
-      .get<CategorySkillInterface[]>(this.urlApiCategorySkill, {
-        headers: headers,
-      })
+      .get<CategorySkillInterface[]>(this.urlApiCategorySkill)
       .pipe(tap());
   }
 
