@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { SkillModel } from '../Classes/skill-model';
+import { SkillModel } from '../../../Classes/skill-model';
 
 @Component({
   selector: 'app-skills-sorter',

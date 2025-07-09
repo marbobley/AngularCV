@@ -1,6 +1,6 @@
 import { Component, input, output } from '@angular/core';
-import { SkillModel } from '../Classes/skill-model';
-import { TypeSkillEnum } from '../Enum/TypeSkillEnum';
+import { SkillModel } from '../../../Classes/skill-model';
+import { TypeSkillEnum } from '../../../Enum/TypeSkillEnum';
 
 @Component({
   selector: 'app-skills-filter',

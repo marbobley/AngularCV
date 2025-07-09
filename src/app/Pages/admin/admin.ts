@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategorySkillList } from "../../category-skill-list/category-skill-list";
+import { CategorySkillList } from "../ComponentPages/category-skill-list/category-skill-list";
 
 @Component({
   selector: 'app-admin',

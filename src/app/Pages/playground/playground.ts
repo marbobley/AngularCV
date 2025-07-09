@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComwayGame } from "../../comway-game/comway-game";
+import { ComwayGame } from "../ComponentPages/comway-game/comway-game";
 
 @Component({
   selector: 'app-playground',

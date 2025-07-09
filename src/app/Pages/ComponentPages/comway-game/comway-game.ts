@@ -1,7 +1,7 @@
 import { Component, ElementRef, inject, viewChild } from '@angular/core';
-import { BitArray } from '../Types/BitArray';
-import { ComwayService } from '../Services/comway-service';
-import { RenderService } from '../Services/render-service';
+import { BitArray } from '../../../Types/BitArray';
+import { ComwayService } from '../../../Services/comway-service';
+import { RenderService } from '../../../Services/render-service';
 import { FormsModule } from '@angular/forms';
 
 @Component({

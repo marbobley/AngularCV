@@ -1,7 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { CategorySkillApiService } from '../Services/api/category-skill-api-service';
-import { CategorySkillInterface } from '../Interface/CategorySkillInterface';
-import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
+import { CategorySkillApiService } from '../../../Services/api/category-skill-api-service';
+import { CategorySkillInterface } from '../../../Interface/CategorySkillInterface';
+import { AuthenticateApiService } from '../../../Services/api/authenticate-api-service';
 
 @Component({
   selector: 'app-category-skill-list',

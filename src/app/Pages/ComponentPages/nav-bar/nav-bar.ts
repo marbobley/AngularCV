@@ -1,8 +1,8 @@
 import { Component, ElementRef, inject, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LayoutService } from '../Services/layout-service';
+import { LayoutService } from '../../../Services/layout-service';
 import { NgClass } from '@angular/common';
-import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
+import { AuthenticateApiService } from '../../../Services/api/authenticate-api-service';
 
 @Component({
   selector: 'app-nav-bar',
