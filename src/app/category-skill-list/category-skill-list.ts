@@ -28,8 +28,8 @@ export class CategorySkillList implements OnInit {
     }
   }
 
-  getSkill() {
-    this.categorySkillService.getCategorySkill(35).subscribe((res) => {
+  getSkills() {
+    this.categorySkillService.getCategorySkills().subscribe((res) => {
       console.log(res);
     });
   }

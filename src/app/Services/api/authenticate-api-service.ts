@@ -34,6 +34,9 @@ export class AuthenticateApiService {
           // Les deux tokens sont automatiquement stockés dans des cookies HTTP-only
           // Nous mettons à jour l'état de l'utilisateur connecté
           this._currentUser.set(response.user);
+          window.sessionStorage.removeItem('USER_KEY');
+          window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
+
         })
       );
   }

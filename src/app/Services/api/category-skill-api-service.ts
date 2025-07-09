@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
 
 @Injectable({
@@ -11,15 +11,36 @@ export class CategorySkillApiService {
   private http = inject(HttpClient);
   urlApiCategorySkill = `${environment.apiURL}/categories`;
 
-  getCategorySkill(id: number): Observable<CategorySkillInterface>{
+  private getToken(): string {
+    const token = window.sessionStorage.getItem('USER_KEY');
+    let jsonToken = null;
+    if (token) {
+      jsonToken = JSON.parse(token);
+      console.log(console.log());
+    }
+
+    return 'Bearer ' + jsonToken['token'];
+  }
+
+  getCategorySkill(id: number): Observable<CategorySkillInterface> {
+    let headers = new HttpHeaders().set('Authorization', this.getToken());
+    headers = new HttpHeaders().set(
+      'Content-Type',
+      'application/json; charset=utf-8'
+    );
     return this.http
-    .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id)
-    .pipe(tap());
+      .get<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id, {
+        headers: headers,
+      })
+      .pipe(tap());
   }
 
   getCategorySkills(): Observable<CategorySkillInterface[]> {
+    const headers = new HttpHeaders().set('Authorization', this.getToken());
     return this.http
-      .get<CategorySkillInterface[]>(this.urlApiCategorySkill)
+      .get<CategorySkillInterface[]>(this.urlApiCategorySkill, {
+        headers: headers,
+      })
       .pipe(tap());
   }
 
