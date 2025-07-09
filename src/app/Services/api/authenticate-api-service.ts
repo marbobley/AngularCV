@@ -31,31 +31,30 @@ export class AuthenticateApiService {
       }>(this.urlApi, { username, password }, { headers: headers })
       .pipe(
         tap((response) => {
-          // Les deux tokens sont automatiquement stockés dans des cookies HTTP-only
           // Nous mettons à jour l'état de l'utilisateur connecté
           this._currentUser.set(response.user);
           window.sessionStorage.removeItem('USER_KEY');
           window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
-
         })
       );
-  }
-/*
+  }/*
+
   // Méthode pour rafraîchir les tokens. Utilisée par l'intercepteur HTTP
-  revokeToken(): Observable<any> {
+  revokeToken(): Observable<UserInterface> {
     return this.http
-      .post<any>('/api/revoke-token', {}, { withCredentials: true })
+      .post<UserInterface>('/api/revoke-token', {})
       .pipe(
         tap((response) => {
-          // Les nouveaux tokens sont automatiquement stockés dans des cookies HTTP-only
-          console.log('Tokens refreshed successfully');
+          this._currentUser.set(response);
+          window.sessionStorage.removeItem('USER_KEY');
+          window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
         })
       );
   }
 
-  logout(): Observable<any> {
+  logout(): Observable<UserInterface> {
     return this.http
-      .post<any>('/api/logout', {}, { withCredentials: true })
+      .post<UserInterface>('/api/logout', {})
       .pipe(
         tap(() => {
           // Le backend devrait supprimer les cookies
