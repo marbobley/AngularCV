@@ -1,5 +1,5 @@
 import { Component, DOCUMENT, inject, OnInit } from '@angular/core';
-import { LayoutService } from '../Services/layout-service';
+import { LayoutService } from '../../Services/layout-service';
 import { NgClass } from '@angular/common';
 import { Breakpoints } from '@angular/cdk/layout';
 

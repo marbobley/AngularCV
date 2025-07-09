@@ -4,7 +4,7 @@ import { Home } from './Pages/home/home';
 import { Experience } from './Pages/experience/experience';
 import { Skill } from './Pages/skill/skill';
 import { Playground } from './Pages/playground/playground';
-import { TestBreakpointObserver } from './test-breakpoint-observer/test-breakpoint-observer';
+import { TestBreakpointObserver } from './Pages/test-breakpoint-observer/test-breakpoint-observer';
 import { LoginApi } from './Pages/login-api/login-api';
 import { Admin } from './Pages/admin/admin';
 
