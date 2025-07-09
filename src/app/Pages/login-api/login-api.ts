@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
+import { AuthenticateApiService } from '../../Services/api/authenticate-api-service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';

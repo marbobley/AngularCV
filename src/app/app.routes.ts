@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { About } from './about/about';
-import { Home } from './home/home';
+import { About } from './Pages/about/about';
+import { Home } from './Pages/home/home';
 import { Experience } from './experience/experience';
-import { Skill } from './skill/skill';
-import { Playground } from './playground/playground';
+import { Skill } from './Pages/skill/skill';
+import { Playground } from './Pages/playground/playground';
 import { TestBreakpointObserver } from './test-breakpoint-observer/test-breakpoint-observer';
-import { LoginApi } from './login-api/login-api';
+import { LoginApi } from './Pages/login-api/login-api';
 import { Admin } from './admin/admin';
 
 export const routes: Routes = [
