@@ -37,6 +37,14 @@
       (click)="closeSideMenu()"
       >Connexion</a
     >
+    @if(isConnected()) {
+    <a
+      routerLink="admin"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      >Admin</a
+    >
+    }
     <a
       routerLink="home"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"

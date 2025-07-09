@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { CategorySkillApiService } from '../Services/api/category-skill-api-service';
 import { CategorySkillInterface } from '../Interface/CategorySkillInterface';
+import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
 
 @Component({
   selector: 'app-category-skill-list',
@@ -10,13 +11,21 @@ import { CategorySkillInterface } from '../Interface/CategorySkillInterface';
 })
 export class CategorySkillList implements OnInit {
   private categorySkillService = inject(CategorySkillApiService);
+  authenticateService = inject(AuthenticateApiService);
+  isConnected = this.authenticateService.isConnected;
 
   categorySkills = signal<CategorySkillInterface[]>([]);
 
   ngOnInit(): void {
-    this.categorySkillService.getCategorySkills().subscribe((res) => {
-      this.categorySkills.set(res);
-    });
+    if (this.isConnected()) {
+      this.categorySkillService.getCategorySkills().subscribe((res) => {
+        this.categorySkills.set(res);
+      });
+    }
+    else
+    {
+      console.log('not connected');
+    }
   }
 
   getSkill() {
