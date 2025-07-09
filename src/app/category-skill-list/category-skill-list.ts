@@ -1,8 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { CategorySkillApiService } from '../Services/api/category-skill-api-service';
 import { CategorySkillInterface } from '../Interface/CategorySkillInterface';
-import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
-import { UserInterface } from '../Interface/UserInterface';
 
 @Component({
   selector: 'app-category-skill-list',
@@ -12,7 +10,6 @@ import { UserInterface } from '../Interface/UserInterface';
 })
 export class CategorySkillList implements OnInit {
   private categorySkillService = inject(CategorySkillApiService);
-  private authenticateService = inject(AuthenticateApiService);
 
   categorySkills = signal<CategorySkillInterface[]>([]);
 
@@ -39,15 +36,5 @@ export class CategorySkillList implements OnInit {
       .subscribe((res) => {
         console.log(res);
       });
-  }
-
-  authenticate() {
-
-    const user: UserInterface = { 
-      username: "user@skill.com",
-      password: "password"
-    }
-
-    this.authenticateService.postLoginCheck(user).subscribe((res) => console.log(res));
   }
 }

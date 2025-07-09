@@ -1,38 +1,33 @@
-import { Component, inject, signal } from '@angular/core';
-import { UserInterface } from '../Interface/UserInterface';
+import { Component, inject } from '@angular/core';
 import { AuthenticateApiService } from '../Services/api/authenticate-api-service';
+import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-api',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './login-api.html',
   styleUrl: './login-api.css',
 })
 export class LoginApi {
-  private authenticateService = inject(AuthenticateApiService);
-  
-  jwToken = signal<string>("");
+  private authService = inject(AuthenticateApiService);
+  private router = inject(Router);
 
-  login() {
-    this.authenticate("user@skill.com","password");
-  }
-  
-  
-    authenticate(username: string, password: string) {
-  
-      const user: UserInterface = { 
-        username: username,
-        password: password
+  username = '';
+  password = '';
+
+
+  onSubmit() {
+    this.authService.login(this.username, this.password).subscribe({
+      next: () => {
+        console.log('Logged in successfully');
+        this.router.navigateByUrl('/');
+      },
+      error: (error: HttpErrorResponse) => {  
+        console.error('Login failed', error);
+        // Afficher un message d'erreur à l'utilisateur
       }
-
-      let test = '';
-  
-      this.authenticateService.postLoginCheck(user).subscribe(res => 
-      {
-        //this.jwToken.set(res);
-        console.log(res);
-        test= res;
-        console.log(test.token);
-      });
-    }
+    });
+  }
 }
