@@ -1,4 +1,5 @@
 <main class="main-page" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
+  {{ categorySkills() }}
   <section class="section" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
     <article>
       <div class="card" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
@@ -45,16 +46,16 @@
           ></app-skills-sorter>
           <button (click)="reset()">RAZ</button>
         </div>
-        Filtre : @for(skillType of GetSkillType();track skillType) {
+        Filtre : @for(skillType of categorySkills();track skillType.id) {
         <app-skills-filter
           [skills]="skillsMemorized"
           (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="skillType"
+          [skillTypeFiltering]="skillType.name"
         ></app-skills-filter>
         }
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-        @for(skill of skills(); track skill; ) {
+        @for(skill of skills(); track skill.Langage; ) {
         <app-card-skill class="mat-tab-elm" [skill]="skill"></app-card-skill>
         }
       </div>

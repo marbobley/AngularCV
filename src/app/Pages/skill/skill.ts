@@ -8,6 +8,8 @@ import { TypeSkillEnum } from '../../Enum/TypeSkillEnum';
 import { SkillsFilter } from '../ComponentPages/skills-filter/skills-filter';
 import { SkillsSorter } from '../ComponentPages/skills-sorter/skills-sorter';
 import { LayoutService } from '../../Services/layout-service';
+import { CategorySkillApiService } from '../../Services/api/category-skill-api-service';
+import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 
 @Component({
   selector: 'app-skill',
@@ -23,11 +25,18 @@ export class Skill implements OnInit {
   private layoutService = inject(LayoutService);
   isPhonePortrait = this.layoutService.isPhonePortrait;
 
+  categorySkillApi = inject(CategorySkillApiService);
+  categorySkills = signal<CategorySkillInterface[]>([]);
+
   ngOnInit(): void {
     this.skillDataService.getSkills().subscribe((res) => {
       this.skills.set(res);
       this.skillsMemorized = res;
     });
+
+    this.categorySkillApi.getCategorySkills().subscribe(res => {
+      this.categorySkills.set(res);
+    })
 
     this.GetSkillType();
   }
