@@ -1,2 +1,5 @@
 <label for="name">Name :</label>
-<input id="name" type="text" [formControl]="categorySkillForm">
+<input id="name" type="text" [formControl]="name" />
+<label for="description">Description :</label>
+<input id="desc" type="text" [formControl]="description" />
+<button type="button" (click)="sendCategorySkill()">Envoyer</button>
