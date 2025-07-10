@@ -2,7 +2,6 @@ import { NgClass } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CardSkill } from '../ComponentPages/card-skill/card-skill';
-import { SkillModel } from '../../Classes/skill-model';
 import { SkillDataService } from '../../Services/skill-data-service/skill-data-service';
 import { SkillsFilter } from '../ComponentPages/skills-filter/skills-filter';
 import { SkillsSorter } from '../ComponentPages/skills-sorter/skills-sorter';
