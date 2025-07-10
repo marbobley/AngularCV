@@ -3,6 +3,7 @@ import { jwtDecode } from 'jwt-decode';
 
 interface MyToken {
   roles: string[];
+  username: string;
 }
 
 @Injectable({
@@ -22,8 +23,8 @@ export class TokenService {
   }
 
   private decode(token: string): MyToken | null {
-    //const token = window.sessionStorage.getItem('USER_KEY');
     if (token) {
+      console.log(jwtDecode(token));
       const decoded = jwtDecode<MyToken>(token);
       return decoded;
     }
@@ -44,13 +45,25 @@ export class TokenService {
     }
     return false;
   }
-  
+
   /**
    * set in sessionStorage 'USER_KEY' , the item (jwt normally)
-   * @param item : jwt 
+   * @param item : jwt
    */
   public setAuth(item: string) {
     window.sessionStorage.removeItem('USER_KEY');
-    window.sessionStorage.setItem('USER_KEY', item);
+    window.sessionStorage.setItem('USER_KEY', item);    
+  }
+
+  public getUserName() : string
+  {
+    const token = window.sessionStorage.getItem('USER_KEY');
+    if (token) {
+      const decoded = this.decode(token);
+      if (decoded && decoded.username) {
+        return decoded.username;
+      }
+    }
+    return '';
   }
 }

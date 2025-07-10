@@ -8,7 +8,6 @@ import { TokenService } from './token-service';
 @Injectable({
   providedIn: 'root',
 })
-
 export class AuthenticateApiService {
   private http = inject(HttpClient);
   private token = inject(TokenService);
@@ -17,6 +16,10 @@ export class AuthenticateApiService {
 
   currentUser = this._currentUser.asReadonly();
   isConnected = computed(() => this.currentUser() !== null);
+
+  reloadToken(username: string) {
+    this._currentUser.set({ username: username });
+  }
 
   login(
     username: string,
