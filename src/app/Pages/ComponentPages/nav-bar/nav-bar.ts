@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { LayoutService } from '../../../Services/layout-service';
 import { NgClass } from '@angular/common';
 import { AuthenticateApiService } from '../../../Services/api/authenticate-api-service';
+import { TokenService } from '../../../Services/api/token-service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -15,7 +16,9 @@ export class NavBar {
   responsive = inject(LayoutService);
   isPhonePortrait = this.responsive.isPhonePortrait;
   authenticateService = inject(AuthenticateApiService);
+  tokenService = inject(TokenService);
   isConnected = this.authenticateService.isConnected;
+  isAuthorized = this.tokenService.isAdminToken();
 
   openSideMenu() {
     const elementSideNav = this.sideNav();
