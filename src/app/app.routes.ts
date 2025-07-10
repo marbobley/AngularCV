@@ -7,6 +7,7 @@ import { Playground } from './Pages/playground/playground';
 import { TestBreakpointObserver } from './Pages/test-breakpoint-observer/test-breakpoint-observer';
 import { LoginApi } from './Pages/login-api/login-api';
 import { Admin } from './Pages/admin/admin';
+import { AdminGuard } from './Guards/admin-guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,6 +17,6 @@ export const routes: Routes = [
     { path: 'skill', component: Skill },
     { path: 'playground', component: Playground },
     { path: 'testBreakpoint', component: TestBreakpointObserver },
-    { path: 'admin' , component: Admin},
+    { path: 'admin' , component: Admin , canActivate: [AdminGuard]},
     { path: 'login' , component: LoginApi}
 ];

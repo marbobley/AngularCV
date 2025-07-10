@@ -35,6 +35,7 @@ export class AuthenticateApiService {
           this._currentUser.set(response.user);
           window.sessionStorage.removeItem('USER_KEY');
           window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
+          console.log(this.isConnected());
         })
       );
   }
