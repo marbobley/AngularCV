@@ -31,12 +31,6 @@
     <p>06.35.31.50.22</p>
   </div>
   <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-    <a
-      routerLink="login"
-      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
-      (click)="closeSideMenu()"
-      >Connexion</a
-    >
     @if(isConnected()) {
     <a
       routerLink="admin"
