@@ -18,7 +18,7 @@ export class NavBar {
   authenticateService = inject(AuthenticateApiService);
   tokenService = inject(TokenService);
   isConnected = this.authenticateService.isConnected;
-  isAuthorized = this.tokenService.isAdminToken();
+  isAuthorized = this.tokenService.isAdmin;
 
   openSideMenu() {
     const elementSideNav = this.sideNav();

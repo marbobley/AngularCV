@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { jwtDecode } from 'jwt-decode';
 
 interface MyToken {
@@ -9,6 +9,8 @@ interface MyToken {
   providedIn: 'root',
 })
 export class TokenService {
+  isAdmin = signal<boolean>(false);
+
   public getAuthenticateToken(): string {
     const token = window.sessionStorage.getItem('USER_KEY');
     let jsonToken = null;
@@ -28,6 +30,10 @@ export class TokenService {
     return null;
   }
 
+  public setIsAdmin() {
+    this.isAdmin.set(this.isAdminToken());
+  }
+
   public isAdminToken(): boolean {
     const token = window.sessionStorage.getItem('USER_KEY');
     if (token) {
@@ -37,5 +43,14 @@ export class TokenService {
       }
     }
     return false;
+  }
+  
+  /**
+   * set in sessionStorage 'USER_KEY' , the item (jwt normally)
+   * @param item : jwt 
+   */
+  public setAuth(item: string) {
+    window.sessionStorage.removeItem('USER_KEY');
+    window.sessionStorage.setItem('USER_KEY', item);
   }
 }

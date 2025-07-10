@@ -3,6 +3,7 @@ import { Observable, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
 import { UserInterface } from '../../Interface/UserInterface';
+import { TokenService } from './token-service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,7 @@ import { UserInterface } from '../../Interface/UserInterface';
 
 export class AuthenticateApiService {
   private http = inject(HttpClient);
+  private token = inject(TokenService);
   urlApi = `${environment.apiURL}/login_check`;
   private _currentUser = signal<UserInterface | null>(null);
 
@@ -34,8 +36,8 @@ export class AuthenticateApiService {
         tap((response) => {
           // Nous mettons à jour l'état de l'utilisateur connecté
           this._currentUser.set(response.user);
-          window.sessionStorage.removeItem('USER_KEY');
-          window.sessionStorage.setItem('USER_KEY', JSON.stringify(response));
+          this.token.setAuth(JSON.stringify(response));
+          this.token.setIsAdmin();
         })
       );
   }
