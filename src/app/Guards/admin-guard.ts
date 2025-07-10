@@ -7,7 +7,6 @@ export const AdminGuard: CanActivateFn = () => {
   const auth = inject(AuthenticateApiService);
   const token = inject(TokenService);
   const router = inject(Router);
-  console.log('guard entry');
   
   if(!auth.isConnected() || !token.isAdminToken())
   {

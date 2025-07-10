@@ -14,7 +14,6 @@ export class TokenService {
     let jsonToken = null;
     if (token) {
       jsonToken = JSON.parse(token);
-      console.log(console.log());
     }
 
     return 'Bearer ' + jsonToken['token'];
@@ -34,12 +33,9 @@ export class TokenService {
     if (token) {
       const decoded = this.decode(token);
       if (decoded && decoded.roles.includes('ROLE_ADMIN')) {
-        console.log('IsAdmin');
         return true;
       }
     }
-
-        console.log('isnotadmin');
     return false;
   }
 }

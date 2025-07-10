@@ -38,7 +38,6 @@ export class RenderService {
     this.render(gameBoard, ctx, resolution);
     gameBoard = nextGen(gameBoard);
     this.localBitArray = gameBoard;
-    console.log('animate');
   }
 
   animateWithInterval(

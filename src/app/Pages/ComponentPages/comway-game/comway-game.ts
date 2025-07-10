@@ -63,6 +63,5 @@ export class ComwayGame {
   onApply() {
     this.stopAnimateInterval();
     this.init();
-    console.log(this.boardWidth);
   }
 }

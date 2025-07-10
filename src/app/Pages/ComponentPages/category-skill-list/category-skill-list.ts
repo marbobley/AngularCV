@@ -24,7 +24,6 @@ export class CategorySkillList implements OnInit {
 
   getSkills() {
     this.categorySkillService.getCategorySkills().subscribe((res) => {
-      console.log(res);
       this.categorySkills.set(res);
     });
   }
@@ -37,8 +36,6 @@ export class CategorySkillList implements OnInit {
 
     this.categorySkillService
       .postCategorySkill(categorySkill)
-      .subscribe((res) => {
-        console.log(res);
-      });
+      .subscribe();
   }
 }

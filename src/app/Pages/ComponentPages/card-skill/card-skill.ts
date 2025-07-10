@@ -22,9 +22,7 @@ export class CardSkill {
   skill = input<SkillInterface>();
 
   getSkillCategory() {
-    console.log(this.skill());
     const catSkill = this.skill()?.categorySkill;
-    console.log(catSkill);
     if(catSkill)
       return catSkill[0].name;
 

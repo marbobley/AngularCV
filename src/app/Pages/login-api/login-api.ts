@@ -21,7 +21,6 @@ export class LoginApi {
   onSubmit() {
     this.authService.login(this.username, this.password).subscribe({
       next: () => {
-        console.log('Logged in successfully');
         this.router.navigateByUrl('/');
       },
       error: (error: HttpErrorResponse) => {  
