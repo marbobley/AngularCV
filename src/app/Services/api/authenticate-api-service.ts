@@ -7,6 +7,7 @@ import { UserInterface } from '../../Interface/UserInterface';
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthenticateApiService {
   private http = inject(HttpClient);
   urlApi = `${environment.apiURL}/login_check`;

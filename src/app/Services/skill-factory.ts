@@ -5,6 +5,9 @@ import { SkillModel } from '../Classes/skill-model';
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * To generate skills based on pattern builder
+ */
 export class SkillFactory {
 
   GetSkill(
