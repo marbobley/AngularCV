@@ -1,291 +1,418 @@
 [
   {
-    "TypeSkill": "Framework",
-    "Langage": "Angular",
-    "Level": 2,
-    "YearOfExperience": "Moins de 1",
-    "Description": "Pas de pratique pro: ce site est une mise en pratique de mes connaissances Angular",
-    "Evaluation": "Débutant",
-    "ImgSrc": "tech-icons/angular.png"
+    "language": "Angular",
+    "level": 2,
+    "yearOfExperience": "Moins de 1",
+    "description": "Pas de pratique pro: ce site est une mise en pratique de mes connaissances Angular",
+    "evaluation": "Débutant",
+    "imgSource": "tech-icons/angular.png",
+    "categorySkill": [
+      {
+        "name": "Framework"
+      }
+    ]
   },
   {
-    "TypeSkill": "Framework",
-    "Langage": "PHP/Symfony",
-    "Level": 3.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "Pas de pratique pro mais des bases : création d'un site de gestion de compte, création de jeux type UnLock ou Exit en ligne",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/symfony.jpg"
+    "language": "PHP/Symfony",
+    "level": 3.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "Pas de pratique pro mais des bases : création d'un site de gestion de compte, création de jeux type UnLock ou Exit en ligne",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/symfony.jpg",
+    "categorySkill": [
+      {
+        "name": "Framework"
+      }
+    ]
   },
   {
-    "TypeSkill": "Framework",
-    "Langage": ".NET Core",
-    "Level": 3.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "Pas de pratique pro mais des bases",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/dotnet.png"
+    "language": ".NET Core",
+    "level": 3.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "Pas de pratique pro mais des bases",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/dotnet.png",
+    "categorySkill": [
+      {
+        "name": "Framework"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "C#",
-    "Level": 7,
-    "YearOfExperience": "Plus de 5",
-    "Description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/csharp.png"
+    "language": "C#",
+    "level": 7,
+    "yearOfExperience": "Plus de 5",
+    "description": "Principalement dans un contexte TMA: beaucoup de correctifs et d'evolution",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/csharp.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "SQL",
-    "Level": 8,
-    "YearOfExperience": "Plus de 8",
-    "Description": "SQL Server, SQL Oracle, MySQL, MariaDB...",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/sqlserver.png"
+    "language": "SQL",
+    "level": 8,
+    "yearOfExperience": "Plus de 8",
+    "description": "SQL Server, SQL Oracle, MySQL, MariaDB...",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/sqlserver.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "C",
-    "Level": 3,
-    "YearOfExperience": "5",
-    "Description": "Langage utilisé pendant mes études",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/C.png"
+    "language": "C",
+    "level": 3,
+    "yearOfExperience": "5",
+    "description": "language utilisé pendant mes études",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/C.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "C++",
-    "Level": 3,
-    "YearOfExperience": "Moins de 2",
-    "Description": "Langage utilisé pendant mes études et quelques mois pro",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/Cplusplus.png"
+    "language": "C++",
+    "level": 3,
+    "yearOfExperience": "Moins de 2",
+    "description": "language utilisé pendant mes études et quelques mois pro",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/Cplusplus.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "Javascript",
-    "Level": 3.5,
-    "YearOfExperience": "1 à 2",
-    "Description": "Pratiqué dans un contexte Sharepoint",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/Javascript.png"
+    "language": "Javascript",
+    "level": 3.5,
+    "yearOfExperience": "1 à 2",
+    "description": "Pratiqué dans un contexte Sharepoint",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/Javascript.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "TypeScript",
-    "Level": 3.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "En cours de formation: ce site est une mise en pratique du TS.",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/Typescript.png"
+    "language": "TypeScript",
+    "level": 3.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "En cours de formation: ce site est une mise en pratique du TS.",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/Typescript.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "HTML/CSS",
-    "Level": 3.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "En cours de formation: ce site est une mise en pratique du HTML/CSS.",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/html5.png"
+    "language": "HTML/CSS",
+    "level": 3.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "En cours de formation: ce site est une mise en pratique du HTML/CSS.",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/html5.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Langage",
-    "Langage": "PHP",
-    "Level": 3,
-    "YearOfExperience": "Moins de 1",
-    "Description": "Pas de pratique pro mais des bases",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/Php.png"
+    "language": "PHP",
+    "level": 3,
+    "yearOfExperience": "Moins de 1",
+    "description": "Pas de pratique pro mais des bases",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/Php.png",
+    "categorySkill": [
+      {
+        "name": "Langage"
+      }
+    ]
   },
   {
-    "TypeSkill": "Outil",
-    "Langage": "Composer",
-    "Level": 4,
-    "YearOfExperience": "Moins de 1",
-    "Description": "Pas de pratique pro mais utiliser pour Symfony",
-    "Evaluation": "Intermediaire",
-    "ImgSrc": "tech-icons/composer.png"
+    "language": "Composer",
+    "level": 4,
+    "yearOfExperience": "Moins de 1",
+    "description": "Pas de pratique pro mais utiliser pour Symfony",
+    "evaluation": "Intermediaire",
+    "imgSource": "tech-icons/composer.png",
+    "categorySkill": [
+      {
+        "name": "Outil"
+      }
+    ]
   },
   {
-    "TypeSkill": "Outil",
-    "Langage": "npm",
-    "Level": 4.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "En cours de formation",
-    "Evaluation": "Intermediaire",
-    "ImgSrc": "tech-icons/npm.png"
+    "language": "npm",
+    "level": 4.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "En cours de formation",
+    "evaluation": "Intermediaire",
+    "imgSource": "tech-icons/npm.png",
+    "categorySkill": [
+      {
+        "name": "Outil"
+      }
+    ]
   },
   {
-    "TypeSkill": "Outil",
-    "Langage": "dotnet",
-    "Level": 3.5,
-    "YearOfExperience": "Moins de 1",
-    "Description": "En cours de formation",
-    "Evaluation": "Intermediaire",
-    "ImgSrc": "tech-icons/dotnet.png"
+    "language": "dotnet",
+    "level": 3.5,
+    "yearOfExperience": "Moins de 1",
+    "description": "En cours de formation",
+    "evaluation": "Intermediaire",
+    "imgSource": "tech-icons/dotnet.png",
+    "categorySkill": [
+      {
+        "name": "Outil"
+      }
+    ]
   },
   {
-    "TypeSkill": "Outil",
-    "Langage": "git",
-    "Level": 6,
-    "YearOfExperience": "Plus de 5",
-    "Description": "Utiliser plusieurs fois sur des projets perso ou pro",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/git.png"
+    "language": "git",
+    "level": 6,
+    "yearOfExperience": "Plus de 5",
+    "description": "Utiliser plusieurs fois sur des projets perso ou pro",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/git.png",
+    "categorySkill": [
+      {
+        "name": "Outil"
+      }
+    ]
   },
   {
-    "TypeSkill": "Architecture",
-    "Langage": "MVC",
-    "Level": 3,
-    "YearOfExperience": "moins de 5",
-    "Description": "Non vu directement, mais j'ai tenté de faire tendre mon dernier projet vers ce type d'architecture",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/mvc.png"
+    "language": "MVC",
+    "level": 3,
+    "yearOfExperience": "moins de 5",
+    "description": "Non vu directement, mais j'ai tenté de faire tendre mon dernier projet vers ce type d'architecture",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/mvc.png",
+    "categorySkill": [
+      {
+        "name": "Architecture"
+      }
+    ]
   },
   {
-    "TypeSkill": "Architecture",
-    "Langage": "MVVM",
-    "Level": 3,
-    "YearOfExperience": "moins de 3",
-    "Description": "En charge d'une application .NET en TMA (quelques évolutions, mise à jour des modèles...)",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/mvvm.png"
+    "language": "MVVM",
+    "level": 3,
+    "yearOfExperience": "moins de 3",
+    "description": "En charge d'une application .NET en TMA (quelques évolutions, mise à jour des modèles...)",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/mvvm.png",
+    "categorySkill": [
+      {
+        "name": "Architecture"
+      }
+    ]
   },
   {
-    "TypeSkill": "Architecture",
-    "Langage": "Pas d'architecture",
-    "Level": 9,
-    "YearOfExperience": "plus de 10",
-    "Description": "J'ai principalement travaillé dans des TMA industrielles : vieux logiciels, peu de bonne pratique, pas d'architecture en général.",
-    "Evaluation": "Expert",
-    "ImgSrc": "tech-icons/noarchi.png"
+    "language": "Pas d'architecture",
+    "level": 9,
+    "yearOfExperience": "plus de 10",
+    "description": "J'ai principalement travaillé dans des TMA industrielles : vieux logiciels, peu de bonne pratique, pas d'architecture en général.",
+    "evaluation": "Expert",
+    "imgSource": "tech-icons/noarchi.png",
+    "categorySkill": [
+      {
+        "name": "Architecture"
+      }
+    ]
   },
   {
-    "TypeSkill": "Logiciel",
-    "Langage": "Visual Studio Code",
-    "Level": 6,
-    "YearOfExperience": "moins de 1",
-    "Description": "Beaucoup utilisé ces derniers temps dans le cadre de mes formations et projets.",
-    "Evaluation": "Intermédiaire",
-    "ImgSrc": "tech-icons/vscode.png"
+    "language": "Visual Studio Code",
+    "level": 6,
+    "yearOfExperience": "moins de 1",
+    "description": "Beaucoup utilisé ces derniers temps dans le cadre de mes formations et projets.",
+    "evaluation": "Intermédiaire",
+    "imgSource": "tech-icons/vscode.png",
+    "categorySkill": [
+      {
+        "name": "Logiciel"
+      }
+    ]
   },
   {
-    "TypeSkill": "Logiciel",
-    "Langage": "SQL Server Management",
-    "Level": 7,
-    "YearOfExperience": "plus de 5",
-    "Description": "Utiliser plusieurs fois sur des projets perso ou pro",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/sqlservermanagement.png"
+    "language": "SQL Server Management",
+    "level": 7,
+    "yearOfExperience": "plus de 5",
+    "description": "Utiliser plusieurs fois sur des projets perso ou pro",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/sqlservermanagement.png",
+    "categorySkill": [
+      {
+        "name": "Logiciel"
+      }
+    ]
   },
   {
-    "TypeSkill": "Logiciel",
-    "Langage": "Jira",
-    "Level": 6,
-    "YearOfExperience": "plus de 5",
-    "Description": "Utiliser plusieurs fois sur des projets pro : permet une vision claire de l'activité, des jalons, des RAE...J'adore !",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/jira.png"
+    "language": "Jira",
+    "level": 6,
+    "yearOfExperience": "plus de 5",
+    "description": "Utiliser plusieurs fois sur des projets pro : permet une vision claire de l'activité, des jalons, des RAE...J'adore !",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/jira.png",
+    "categorySkill": [
+      {
+        "name": "Logiciel"
+      }
+    ]
   },
   {
-    "TypeSkill": "Environnement",
-    "Langage": "Windows",
-    "Level": 7,
-    "YearOfExperience": "Plus de 20",
-    "Description": "Power shell, services, Windows server, ISS ... j'ai plusieus fois utilisés ces outils et environnement sur des projets pro ou perso",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/windows.png"
+    "language": "Windows",
+    "level": 7,
+    "yearOfExperience": "Plus de 20",
+    "description": "Power shell, services, Windows server, ISS ... j'ai plusieus fois utilisés ces outils et environnement sur des projets pro ou perso",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/windows.png",
+    "categorySkill": [
+      {
+        "name": "Environnement"
+      }
+    ]
   },
   {
-    "TypeSkill": "Environnement",
-    "Langage": "Linux",
-    "Level": 6,
-    "YearOfExperience": "Plus de 20",
-    "Description": "Comme Windows, j'utilse aussi très souvent ce système. Je ne suis pas un expert du terminal, mais j'ai des bonnes bases",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/linux.png"
+    "language": "Linux",
+    "level": 6,
+    "yearOfExperience": "Plus de 20",
+    "description": "Comme Windows, j'utilse aussi très souvent ce système. Je ne suis pas un expert du terminal, mais j'ai des bonnes bases",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/linux.png",
+    "categorySkill": [
+      {
+        "name": "Environnement"
+      }
+    ]
   },
   {
-    "TypeSkill": "Documentation",
-    "Langage": "Spécifications",
-    "Level": 6,
-    "YearOfExperience": "Plus de 6",
-    "Description": "Fonctionnelle, technique, guide utilisateur, cahier de recette, estimation, planification ",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/doc.png"
+    "language": "Spécifications",
+    "level": 6,
+    "yearOfExperience": "Plus de 6",
+    "description": "Fonctionnelle, technique, guide utilisateur, cahier de recette, estimation, planification ",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/doc.png",
+    "categorySkill": [
+      {
+        "name": "Documentation"
+      }
+    ]
   },
   {
-    "TypeSkill": "Projet",
-    "Langage": "Gestion du temps",
-    "Level": 8,
-    "YearOfExperience": "Plus de 10",
-    "Description": "Bien gérer son temps, c'est essentiel pour moi : ça me permet d'anticiper, avoir une vision claire de mon activité et mieux gérer les moments de pression",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/time.png"
+    "language": "Gestion du temps",
+    "level": 8,
+    "yearOfExperience": "Plus de 10",
+    "description": "Bien gérer son temps, c'est essentiel pour moi : ça me permet d'anticiper, avoir une vision claire de mon activité et mieux gérer les moments de pression",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/time.png",
+    "categorySkill": [
+      {
+        "name": "Projet"
+      }
+    ]
   },
   {
-    "TypeSkill": "Projet",
-    "Langage": "Gestion des priorités",
-    "Level": 8,
-    "YearOfExperience": "Plus de 10",
-    "Description": "Dans un context TMA, il faut savoir faire des choix!",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/priority.png"
+    "language": "Gestion des priorités",
+    "level": 8,
+    "yearOfExperience": "Plus de 10",
+    "description": "Dans un context TMA, il faut savoir faire des choix!",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/priority.png",
+    "categorySkill": [
+      {
+        "name": "Projet"
+      }
+    ]
   },
   {
-    "TypeSkill": "Projet",
-    "Langage": "Reporting clair et concis",
-    "Level": 8,
-    "YearOfExperience": "Plus de 10",
-    "Description": "Je suis en télétravail depuis plusieurs années grace à reporting clair auprès du management : Le travail est fait en temps et en heure et les chefs de projets sont tenus régulièrement informés des avancements et point de blocages",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/report.png"
+    "language": "Reporting clair et concis",
+    "level": 8,
+    "yearOfExperience": "Plus de 10",
+    "description": "Je suis en télétravail depuis plusieurs années grace à reporting clair auprès du management : Le travail est fait en temps et en heure et les chefs de projets sont tenus régulièrement informés des avancements et point de blocages",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/report.png",
+    "categorySkill": [
+      {
+        "name": "Projet"
+      }
+    ]
   },
   {
-    "TypeSkill": "Projet",
-    "Langage": "Gestion de TMA",
-    "Level": 9,
-    "YearOfExperience": "Plus de 10",
-    "Description": "Je suis principalement intervenu dans des projets TMA : j'ai conscience des SLA & SLO et je sais me rendre disponible quand il y a besoin",
-    "Evaluation": "Expert",
-    "ImgSrc": "tech-icons/tma.png"
+    "language": "Gestion de TMA",
+    "level": 9,
+    "yearOfExperience": "Plus de 10",
+    "description": "Je suis principalement intervenu dans des projets TMA : j'ai conscience des SLA & SLO et je sais me rendre disponible quand il y a besoin",
+    "evaluation": "Expert",
+    "imgSource": "tech-icons/tma.png",
+    "categorySkill": [
+      {
+        "name": "Projet"
+      }
+    ]
   },
   {
-    "TypeSkill": "Metier",
-    "Langage": "GMAO milieu nucléaire",
-    "Level": 5,
-    "YearOfExperience": "3 à 4",
-    "Description": "Au sein d'une TMA, je me suis occupé de la remise en route d'un très vieux logiciel de GMAO, ainsi que d'un progiciel (INFOREAM)",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/energy.png"
+    "language": "GMAO milieu nucléaire",
+    "level": 5,
+    "yearOfExperience": "3 à 4",
+    "description": "Au sein d'une TMA, je me suis occupé de la remise en route d'un très vieux logiciel de GMAO, ainsi que d'un progiciel (INFOREAM)",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/energy.png",
+    "categorySkill": [
+      {
+        "name": "Metier"
+      }
+    ]
   },
   {
-    "TypeSkill": "Metier",
-    "Langage": "Production de parechoc",
-    "Level": 7,
-    "YearOfExperience": "environs 5",
-    "Description": "Au sein d'une TMA, je me suis occupé d'évolution, maintenance, correctif, formations d'outil lié à la production de parechec (de la presse à l'assemblage)",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/bumper.png"
+    "language": "Production de parechoc",
+    "level": 7,
+    "yearOfExperience": "environs 5",
+    "description": "Au sein d'une TMA, je me suis occupé d'évolution, maintenance, correctif, formations d'outil lié à la production de parechec (de la presse à l'assemblage)",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/bumper.png",
+    "categorySkill": [
+      {
+        "name": "Metier"
+      }
+    ]
   },
   {
-    "TypeSkill": "Parler",
-    "Langage": "Anglais - courant",
-    "Level": 7,
-    "YearOfExperience": "environs 20",
-    "Description": "Au cours de mon dernier projet, j'ai travaillé en équipe avec des personnes situées en Inde, en Amérique, en Angleterre : J'ai pu améliorer mon anglais !",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/en.png"
+    "language": "Anglais - courant",
+    "level": 7,
+    "yearOfExperience": "environs 20",
+    "description": "Au cours de mon dernier projet, j'ai travaillé en équipe avec des personnes situées en Inde, en Amérique, en Angleterre : J'ai pu améliorer mon anglais !",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/en.png",
+    "categorySkill": [
+      {
+        "name": "Parler"
+      }
+    ]
   },
   {
-    "TypeSkill": "Parler",
-    "Langage": "Français - native",
-    "Level": 7,
-    "YearOfExperience": "environs 33",
-    "Description": "Ma langue natale ! Par contre, je ne garantis pas un sans fautes ! ",
-    "Evaluation": "Confirmé",
-    "ImgSrc": "tech-icons/fr.png"
+    "language": "Français - native",
+    "level": 7,
+    "yearOfExperience": "environs 33",
+    "description": "Ma langue natale ! Par contre, je ne garantis pas un sans fautes ! ",
+    "evaluation": "Confirmé",
+    "imgSource": "tech-icons/fr.png",
+    "categorySkill": [
+      {
+        "name": "Parler"
+      }
+    ]
   }
 ]
-

@@ -9,6 +9,8 @@ import { SkillsSorter } from '../ComponentPages/skills-sorter/skills-sorter';
 import { LayoutService } from '../../Services/layout-service';
 import { CategorySkillApiService } from '../../Services/api/category-skill-api-service';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
+import { SkillApiService } from '../../Services/api/skill-api-service';
+import { SkillInterface } from '../../Interface/SkillInterface';
 
 @Component({
   selector: 'app-skill',
@@ -17,8 +19,6 @@ import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
   styleUrl: './skill.css',
 })
 export class Skill implements OnInit {
-  skills = signal<SkillModel[]>([]);
-  skillsMemorized: SkillModel[] = [];
   private skillDataService = inject(SkillDataService);
   private layoutService = inject(LayoutService);
   isPhonePortrait = this.layoutService.isPhonePortrait;
@@ -26,25 +26,31 @@ export class Skill implements OnInit {
   categorySkillApi = inject(CategorySkillApiService);
   categorySkills = signal<CategorySkillInterface[]>([]);
 
+  skillApi = inject(SkillApiService);
+  skills = signal<SkillInterface[]>([]);
+  skillsMemorized: SkillInterface[] = [];
+
   ngOnInit(): void {
-    this.skillDataService.getSkills().subscribe((res) => {
-      this.skills.set(res);
-      this.skillsMemorized = res;
-    });
 
     this.categorySkillApi.getCategorySkills().subscribe(res => {
       this.categorySkills.set(res);
     });
+
+    this.skillApi.getSkills().subscribe(res => {
+      this.skills.set(res);
+      this.skillsMemorized = res;
+    })
+
   }
   reset() {
     this.skills.set(this.skillsMemorized);
   }
 
-  handleSkillFiltered($event: SkillModel[]) {
+  handleSkillFiltered($event: SkillInterface[]) {
     this.skills.set($event);
   }
 
-  handleSkillSorted($event: SkillModel[]) {
+  handleSkillSorted($event: SkillInterface[]) {
     this.skills.set($event);
   }
 }

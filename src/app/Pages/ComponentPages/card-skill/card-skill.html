@@ -1,25 +1,25 @@
 <mat-card class="card-block" appearance="outlined">
   <mat-card-header class="mat-card-header">
     <div mat-card-avatar class="card-header">
-      <img [src]="skill()?.ImgSrc" [alt]="skill()?.ImgSrc" />
+      <img [src]="skill()?.imgSource" [alt]="skill()?.imgSource" />
     </div>
     <mat-card-title class="mat-card-title"
-      >{{ skill()?.TypeSkill }} : {{skill()?.Langage}}</mat-card-title
+      >{{ getSkillCategory() }} : {{skill()?.language}}</mat-card-title
     >
     <mat-card-subtitle class="mat-card-subtitle"
-      >Niveau: {{skill()?.Evaluation}}
+      >Niveau: {{skill()?.evaluation}}
       <mat-progress-bar
         mode="determinate"
-        value="{{ skill()?.Level | MultiplyByX:10}} "
+        value="{{ skill()?.level | MultiplyByX:10}} "
         class="mat-progress-bar"
-        matTooltip="{{ skill()?.Level | MultiplyByX:10}} /100 "
+        matTooltip="{{ skill()?.level | MultiplyByX:10}} /100 "
       ></mat-progress-bar>
     </mat-card-subtitle>
     <mat-card-subtitle
-      >Année de pratique: {{ skill()?.YearOfExperience}} ans</mat-card-subtitle
+      >Année de pratique: {{ skill()?.yearOfExperience}} ans</mat-card-subtitle
     >
   </mat-card-header>
   <mat-card-content>
-    <p>{{ skill()?.Description}}</p>
+    <p>{{ skill()?.description}}</p>
   </mat-card-content>
 </mat-card>

@@ -54,7 +54,7 @@
         }
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-        @for(skill of skills(); track skill.Langage; ) {
+        @for(skill of skills(); track skill.id; ) {
         <app-card-skill class="mat-tab-elm" [skill]="skill"></app-card-skill>
         }
       </div>

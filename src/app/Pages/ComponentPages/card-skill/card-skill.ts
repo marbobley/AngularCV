@@ -3,8 +3,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { SkillModel } from '../../../Classes/skill-model';
 import { MultiplyByXPipe } from '../../../Pipes/MultiplyByXPipe';
+import { SkillInterface } from '../../../Interface/SkillInterface';
 
 @Component({
   selector: 'app-card-skill',
@@ -19,5 +19,15 @@ import { MultiplyByXPipe } from '../../../Pipes/MultiplyByXPipe';
   styleUrl: './card-skill.css',
 })
 export class CardSkill {
-  skill = input<SkillModel>();
+  skill = input<SkillInterface>();
+
+  getSkillCategory() {
+    console.log(this.skill());
+    const catSkill = this.skill()?.categorySkill;
+    console.log(catSkill);
+    if(catSkill)
+      return catSkill[0].name;
+
+    return 'undefined';
+  }
 }

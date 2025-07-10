@@ -1,3 +1,5 @@
+import { CategorySkillInterface } from "./CategorySkillInterface";
+
 export interface SkillInterface {
   id?: number;
   language: string;
@@ -6,4 +8,5 @@ export interface SkillInterface {
   description: string;
   evaluation: string;
   imgSource: string;
+  categorySkill: CategorySkillInterface[];
 }

@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { SkillModel } from '../../../Classes/skill-model';
+import { SkillInterface } from '../../../Interface/SkillInterface';
 
 @Component({
   selector: 'app-skills-sorter',
@@ -8,8 +8,8 @@ import { SkillModel } from '../../../Classes/skill-model';
   styleUrl: './skills-sorter.css',
 })
 export class SkillsSorter {
-  skillSorted = output<SkillModel[]>();
-  skills = input<SkillModel[]>([]);
+  skillSorted = output<SkillInterface[]>();
+  skills = input<SkillInterface[]>([]);
 
   isSortAsc = true;
 
@@ -23,10 +23,10 @@ export class SkillsSorter {
       this.isSortAsc = !this.isSortAsc;
   }
 
-  sortByLevelDsc(): SkillModel[] {
-    return this.skills().sort((a, b) => b.Level - a.Level);
+  sortByLevelDsc(): SkillInterface[] {
+    return this.skills().sort((a, b) => b.level - a.level);
   }
   sortByLevelAsc() {
-    return this.skills().sort((a, b) => a.Level - b.Level);
+    return this.skills().sort((a, b) => a.level - b.level);
   }
 }

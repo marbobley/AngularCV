@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { SkillModel } from '../../../Classes/skill-model';
+import { SkillInterface } from '../../../Interface/SkillInterface';
 
 @Component({
   selector: 'app-skills-filter',
@@ -8,17 +8,17 @@ import { SkillModel } from '../../../Classes/skill-model';
   styleUrl: './skills-filter.css',
 })
 export class SkillsFilter {
-  skillFiltered = output<SkillModel[]>();
-  skills = input<SkillModel[]>([]);
+  skillFiltered = output<SkillInterface[]>();
+  skills = input<SkillInterface[]>([]);
   skillTypeFiltering = input<string>('Framework');
 
   EmitNewListSkills() {
     this.skillFiltered.emit(this.filterBy());
   }
 
-  filterBy(): SkillModel[] {
+  filterBy(): SkillInterface[] {
     return this.skills().filter(
-      (x) => x.TypeSkill === this.skillTypeFiltering()
+      (x) => x.categorySkill[0].name === this.skillTypeFiltering()
     );
   }
 }
