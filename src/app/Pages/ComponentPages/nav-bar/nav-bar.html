@@ -31,7 +31,7 @@
     <p>06.35.31.50.22</p>
   </div>
   <div class="links" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
-    @if(isConnected() && isAuthorized()) {
+    @if(isConnected() && isAuthorized() && !isExpired()) {
     <a
       routerLink="admin"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"

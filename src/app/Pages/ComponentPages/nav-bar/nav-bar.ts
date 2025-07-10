@@ -19,6 +19,7 @@ export class NavBar {
   tokenService = inject(TokenService);
   isConnected = this.authenticateService.isConnected;
   isAuthorized = this.tokenService.isAdmin;
+  isExpired = this.tokenService.isExpired;
 
   openSideMenu() {
     const elementSideNav = this.sideNav();

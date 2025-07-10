@@ -19,32 +19,29 @@ export class LoginApi implements OnInit {
   username = '';
   password = '';
 
-  
   ngOnInit(): void {
-    this.token.setIsAdmin();
-    const isAdmin = this.token.isAdmin();
+    const isExpired = this.token.isExpired();
+    if (!isExpired) {
+      this.token.setIsAdmin();
+      const isAdmin = this.token.isAdmin();
 
-    if(isAdmin)
-    {
-      console.log('isConnected');
-      
-      this.authService.reloadToken(this.token.getUserName());
-      this.router.navigateByUrl('/');
-      return;
+      if (isAdmin) {
+        this.authService.reloadToken(this.token.getUserName());
+        this.router.navigateByUrl('/admin');
+        return;
+      }
     }
-
   }
-
 
   onSubmit() {
     this.authService.login(this.username, this.password).subscribe({
       next: () => {
         this.router.navigateByUrl('/');
       },
-      error: (error: HttpErrorResponse) => {  
+      error: (error: HttpErrorResponse) => {
         console.error('Login failed', error);
         // Afficher un message d'erreur à l'utilisateur
-      }
+      },
     });
   }
 }

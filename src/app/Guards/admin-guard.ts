@@ -13,7 +13,7 @@ export const AdminGuard: CanActivateFn = () => {
   const token = inject(TokenService);
   const router = inject(Router);
   
-  if(!auth.isConnected() || !token.isAdminToken())
+  if(!auth.isConnected() || !token.isAdmin() || token.isExpired() )
   {
     router.navigateByUrl('/login');
     return false;

@@ -18,7 +18,7 @@ export class Admin {
 
   categorySkillEmit($event: CategorySkillInterface) {
 
-    this.categorySkillApi.postCategorySkill($event).subscribe( res => console.log(res));
+    this.categorySkillApi.postCategorySkill($event).subscribe();
     
   }
 }

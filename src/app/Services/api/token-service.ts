@@ -1,19 +1,20 @@
 import { Injectable, signal } from '@angular/core';
 import { jwtDecode } from 'jwt-decode';
-
-interface MyToken {
-  roles: string[];
-  username: string;
-}
+import { MyTokenInterface } from '../../Interface/MyTokenInterface';
+import moment from 'moment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TokenService {
   isAdmin = signal<boolean>(false);
+  isExpired = signal<boolean>(false);
+
+  private userKey = 'USER_KEY';
+  private expiredKey = 'USER_EXPIRED';
 
   public getAuthenticateToken(): string {
-    const token = window.sessionStorage.getItem('USER_KEY');
+    const token = window.sessionStorage.getItem(this.userKey);
     let jsonToken = null;
     if (token) {
       jsonToken = JSON.parse(token);
@@ -22,21 +23,39 @@ export class TokenService {
     return 'Bearer ' + jsonToken['token'];
   }
 
-  private decode(token: string): MyToken | null {
-    if (token) {
-      console.log(jwtDecode(token));
-      const decoded = jwtDecode<MyToken>(token);
-      return decoded;
+  /**
+   * decode the string token
+   * @param token : jwt to decode
+   * @returns  : MyTokenInterface
+   */
+  private decode(token: string): MyTokenInterface {
+    const decoded = jwtDecode<MyTokenInterface>(token);
+    return decoded;
+  }
+
+  private getExpiration(): number {
+    const expired = window.sessionStorage.getItem(this.expiredKey);
+    if (expired) {
+      return Number(expired);
     }
-    return null;
+    return 0;
+  }
+
+  private hasExpired(): boolean {
+    const expired = this.getExpiration();
+    return moment().isBefore(expired);
+  }
+
+  public setIsExpired() {
+    this.isExpired.set(this.hasExpired());
   }
 
   public setIsAdmin() {
     this.isAdmin.set(this.isAdminToken());
   }
 
-  public isAdminToken(): boolean {
-    const token = window.sessionStorage.getItem('USER_KEY');
+  private isAdminToken(): boolean {
+    const token = window.sessionStorage.getItem(this.userKey);
     if (token) {
       const decoded = this.decode(token);
       if (decoded && decoded.roles.includes('ROLE_ADMIN')) {
@@ -47,17 +66,25 @@ export class TokenService {
   }
 
   /**
-   * set in sessionStorage 'USER_KEY' , the item (jwt normally)
+   * set in sessionStorage this.userKey , the item (jwt normally)
    * @param item : jwt
    */
   public setAuth(item: string) {
-    window.sessionStorage.removeItem('USER_KEY');
-    window.sessionStorage.setItem('USER_KEY', item);    
+    window.sessionStorage.removeItem(this.userKey);
+    window.sessionStorage.removeItem(this.expiredKey);
+    window.sessionStorage.setItem(this.userKey, item);
+
+    const token = window.sessionStorage.getItem(this.userKey);
+    if (token) {
+      const decoded = this.decode(token);
+      if (decoded) {
+        window.sessionStorage.setItem(this.expiredKey, decoded.exp.toString());
+      }
+    }
   }
 
-  public getUserName() : string
-  {
-    const token = window.sessionStorage.getItem('USER_KEY');
+  public getUserName(): string {
+    const token = window.sessionStorage.getItem(this.userKey);
     if (token) {
       const decoded = this.decode(token);
       if (decoded && decoded.username) {
