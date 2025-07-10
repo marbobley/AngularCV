@@ -1,2 +1,11 @@
 @import '../../../../styles.css';
 @import '../../home/home.css';
+
+
+.button{
+    background-color: aqua;
+}
+
+.add{
+    color: red;
+}

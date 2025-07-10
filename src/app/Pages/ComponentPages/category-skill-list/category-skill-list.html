@@ -1,10 +1,19 @@
 <main class="main-page">
+  <a href="" class="button add">+</a>
   <ul>
     @for(categorySkill of categorySkills(); track categorySkill.id; ) { 
-        <li>{{ categorySkill.name }} - {{ categorySkill.description }}</li>
+        <li> <a href="/">{{ categorySkill.id }}</a> -{{ categorySkill.name }} - {{ categorySkill.description }}</li>
     }
   </ul>
-
-  <button (click)="postCategorySkill()">post</button>
-  <button (click)="getSkills()">get skills</button>
+  <section>
+    <article>
+      <form>
+        <label for="inputCategoryName">nom categorie : </label>
+        <input id="inputCategoryName" type="text" minlength="1" max="255" >
+        <label for="inputCategoryDesc">description categorie : </label>
+        <input id="inputCategoryDesc" type="text" minlength="1" max="255" >
+        <button type="submit">ENVOYER</button>
+      </form>
+    </article>
+  </section>
 </main>
