@@ -18,7 +18,7 @@
   <mat-label>Select</mat-label>
   <mat-select>
     @for(cat of categorySkills(); track cat.id ) {
-        <mat-option value="one">{{cat.name}}</mat-option>
+        <mat-option value="{{cat}}">{{cat.name}}</mat-option>
     }
   </mat-select>
 </mat-form-field>

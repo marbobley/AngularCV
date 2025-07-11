@@ -41,7 +41,7 @@ export class SkillEditor implements OnChanges {
     this.yearOfExperience.setValue(currentValue['yearOfExperience']);
     this.evaluation.setValue(currentValue['evaluation']);
     this.imgSource.setValue(currentValue['imgSource']);
-    this.categorySkill.setValue(currentValue['categorySkill']);
+    //this.categorySkill.setValue(currentValue['categorySkill']);
     this.saveId = currentValue['id'];
   }
   sendSkill() {
