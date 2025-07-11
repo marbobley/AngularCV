@@ -14,9 +14,16 @@
   ></app-category-skill-editor>
   }
   <div class="big-separator"></div>
+  <app-skill-editor (skill)="skillToPost($event)"></app-skill-editor>
   <app-skill-list
     [skillsInput]="skills()"
     (skillIdToDelete)="skillToDelete($event)"
     (skillToUpdate)="skillToUpdate($event)"
   ></app-skill-list>
+  @if(skillInterfaceToUpdate()) {
+  <app-skill-editor
+    [skillToUpdate]="skillInterfaceToUpdate()"
+    (skill)="skillToPut($event)"
+  ></app-skill-editor
+  >}
 </main>

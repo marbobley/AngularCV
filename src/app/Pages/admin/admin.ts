@@ -6,10 +6,11 @@ import { CategorySkillApiService } from '../../Services/api/category-skill-api-s
 import { SkillList } from '../ComponentPages/skill-list/skill-list';
 import { SkillInterface } from '../../Interface/SkillInterface';
 import { SkillApiService } from '../../Services/api/skill-api-service';
+import { SkillEditor } from '../ComponentPages/skill-editor/skill-editor';
 
 @Component({
   selector: 'app-admin',
-  imports: [CategorySkillList, CategorySkillEditor, SkillList],
+  imports: [CategorySkillList, CategorySkillEditor, SkillList, SkillEditor],
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
@@ -40,6 +41,14 @@ export class Admin implements OnInit {
     });
   }
 
+  skillToPost($event: SkillInterface) {
+    this.skillApi.postSkill($event).subscribe(() => {
+      this.skillApi.getSkills().subscribe((res) => {
+        this.skills.set(res);
+      });
+    });
+  }
+
   categorySkillToDelete($event: number) {
     this.categorySkillApi.deleteCategorySkill($event).subscribe(() =>
       this.categorySkillApi.getCategorySkills().subscribe((res) => {
@@ -55,18 +64,28 @@ export class Admin implements OnInit {
       })
     );
   }
+  
+  skillToPut($event: SkillInterface) {
+    console.log($event);
+    this.skillApi.putSkill($event).subscribe(() =>
+      this.skillApi.getSkills().subscribe((res) => {
+        this.skills.set(res);
+      })
+    );
+  }
 
   categorySkillToUpdate($event: CategorySkillInterface) {
     this.catSkillToUpdate.set($event);
   }
-  
+
   skillToUpdate($event: SkillInterface) {
     this.skillInterfaceToUpdate.set($event);
   }
   skillToDelete($event: number) {
-    this.skillApi.deleteSkill($event).subscribe(() => 
-    this.skillApi.getSkills().subscribe((res) => {
-      this.skills.set(res);
-    }))
+    this.skillApi.deleteSkill($event).subscribe(() =>
+      this.skillApi.getSkills().subscribe((res) => {
+        this.skills.set(res);
+      })
+    );
   }
 }

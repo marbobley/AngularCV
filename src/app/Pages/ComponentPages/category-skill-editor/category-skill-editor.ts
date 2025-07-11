@@ -24,14 +24,12 @@ export class CategorySkillEditor implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const currentValue = changes['categorySkillToUpdate'].currentValue;
-    console.log(changes);
     this.name.setValue(currentValue['name']);
     this.description.setValue(currentValue['description']);
     this.saveId = currentValue['id'];
   }
 
   sendCategorySkill() {
-    console.log(this.categorySkillToUpdate());
     if (this.categorySkillToUpdate() === undefined) {
       const curName = this.name.value;
       const curDesc = this.description.value;
