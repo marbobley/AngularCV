@@ -17,9 +17,7 @@ export class CategorySkillList implements OnInit {
   categorySkills = signal<CategorySkillInterface[]>([]);
 
   ngOnInit(): void {
-    this.categorySkillService.getCategorySkills().subscribe((res) => {
-      this.categorySkills.set(res);
-    });
+    this.getSkills();
   }
 
   getSkills() {
@@ -28,14 +26,13 @@ export class CategorySkillList implements OnInit {
     });
   }
 
-  postCategorySkill() {
-    const categorySkill: CategorySkillInterface = {
-      name: 'A2',
-      description: 'B2',
-    };
+  deleteCategorySkill(idCategorySkill: number | undefined) {
+    if (idCategorySkill === undefined) return;
 
     this.categorySkillService
-      .postCategorySkill(categorySkill)
-      .subscribe();
+      .deleteCategorySkill(idCategorySkill)
+      .subscribe(() => {
+        this.getSkills();
+      });
   }
 }

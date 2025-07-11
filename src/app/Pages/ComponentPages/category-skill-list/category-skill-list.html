@@ -4,7 +4,7 @@
     @for(categorySkill of categorySkills(); track categorySkill.id; ) {
     <li>
       <a href="/">{{ categorySkill.id }}</a> -{{ categorySkill.name }} - {{
-      categorySkill.description }}
+      categorySkill.description }} - <button (click)="deleteCategorySkill(categorySkill.id)">del</button>
     </li>
     }
   </ul>

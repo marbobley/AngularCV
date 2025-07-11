@@ -49,8 +49,11 @@ export class CategorySkillApiService {
   }
 
   deleteCategorySkill(id: number): Observable<CategorySkillInterface> {
+    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
-      .delete<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id)
+      .delete<CategorySkillInterface>(this.urlApiCategorySkill + '/' + id, {
+        headers: headers,
+      })
       .pipe();
   }
 }

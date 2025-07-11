@@ -11,14 +11,9 @@ import { CategorySkillApiService } from '../../Services/api/category-skill-api-s
   styleUrl: './admin.css',
 })
 export class Admin {
-
   private categorySkillApi = inject(CategorySkillApiService);
 
-  categorySkill: CategorySkillInterface | null = null;
-
   categorySkillEmit($event: CategorySkillInterface) {
-
     this.categorySkillApi.postCategorySkill($event).subscribe();
-    
   }
 }
