@@ -10,7 +10,7 @@
   @if(catSkillToUpdate()) {
   <app-category-skill-editor
     [categorySkillToUpdate]="catSkillToUpdate()"
-    (categorySkill)="categorySkillToPost($event)"
+    (categorySkill)="categorySkillToPut($event)"
   ></app-category-skill-editor>
   }
 </main>

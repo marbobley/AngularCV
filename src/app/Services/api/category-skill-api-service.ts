@@ -40,10 +40,13 @@ export class CategorySkillApiService {
   putCategorySkill(
     categorySkill: CategorySkillInterface
   ): Observable<CategorySkillInterface> {
+    const headers = new HttpHeaders().set('Authorization', this.token.getAuthenticateToken());
     return this.http
       .put<CategorySkillInterface>(
         this.urlApiCategorySkill + '/' + categorySkill.id,
-        categorySkill
+        categorySkill, {
+        headers: headers,
+      }
       )
       .pipe();
   }

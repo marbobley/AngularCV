@@ -38,6 +38,14 @@ export class Admin implements OnInit {
     );
   }
 
+  categorySkillToPut($event: CategorySkillInterface) {
+    this.categorySkillApi.putCategorySkill($event).subscribe(() =>
+      this.categorySkillApi.getCategorySkills().subscribe((res) => {
+        this.categorySkills.set(res);
+      })
+    );
+  }
+
   categorySkillToUpdate($event: CategorySkillInterface) {
     console.log($event);
     this.catSkillToUpdate.set($event);
