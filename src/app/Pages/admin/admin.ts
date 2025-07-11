@@ -14,6 +14,8 @@ export class Admin implements OnInit {
   private categorySkillApi = inject(CategorySkillApiService);
   categorySkills = signal<CategorySkillInterface[]>([]);
 
+  catSkillToUpdate = signal<CategorySkillInterface | undefined>(undefined);
+
   ngOnInit(): void {
     this.categorySkillApi.getCategorySkills().subscribe((res) => {
       this.categorySkills.set(res);
@@ -34,5 +36,10 @@ export class Admin implements OnInit {
         this.categorySkills.set(res);
       })
     );
+  }
+
+  categorySkillToUpdate($event: CategorySkillInterface) {
+    console.log($event);
+    this.catSkillToUpdate.set($event);
   }
 }

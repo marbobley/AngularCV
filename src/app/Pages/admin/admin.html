@@ -5,5 +5,12 @@
   <app-category-skill-list
     [categorySkillsInput]="categorySkills()"
     (categorySkillIdToDelete)="categorySkillToDelete($event)"
+    (categorySkillToUpdate)="categorySkillToUpdate($event)"
   ></app-category-skill-list>
+  @if(catSkillToUpdate()) {
+  <app-category-skill-editor
+    [categorySkillToUpdate]="catSkillToUpdate()"
+    (categorySkill)="categorySkillToPost($event)"
+  ></app-category-skill-editor>
+  }
 </main>

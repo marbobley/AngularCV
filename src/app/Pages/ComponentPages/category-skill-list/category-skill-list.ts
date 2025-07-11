@@ -10,9 +10,17 @@ import { CategorySkillInterface } from '../../../Interface/CategorySkillInterfac
 export class CategorySkillList {
   categorySkillsInput = input<CategorySkillInterface[]>([]);
   categorySkillIdToDelete = output<number>();
+  categorySkillToUpdate = output<CategorySkillInterface>();
 
-  deleteCategorySkill(idCategorySkill: number | undefined) {
+  emitDeleteCategorySkill(idCategorySkill: number | undefined) {
     if (idCategorySkill !== undefined)
       this.categorySkillIdToDelete.emit(idCategorySkill);
   }
+
+  emitUpdateCategorySkill(categorySkill: CategorySkillInterface | undefined){
+    if(categorySkill !== undefined)
+      this.categorySkillToUpdate.emit(categorySkill);
+  }
+
+
 }

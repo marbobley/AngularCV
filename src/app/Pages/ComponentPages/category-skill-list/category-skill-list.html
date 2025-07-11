@@ -3,8 +3,8 @@
   <ul>
     @for(categorySkill of categorySkillsInput(); track categorySkill.id; ) {
     <li>
-      <a href="/">{{ categorySkill.id }}</a> -{{ categorySkill.name }} - {{
-      categorySkill.description }} - <button (click)="deleteCategorySkill(categorySkill.id)">del</button>
+      <button (click)="emitUpdateCategorySkill(categorySkill)">{{ categorySkill.id }}</button> -{{ categorySkill.name }} - {{
+      categorySkill.description }} - <button (click)="emitDeleteCategorySkill(categorySkill.id)">del</button>
     </li>
     }
   </ul>
