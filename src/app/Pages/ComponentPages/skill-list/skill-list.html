@@ -1,0 +1,11 @@
+<div>
+  <h2>Listes des compétences</h2>
+  <ul>
+    @for(skill of skillsInput(); track skill.id; ) {
+    <li>
+      <button (click)="emitUpdateSkill(skill)">{{ skill.id }}</button> -{{ skill.language }} - {{
+      skill.description }} - <button (click)="emitDeleteSkill(skill.id)">del</button>
+    </li>
+    }
+  </ul>
+</div>

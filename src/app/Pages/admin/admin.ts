@@ -3,22 +3,32 @@ import { CategorySkillList } from '../ComponentPages/category-skill-list/categor
 import { CategorySkillEditor } from '../ComponentPages/category-skill-editor/category-skill-editor';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 import { CategorySkillApiService } from '../../Services/api/category-skill-api-service';
+import { SkillList } from '../ComponentPages/skill-list/skill-list';
+import { SkillInterface } from '../../Interface/SkillInterface';
+import { SkillApiService } from '../../Services/api/skill-api-service';
 
 @Component({
   selector: 'app-admin',
-  imports: [CategorySkillList, CategorySkillEditor],
+  imports: [CategorySkillList, CategorySkillEditor, SkillList],
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
 export class Admin implements OnInit {
   private categorySkillApi = inject(CategorySkillApiService);
+  private skillApi = inject(SkillApiService);
   categorySkills = signal<CategorySkillInterface[]>([]);
+  skills = signal<SkillInterface[]>([]);
 
   catSkillToUpdate = signal<CategorySkillInterface | undefined>(undefined);
+  skillInterfaceToUpdate = signal<SkillInterface | undefined>(undefined);
 
   ngOnInit(): void {
     this.categorySkillApi.getCategorySkills().subscribe((res) => {
       this.categorySkills.set(res);
+    });
+
+    this.skillApi.getSkills().subscribe((res) => {
+      this.skills.set(res);
     });
   }
 
@@ -47,7 +57,16 @@ export class Admin implements OnInit {
   }
 
   categorySkillToUpdate($event: CategorySkillInterface) {
-    console.log($event);
     this.catSkillToUpdate.set($event);
+  }
+  
+  skillToUpdate($event: SkillInterface) {
+    this.skillInterfaceToUpdate.set($event);
+  }
+  skillToDelete($event: number) {
+    this.skillApi.deleteSkill($event).subscribe(() => 
+    this.skillApi.getSkills().subscribe((res) => {
+      this.skills.set(res);
+    }))
   }
 }

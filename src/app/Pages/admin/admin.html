@@ -13,4 +13,10 @@
     (categorySkill)="categorySkillToPut($event)"
   ></app-category-skill-editor>
   }
+  <div class="big-separator"></div>
+  <app-skill-list
+    [skillsInput]="skills()"
+    (skillIdToDelete)="skillToDelete($event)"
+    (skillToUpdate)="skillToUpdate($event)"
+  ></app-skill-list>
 </main>
