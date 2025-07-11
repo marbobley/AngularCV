@@ -1,7 +1,7 @@
 <div>
   <h2>Listes des catégories de compétences</h2>
   <ul>
-    @for(categorySkill of categorySkills(); track categorySkill.id; ) {
+    @for(categorySkill of categorySkillsInput(); track categorySkill.id; ) {
     <li>
       <a href="/">{{ categorySkill.id }}</a> -{{ categorySkill.name }} - {{
       categorySkill.description }} - <button (click)="deleteCategorySkill(categorySkill.id)">del</button>
