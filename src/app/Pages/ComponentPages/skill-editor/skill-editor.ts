@@ -7,16 +7,22 @@ import {
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { SkillInterface } from '../../../Interface/SkillInterface';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import { CategorySkillInterface } from '../../../Interface/CategorySkillInterface';
+
 
 @Component({
   selector: 'app-skill-editor',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatSelectModule , MatInputModule],
   templateUrl: './skill-editor.html',
   styleUrl: './skill-editor.css',
 })
 export class SkillEditor implements OnChanges {
   skill = output<SkillInterface>();
   skillToUpdate = input<SkillInterface>();
+  categorySkills = input<CategorySkillInterface[]>([{ name: 'abc' , description : 'def'}]);
 
   saveId: number | undefined = undefined;
   language = new FormControl('');

@@ -14,7 +14,10 @@
   ></app-category-skill-editor>
   }
   <div class="big-separator"></div>
-  <app-skill-editor (skill)="skillToPost($event)"></app-skill-editor>
+  <app-skill-editor 
+  (skill)="skillToPost($event)"
+  [categorySkills]="categorySkills()"
+  ></app-skill-editor>
   <app-skill-list
     [skillsInput]="skills()"
     (skillIdToDelete)="skillToDelete($event)"
