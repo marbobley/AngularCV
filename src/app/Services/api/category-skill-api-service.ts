@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { CategorySkillInterface } from '../../Interface/CategorySkillInterface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { TokenService } from './token-service';
 
 @Injectable({
