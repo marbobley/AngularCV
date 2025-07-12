@@ -10,7 +10,7 @@ import { SkillInterface } from '../../../Interface/SkillInterface';
 export class SkillsFilter {
   skillFiltered = output<SkillInterface[]>();
   skills = input<SkillInterface[]>([]);
-  skillTypeFiltering = input<string>('Framework');
+  skillTypeFiltering = input<string | undefined>('Framework');
 
   EmitNewListSkills() {
     this.skillFiltered.emit(this.filterBy());
