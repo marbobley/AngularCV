@@ -4,8 +4,8 @@
   background-color: white;
   position: fixed;
   z-index: 10;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
   width:100%;
   border-bottom: 2px solid black;
 }
@@ -15,8 +15,8 @@
   margin: auto;
   position: absolute;
   z-index: -1;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
 }
 
 .imgOnImg{
@@ -68,7 +68,7 @@
   /* 0.5 second transition effect to slide in the sidenav */
   border-right: var(--app-background-color);
   border-right-style: groove;
-  border-right-width: -5px;
+  border-right-width: 0;
 }
 
 .openSideNav {
@@ -92,7 +92,7 @@
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
   margin-left: 50px;
   background: none;
   border: none;
@@ -133,7 +133,7 @@
 }
 
 .sidenav a.is-phone-portrait {
-  padding: 0px;
+  padding: 0;
   text-decoration: none;
   font-size: 20px;
   color: #818181;
