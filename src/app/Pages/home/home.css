@@ -15,7 +15,6 @@
 }
 
 .left img {
-  display: block;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -63,7 +62,7 @@
 .card-horizontal{
   display: inline-flex;
   width: auto;
-  margin: 10px;  
+  margin: 10px;
 }
 
 .card-horizontal.is-phone-portrait{
