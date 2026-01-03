@@ -1,10 +1,15 @@
 @if(isPhonePortrait()) {
 
+
 <div class="navbar-bottom">
   <a routerLink="home">Home</a>
   <a routerLink="about">A propos</a>
   <a routerLink="experience">Expériences</a>
   <a routerLink="skill">Compétences</a>
+  <span>Email</span>
+  <button (click)="copyToClipboard('fournier.wilf@gmail.com')" title="Copier l'email">📋</button>
+  <span>Téléphone</span>
+  <button (click)="copyToClipboard('06.35.31.50.22')" title="Copier le numéro">📋</button>
 </div>
 
 } @else {
