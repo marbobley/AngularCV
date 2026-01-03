@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, signal, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LayoutService } from '../../../Services/layout-service';
 import { NgClass } from '@angular/common';
@@ -22,6 +22,12 @@ export class NavBar {
   isConnected = this.authenticateService.isConnected;
   isAuthorized = this.tokenService.isAdmin;
   isExpired = this.tokenService.isExpired;
+
+  isContactMenuOpen = signal(false);
+
+  toggleContactMenu() {
+    this.isContactMenuOpen.update(v => !v);
+  }
 
   openSideMenu() {
     const elementSideNav = this.sideNav();
