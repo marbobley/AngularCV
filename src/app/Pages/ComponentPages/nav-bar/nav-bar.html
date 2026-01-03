@@ -2,6 +2,15 @@
 
 <div class="navbar-bottom">
   <a routerLink="home">Home</a>
+  <div class="dropdown-contact">
+    @if(isContactMenuOpen()) {
+      <div class="dropdown-content">
+        <button (click)="copyToClipboard('fournier.wilf@gmail.com'); toggleContactMenu()" title="Copier l'email">📋 Email</button>
+        <button (click)="copyToClipboard('06.35.31.50.22'); toggleContactMenu()" title="Copier le numéro">📋 Tél</button>
+      </div>
+    }
+    <button class="dropbtn" (click)="toggleContactMenu()">Contact</button>
+  </div>
   <a routerLink="about">A propos</a>
   <a routerLink="experience">Expériences</a>
   <a routerLink="skill">Compétences</a>
@@ -62,18 +71,6 @@
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
       >Compétences</a
-    >
-    <a
-      routerLink="playground"
-      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
-      (click)="closeSideMenu()"
-      >Playground</a
-    >
-    <a
-      routerLink="testBreakpoint"
-      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
-      (click)="closeSideMenu()"
-      >Breakpoint Observer</a
     >
   </div>
 </nav>
