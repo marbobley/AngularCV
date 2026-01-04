@@ -38,24 +38,27 @@
     <article>
       <div class="filter-box">
         <div>
-          Tri :
+          <span>Trier par niveau :</span>
           <app-skills-sorter
             [skills]="skills()"
             (skillSorted)="handleSkillSorted($event)"
           ></app-skills-sorter>
-          <button (click)="reset()">RAZ</button>
+          <button (click)="reset()" class="reset-btn">Réinitialiser</button>
         </div>
-        Filtre : @for(skillType of categorySkills();track skillType.id) {
-        <app-skills-filter
-          [skills]="skillsMemorized"
-          (skillFiltered)="handleSkillFiltered($event)"
-          [skillTypeFiltering]="skillType.name"
-        ></app-skills-filter>
-        }
+        <div>
+          <span>Filtrer par catégorie :</span>
+          @for(skillType of categorySkills();track skillType.id) {
+            <app-skills-filter
+              [skills]="skillsMemorized"
+              (skillFiltered)="handleSkillFiltered($event)"
+              [skillTypeFiltering]="skillType.name"
+            ></app-skills-filter>
+          }
+        </div>
       </div>
       <div class="mat-tab" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
         @for(skill of skills(); track skill.id; ) {
-        <app-card-skill class="mat-tab-elm" [skill]="skill"></app-card-skill>
+          <app-card-skill class="mat-tab-elm" [skill]="skill"></app-card-skill>
         }
       </div>
     </article>

@@ -1,70 +1,74 @@
 @import "../../../styles.css";
 @import "../home/home.css";
 
-.card-block {
-  max-width: 100px;
-  margin-right: 20px;
-  height: 100%;
-  max-height: 300px;
-  margin-top: 5px;
-}
-
-.card-header {
-  background-image: url("https://material.angular.dev/assets/img/examples/shiba1.jpg");
-  background-size: cover;
-}
 .mat-tab {
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 10px;
-  min-height: 300px;
-}
-
-.mat-tab.is-phone-portrait {
-  max-height: none;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .mat-tab-elm {
-  width: 400px;
+  width: 100%;
 }
 
-p {
-  text-align: justify;
+.filter-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.filter-box{
-  margin: auto;
-  padding: 10px;
-  text-align: center;
+.filter-box > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--secondary-color);
 }
 
-.filter-box button{
-  padding: 10px;
-  margin: 10px;
+.filter-box button {
+  padding: 8px 16px;
   border-radius: 20px;
-  border: none;
-  transition: 0.5s;
-  background-color: var(--app-background-color);
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
 }
 
-.filter-box button:hover{
-  color: rgb(6, 185, 6);
-}
-.filter-box button:active{
-  filter: brightness(85%);
-  -webkit-box-shadow: inset 0px 0px 5px #244e28;
-     -moz-box-shadow: inset 0px 0px 5px #244e28;
-          box-shadow: inset 0px 0px 5px #244e28;
-   outline: none;
+.filter-box button:hover {
+  background-color: var(--accent-color);
+  color: white;
 }
 
-.thanks{
-  padding: 10px;
+.filter-box button:active {
+  transform: scale(0.95);
+}
+
+.thanks {
+  margin-top: 40px;
+  padding: 20px;
   text-align: center;
-  font-weight: bolder;
-  font-size: larger;
-  color: var(--app-background-color);
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #eee;
+}
+
+.thanks a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .mat-tab {
+    grid-template-columns: 1fr;
+  }
 }

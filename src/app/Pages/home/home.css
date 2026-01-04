@@ -1,84 +1,87 @@
 @import "../../../styles.css";
 
 .card {
-  display: inline-flex;
-  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card.is-phone-portrait {
-  display: block;
-}
-.card .right {
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 
-.left img {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.right img {
-  max-width: 500px;
-  display: block;
-}
-.right-text{
-  padding-left: 100px;
-  padding-right: 100px;
-  font-size: 30px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+.left-text, .right-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.right-text.is-phone-portrait
-{
-  text-align: center;
-}
-.left-text {
-  padding-left: 100px;
-  padding-right: 100px;
-  font-size: 30px;
-}
-.left {
-  justify-content: center;
-  align-items: center;
-  display: flex;
+.left-text h2, .right-text h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-.left-text.is-phone-portrait {
-  padding-left: 0px;
-  padding-right: 0px;
-  font-size: 15px;
+.left-text p, .right-text p {
+  margin-bottom: 1.2rem;
   text-align: justify;
-  padding: 1px;
-}
-.left img.is-phone-portrait,
-.right img.is-phone-portrait {
-  max-width: 250px;
 }
 
-.card-horizontal{
-  display: inline-flex;
-  width: auto;
-  margin: 10px;
-}
-
-.card-horizontal.is-phone-portrait{
+.left, .right {
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
   align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-
 }
 
-.card-section{
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
+.left img, .right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.card-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.card-section {
+  padding: 40px 0;
+}
+
+.right-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.right-text a:hover {
+  border-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .left-text, .right-text {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
 }
