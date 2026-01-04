@@ -1,7 +1,22 @@
 @if(isPhonePortrait()) {
 
 <div class="navbar-bottom">
-  <a routerLink="home">Home</a>
+  <a routerLink="home">
+    <span class="material-icons">home</span>
+    Accueil
+  </a>
+  <a routerLink="experience">
+    <span class="material-icons">work</span>
+    Expériences
+  </a>
+  <a routerLink="skill">
+    <span class="material-icons">psychology</span>
+    Compétences
+  </a>
+  <a routerLink="about">
+    <span class="material-icons">person</span>
+    Bio
+  </a>
   <div class="dropdown-contact">
     @if(isContactMenuOpen()) {
       <div class="dropdown-content">
@@ -9,17 +24,17 @@
         <button (click)="copyToClipboard('06.35.31.50.22'); toggleContactMenu()" title="Copier le numéro">📋 Tél</button>
       </div>
     }
-    <button class="dropbtn" (click)="toggleContactMenu()">Contact</button>
+    <button class="dropbtn" (click)="toggleContactMenu()">
+      <span class="material-icons">contact_page</span>
+      Contact
+    </button>
   </div>
-  <a routerLink="about">A propos</a>
-  <a routerLink="experience">Expériences</a>
-  <a routerLink="skill">Compétences</a>
 </div>
 
 } @else {
 <div class="navHeader" [ngClass]="{'is-phone-portrait': isPhonePortrait()}">
   <button class="openbtn" (click)="openSideMenu()">&#9776;</button>
-  <h1>Ingénieur développement</h1>
+  <h1>Wilfried FOURNIER - Ingénieur Logiciel</h1>
 </div>
 <nav
   class="sidenav"
@@ -28,12 +43,14 @@
   (mouseleave)="closeSideMenu()"
 >
   <button (click)="closeSideMenu()" class="closebtn">&times;</button>
-  <img
-    src="sideNaveImage-computer.jpg"
-    class="imgSideNav"
-    alt="image d'un ordinateur"
-  />
-  <img src="pprofil.jpg" class="imgOnImg" alt="image de wilfried fournier" />
+  <div style="position: relative;">
+    <img
+      src="sideNaveImage-computer.jpg"
+      class="imgSideNav"
+      alt="image d'un ordinateur"
+    />
+    <img src="pprofil.jpg" class="imgOnImg" alt="image de wilfried fournier" />
+  </div>
   <div class="contact">
     <h2 class="titleName">FOURNIER Wilfried</h2>
     <p>fournier.wilf&#x40;gmail.com</p>
@@ -45,32 +62,32 @@
       routerLink="admin"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
-      >Admin</a
+      ><span class="material-icons" style="margin-right: 10px;">admin_panel_settings</span> Admin</a
     >
     }
     <a
       routerLink="home"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
-      >Accueil</a
-    >
-    <a
-      routerLink="about"
-      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
-      (click)="closeSideMenu()"
-      >A propos</a
+      ><span class="material-icons" style="margin-right: 10px;">home</span> Accueil</a
     >
     <a
       routerLink="experience"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
-      >Expériences</a
+      ><span class="material-icons" style="margin-right: 10px;">work</span> Expériences</a
     >
     <a
       routerLink="skill"
       [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
       (click)="closeSideMenu()"
-      >Compétences</a
+      ><span class="material-icons" style="margin-right: 10px;">psychology</span> Compétences</a
+    >
+    <a
+      routerLink="about"
+      [ngClass]="{'is-phone-portrait': isPhonePortrait()}"
+      (click)="closeSideMenu()"
+      ><span class="material-icons" style="margin-right: 10px;">person</span> À propos</a
     >
   </div>
 </nav>

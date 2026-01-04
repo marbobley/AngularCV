@@ -1,65 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --app-background-color: #abd3be;
-    --app-main-color: #abd3be;
-    --app-second-color: #ddf9ea;
-    --app-main-font-size: 14px;
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333333;
+    --light-text: #ffffff;
+    --background-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --app-main-font-size: 16px;
 }
 
 html,
 body {
     height: 100%;
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: var(--app-background-color);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 .main-page {
-    background-color: white;
-    height: auto;
-    position: absolute;
-    /* Stay on top */
-    top: 120px;
-    /* Stay at the top */
-    left: 20px;
-    box-shadow:
-        0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
-    width: 95%;
+    background-color: var(--card-bg);
+    min-height: calc(100vh - 160px);
+    margin: 120px auto 40px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
 }
 
 
 .section {
-    background-color: var(--app-second-color);
-    margin: 10px;
-
+    background-color: transparent;
+    margin: 20px 0;
+    padding: 20px;
 }
 
 .main-page.is-phone-portrait{
-    width: 100%;
-    left: 2px;
-    top: 10px;
+    width: 95%;
+    margin: 80px auto 20px;
+    padding: 10px;
 }
 .section.is-phone-portrait {
-    margin: 10px;
-    padding: 2px;
+    margin: 10px 0;
+    padding: 10px;
 }
 
 
 .title-article {
     text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 
 .big-separator {
-    border: 2px solid #858585;
-    width: 70%;
+    border: none;
+    border-top: 3px solid var(--accent-color);
+    width: 80px;
+    margin: 10px auto 30px;
 }
 
 .little-separator {
-    border: 2px solid #858585;
-    width: 20%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    border: none;
+    border-top: 1px solid #eee;
+    width: 50%;
+    margin: 40px auto;
 }
 
 
