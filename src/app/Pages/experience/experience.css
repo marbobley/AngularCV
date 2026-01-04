@@ -21,7 +21,7 @@
 }
 
 .container {
-  padding: 10px 40px;
+  padding: 5px 0px;
   position: relative;
   background-color: transparent;
   width: 50%;
@@ -32,7 +32,7 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  right: -8px;
+  right: -12px;
   background-color: var(--card-bg);
   border: 4px solid var(--accent-color);
   top: 20px;
@@ -94,18 +94,18 @@
 
 @media screen and (max-width: 768px) {
   .timeline::after {
-    left: 31px;
+    left: 5px;
   }
 
   .container {
     width: 100%;
-    padding-left: 70px;
+    padding-left: 10px;
     padding-right: 25px;
     text-align: left;
   }
 
   .left::after, .right-timeline::after {
-    left: 23px;
+    left: -4px;
   }
 
   .right-timeline {
