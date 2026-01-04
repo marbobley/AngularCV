@@ -21,7 +21,7 @@
 }
 
 .container {
-  padding: 5px 0px;
+  padding: 5px 0;
   position: relative;
   background-color: transparent;
   width: 50%;
@@ -109,6 +109,6 @@
   }
 
   .right-timeline {
-    left: 0%;
+    left: 0;
   }
 }
